@@ -1,0 +1,1983 @@
+{
+  "source": {
+    "url": "https://findfoodbank.org/map/",
+    "copied_on": "2026-11-19",
+    "note": "English text is copied as written on the source page (Coachella Valley cities only). hours_es, notes_es and contact_es are our Spanish translations. types and schedule were worked out from the text. schedule null means the text does not say which days. Nothing is confirmed by phone yet."
+  },
+  "places": [
+    {
+      "id": 1,
+      "name": "FIND Regional Food Bank Mobile Market",
+      "city": "Indio",
+      "address": "83775 Citrus Ave. Indio, CA 92201",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "Food Distributions Every Friday from 7:00 am – 8:30 am"
+      ],
+      "hours_es": [
+        "Repartos de comida todos los viernes de 7:00 am a 8:30 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)775-3663",
+      "contact_es": "(760)775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Fri"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 2,
+      "name": "The Narrow Door",
+      "city": "Indio",
+      "address": "43052 Madison St, Ste 101 Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Every 2nd Saturday from 9:00 am – 11:00 am"
+      ],
+      "hours_es": [
+        "Repartos de comida cada 2.º sábado de 9:00 am a 11:00 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)775-6200",
+      "contact_es": "(760)775-6200",
+      "phones": [
+        "+17607756200"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            2
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 3,
+      "name": "Boys & Girls Club Indio",
+      "city": "Indio",
+      "address": "83100 Date Ave Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Every 3rd Thursday from 4 p.m. until the food runs out"
+      ],
+      "hours_es": [
+        "Repartos de comida cada 3.er jueves desde las 4 p.m. hasta que se acabe la comida"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)836-1160",
+      "contact_es": "(760)836-1160",
+      "phones": [
+        "+17608361160"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 4,
+      "name": "Wellspring Church",
+      "city": "Indian Wells",
+      "address": "44-175 Washington St. Indian Wells, CA 92210",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "2nd Saturday 7:00am-9:00am"
+      ],
+      "hours_es": [
+        "2.º sábado de 7:00 am a 9:00 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 200-2000",
+      "contact_es": "(760) 200-2000",
+      "phones": [
+        "+17602002000"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            2
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 5,
+      "name": "FIND Mobile Market - Rancho Las Flores Park",
+      "city": "Coachella",
+      "address": "48400 Van Buren St. Coachella, CA 92236",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "3rd Friday 7:00am-9:00am"
+      ],
+      "hours_es": [
+        "3.er viernes de 7:00 am a 9:00 am"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Fri"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 6,
+      "name": "FIND Mobile Market - Oasis Elementary School",
+      "city": "Thermal",
+      "address": "88175 74th Ave. Thermal, CA 92274",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "2nd and 4th Friday 4:00pm-6:00pm"
+      ],
+      "hours_es": [
+        "2.º y 4.º viernes de 4:00 pm a 6:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Fri"
+          ],
+          "weeks": [
+            2,
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 7,
+      "name": "FIND Mobile Market - North Shore Community Park",
+      "city": "Mecca",
+      "address": "99480 70th Ave. Mecca, CA 92254",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "4th Tuesday 4:00pm-6:00pm"
+      ],
+      "hours_es": [
+        "4.º martes de 4:00 pm a 6:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ],
+          "weeks": [
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 8,
+      "name": "FIND Mobile Market - La Quinta Library (Walk-Up + Seniors Only)",
+      "city": "La Quinta",
+      "address": "78275 Calle Tampico, La Quinta, CA 92253 – Walk-up + Seniors Only",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "4th Saturday 7:00am-9:00am"
+      ],
+      "hours_es": [
+        "4.º sábado de 7:00 am a 9:00 am"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 9,
+      "name": "FIND Mobile Market - West Shores High School",
+      "city": "Thermal",
+      "address": "2381 Shores Hawk, Thermal, CA 92274",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "2nd Wednesday 8:00am-10:00am"
+      ],
+      "hours_es": [
+        "2.º miércoles de 8:00 am a 10:00 am"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Wed"
+          ],
+          "weeks": [
+            2
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 14,
+      "name": "First Baptist Church Indio",
+      "city": "Indio",
+      "address": "82490 Doctor Carreon Blvd. Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Every Monday from 8:30 am – 9:30 am"
+      ],
+      "hours_es": [
+        "Repartos de comida todos los lunes de 8:30 am a 9:30 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 342-6299",
+      "contact_es": "(760) 342-6299",
+      "phones": [
+        "+17603426299"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Mon"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 15,
+      "name": "Desert Hot Springs Senior Center",
+      "city": "Desert Hot Springs",
+      "address": "11777 West Dr. Desert Hot Springs, CA 92240",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions every 3rd Wednesday from 9 to 11am or until all food is distributed.",
+        "Desert Hot Springs Senior Center only serves seniors over 55 years old."
+      ],
+      "hours_es": [
+        "Repartos de comida cada 3.er miércoles de 9 a 11 am o hasta que se reparta toda la comida.",
+        "El Desert Hot Springs Senior Center solo atiende a personas mayores de 55 años."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 329-0222",
+      "contact_es": "(760) 329-0222",
+      "phones": [
+        "+17603290222"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Wed"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 18,
+      "name": "Iglesia Fraternidad Cristiana",
+      "city": "Indio",
+      "address": "83151 Requa Ave. Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distribution every 3rd Tuesday"
+      ],
+      "hours_es": [
+        "Reparto de comida cada 3.er martes"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 342-0692",
+      "contact_es": "(760) 342-0692",
+      "phones": [
+        "+17603420692"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 19,
+      "name": "La Mision de San Juan Diego",
+      "city": "North Shore/Mecca",
+      "address": "100110 Compass Dr. North Shore/Mecca, CA 92254",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distribution Every 1st Tuesday of the month from 5:00 pm – 6:00 pm or until all food is distributed."
+      ],
+      "hours_es": [
+        "Reparto de comida cada 1.er martes del mes de 5:00 pm a 6:00 pm o hasta que se reparta toda la comida."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 899-2012",
+      "contact_es": "(760) 899-2012",
+      "phones": [
+        "+17608992012"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 20,
+      "name": "St. Louis Rey Church",
+      "city": "Cathedral City",
+      "address": "68633 C St. Cathedral City, CA 92234",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distribution 1st Friday of the Month from 9am – 10am"
+      ],
+      "hours_es": [
+        "Reparto de comida el 1.er viernes del mes de 9 am a 10 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)844-6629 or (442)275-6213",
+      "contact_es": "(760)844-6629 o (442)275-6213",
+      "phones": [
+        "+17608446629",
+        "+14422756213"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Fri"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 21,
+      "name": "Grace Church DHS",
+      "city": "Desert Hot Springs",
+      "address": "17400 Bubbling Wells Rd. Desert Hot Springs, CA 92241",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distribution every 1st Tuesday of the month from 5:00 pm to 6:00 pm or until all food is distributed."
+      ],
+      "hours_es": [
+        "Reparto de comida cada 1.er martes del mes de 5:00 pm a 6:00 pm o hasta que se reparta toda la comida."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 251-2416",
+      "contact_es": "(760) 251-2416",
+      "phones": [
+        "+17602512416"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 25,
+      "name": "FIND Mobile Market - Sky Valley Community Center",
+      "city": "Desert Hot Springs",
+      "address": "20905 Hot Springs Rd, Desert Hot Springs, CA 92241",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "3rd Tuesday 4:00pm-5:00pm"
+      ],
+      "hours_es": [
+        "3.er martes de 4:00 pm a 5:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 28,
+      "name": "FIND Mobile Market - Mecca Elementary School",
+      "city": "Mecca",
+      "address": "65250 Coahuilla St. Mecca, CA 92254",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "2nd Monday 4:00pm-6:00pm"
+      ],
+      "hours_es": [
+        "2.º lunes de 4:00 pm a 6:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Mon"
+          ],
+          "weeks": [
+            2
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 29,
+      "name": "FIND Mobile Market - Desert Mirage High School",
+      "city": "Thermal",
+      "address": "86150 Ave 66th Thermal, CA 92274",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "3rd Wednesday 4:00pm-6:00pm"
+      ],
+      "hours_es": [
+        "3.er miércoles de 4:00 pm a 6:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Wed"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 30,
+      "name": "FIND Mobile Market - Cabot Yerxa Elementary School",
+      "city": "Desert Hot Springs",
+      "address": "67067 Desert View Ave. Desert Hot Springs, CA 92240",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "4th Monday 9:00am-11:00am"
+      ],
+      "hours_es": [
+        "4.º lunes de 9:00 am a 11:00 am"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Mon"
+          ],
+          "weeks": [
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 33,
+      "name": "FIND Mobile Market - Coachella Valley High School",
+      "city": "Thermal",
+      "address": "83800 Airport Blvd. Thermal, CA 92274",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "1st Monday 11:00am-12:00pm"
+      ],
+      "hours_es": [
+        "1.er lunes de 11:00 am a 12:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Mon"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 34,
+      "name": "Well in the Desert",
+      "city": "Palm Springs",
+      "address": "181 N. Indian Canyon, Palm Springs, CA 92262",
+      "types": [
+        "pantry",
+        "meals"
+      ],
+      "hours": [
+        "Food Distributions on Saturdays at 6:00 am (until all food is distributed)",
+        "Monday through Friday: Hot Lunch – Call for location"
+      ],
+      "hours_es": [
+        "Repartos de comida los sábados a las 6:00 am (hasta que se reparta toda la comida)",
+        "De lunes a viernes: almuerzo caliente – llame para saber el lugar"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 656-8905",
+      "contact_es": "(760) 656-8905",
+      "phones": [
+        "+17606568905"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ]
+        },
+        {
+          "days": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 35,
+      "name": "Desert Chapel",
+      "city": "Palm Springs",
+      "address": "630 S. Sunrise Way, Palm Springs, CA 92264",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "2nd and 4th Saturday of each month from 7:00 am – 8:00 am"
+      ],
+      "hours_es": [
+        "2.º y 4.º sábado de cada mes de 7:00 am a 8:00 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "760-327-2772",
+      "contact_es": "760-327-2772",
+      "phones": [
+        "+17603272772"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            2,
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 36,
+      "name": "St. Theresa’s Catholic Church",
+      "city": "Palm Springs",
+      "address": "2800 E. Ramon Rd. Palm Springs, CA 92264 – Distributions take place in the school gym, located behind the church.",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions on Mondays from 7:30am – 11:30am",
+        "Emergency food may be picked up on other days during the week, if available. Please call the contact listed below."
+      ],
+      "hours_es": [
+        "Repartos de comida los lunes de 7:30 am a 11:30 am",
+        "Se puede recoger comida de emergencia otros días de la semana, si hay disponible. Por favor llame al contacto que aparece abajo."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 323-2669",
+      "contact_es": "(760) 323-2669",
+      "phones": [
+        "+17603232669"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Mon"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 37,
+      "name": "The Center",
+      "city": "Palm Springs",
+      "address": "The Community Food Bank: 2901 E. Alejo Rd. Palm Springs, CA 92262",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions on Thursdays from 5:00 pm – 7:00 pm"
+      ],
+      "hours_es": [
+        "Repartos de comida los jueves de 5:00 pm a 7:00 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 416-7790",
+      "contact_es": "(760) 416-7790",
+      "phones": [
+        "+17604167790"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 38,
+      "name": "FIND Mobile Market - James O. Jessie Desert Highlands Unity Center",
+      "city": "Palm Springs",
+      "address": "480 W Tramview Rd. Palm Springs, CA 92262",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "2nd and 4th Thursday 4:00pm-6:00pm"
+      ],
+      "hours_es": [
+        "2.º y 4.º jueves de 4:00 pm a 6:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ],
+          "weeks": [
+            2,
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 39,
+      "name": "FIND Mobile Market - Palm Springs Convention Center",
+      "city": "Palm Springs",
+      "address": "277 N. Avenida Caballeros, Palm Springs, CA 92262",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "1st Thursday 4:00pm-5:30pm"
+      ],
+      "hours_es": [
+        "1.er jueves de 4:00 pm a 5:30 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 40,
+      "name": "Palm Desert Oasis Church",
+      "city": "Palm Desert",
+      "address": "74-200 Country Club Dr. Palm Desert, CA 92260",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distribution Every Saturday from 7:30 am – 8:30 am"
+      ],
+      "hours_es": [
+        "Reparto de comida todos los sábados de 7:30 am a 8:30 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 568-0809",
+      "contact_es": "(760) 568-0809",
+      "phones": [
+        "+17605680809"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 41,
+      "name": "The Joslyn Center",
+      "city": "Palm Desert",
+      "address": "73-750 Catalina Way, Palm Desert, CA 92260",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Every Friday from 8:00 am – 10:00 am (or until all food is distributed)",
+        "Open to all ages in the Cove Community."
+      ],
+      "hours_es": [
+        "Todos los viernes de 8:00 am a 10:00 am (o hasta que se reparta toda la comida)",
+        "Abierto a todas las edades de la comunidad de Cove."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "For additional information on the Joslyn Community Food Bank, contact Alex Garcia, at 760-895-4652 or [email protected]",
+      "contact_es": "Para más información sobre el Joslyn Community Food Bank, comuníquese con Alex Garcia al 760-895-4652 o [email protected]",
+      "phones": [
+        "+17608954652"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Fri"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 42,
+      "name": "St. John’s Lutheran Church",
+      "city": "Palm Desert",
+      "address": "42-695 Washington St. Palm Desert, CA 92211",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "3rd Saturday of the month from 7:00 am – 8:00 am"
+      ],
+      "hours_es": [
+        "3.er sábado del mes de 7:00 am a 8:00 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "CALL TO CONFIRM – (760) 345-2122",
+      "contact_es": "LLAME PARA CONFIRMAR – (760) 345-2122",
+      "phones": [
+        "+17603452122"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 43,
+      "name": "St. Margaret’s Church Neighbors 4 Neighbors",
+      "city": "Palm Desert",
+      "address": "47-535 Hwy 74, Palm Desert, CA 92260",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Every Tuesday 10:00 am – 5:00 pm"
+      ],
+      "hours_es": [
+        "Todos los martes de 10:00 am a 5:00 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "Program Director, Zoey Masterson 760-346-2697-x 102",
+      "contact_es": "Dirección del programa: Zoey Masterson 760-346-2697-x 102",
+      "phones": [
+        "+17603462697,102"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 44,
+      "name": "FIND Mobile Market - Palm Desert High School",
+      "city": "Palm Desert",
+      "address": "74910 Aztec Rd. Palm Desert, CA 92260",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "4th Wednesday 4:30pm-6:00pm"
+      ],
+      "hours_es": [
+        "4.º miércoles de 4:30 pm a 6:00 pm"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Wed"
+          ],
+          "weeks": [
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 45,
+      "name": "Iglesia Un Manantial en el Desierto Site",
+      "city": "North Shore",
+      "address": "99241 Access Rd. North Shore, CA 92254",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Every other Thursday at 8pm"
+      ],
+      "hours_es": [
+        "Cada dos jueves a las 8 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 238 – 2186",
+      "contact_es": "(760) 238 – 2186",
+      "phones": [
+        "+17602382186"
+      ],
+      "schedule": null,
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 46,
+      "name": "Galilee Center",
+      "city": "Mecca",
+      "address": "66-101 Hammond Rd. Mecca, CA 92254",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Thursdays 3:00pm – Until All Food is Distributed",
+        "Registration begins at 3:00pm."
+      ],
+      "hours_es": [
+        "Jueves desde las 3:00 pm hasta que se reparta toda la comida",
+        "La inscripción empieza a las 3:00 pm."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "760-396-9100",
+      "contact_es": "760-396-9100",
+      "phones": [
+        "+17603969100"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 47,
+      "name": "Catholic Charities Site #2",
+      "city": "Mecca",
+      "address": "99-155 Sea View Dr. Mecca, CA 92254",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Wednesdays 8:00am-9:15am"
+      ],
+      "hours_es": [
+        "Miércoles de 8:00 am a 9:15 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": null,
+      "contact_es": null,
+      "phones": [],
+      "schedule": [
+        {
+          "days": [
+            "Wed"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 48,
+      "name": "Catholic Charities Site #1",
+      "city": "Mecca",
+      "address": "65-050 Cahuilla St. Mecca, CA 92254",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Wednesdays 8:00am-9:15am"
+      ],
+      "hours_es": [
+        "Miércoles de 8:00 am a 9:15 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": null,
+      "contact_es": null,
+      "phones": [],
+      "schedule": [
+        {
+          "days": [
+            "Wed"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 50,
+      "name": "Community Food Pantry",
+      "city": "Thermal",
+      "address": "81050 Harrison St. Thermal, CA 92274",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Every Monday, Wednesday & Friday from 9:30 am – 11:30 am",
+        "2nd and 4th Wednesday Evening of Each Month from 5:00pm – 6:30pm",
+        "1st Saturday of Each Month from 9:30am – 11:30am"
+      ],
+      "hours_es": [
+        "Repartos de comida todos los lunes, miércoles y viernes de 9:30 am a 11:30 am",
+        "2.º y 4.º miércoles por la tarde de cada mes de 5:00 pm a 6:30 pm",
+        "1.er sábado de cada mes de 9:30 am a 11:30 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": null,
+      "contact_es": null,
+      "phones": [],
+      "schedule": [
+        {
+          "days": [
+            "Mon",
+            "Wed",
+            "Fri"
+          ]
+        },
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 51,
+      "name": "Coachella Valley Rescue Mission",
+      "city": "Indio",
+      "address": "47-470 Van Buren St. Indio, CA 92201",
+      "types": [
+        "pantry",
+        "meals"
+      ],
+      "hours": [
+        "Food Distribution: Wednesdays 8:00am-10:00am",
+        "Hot Meals available Daily",
+        "Breakfast: 6:00am",
+        "Lunch: 12:00pm",
+        "Dinner: 5:00pm"
+      ],
+      "hours_es": [
+        "Reparto de comida: miércoles de 8:00 am a 10:00 am",
+        "Comidas calientes todos los días",
+        "Desayuno: 6:00 am",
+        "Almuerzo: 12:00 pm",
+        "Cena: 5:00 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)347-3512",
+      "contact_es": "(760)347-3512",
+      "phones": [
+        "+17603473512"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sun",
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri",
+            "Sat"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 52,
+      "name": "Destiny Church",
+      "city": "Indio",
+      "address": "82625 Showcase Parkway, Indio, CA 92203",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Every Saturday from 8:00 am – 9:00 am"
+      ],
+      "hours_es": [
+        "Repartos de comida todos los sábados de 8:00 am a 9:00 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 863-0700",
+      "contact_es": "(760) 863-0700",
+      "phones": [
+        "+17608630700"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 53,
+      "name": "Iglesia Bethel",
+      "city": "Indio",
+      "address": "43-907 Jackson St. Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "1st Friday 6:30pm-8:00pm"
+      ],
+      "hours_es": [
+        "1.er viernes de 6:30 pm a 8:00 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)574-8065",
+      "contact_es": "(760)574-8065",
+      "phones": [
+        "+17605748065"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Fri"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 54,
+      "name": "Martha’s Village & Kitchen",
+      "city": "Indio",
+      "address": "83791 Date Ave. Indio, CA 92201",
+      "types": [
+        "pantry",
+        "meals"
+      ],
+      "hours": [
+        "USDA Food Distribution on the 3rd Wednesday of the Month from 8:00 am – 10:00 am",
+        "Emergency Bags Available Monday Through Friday from 8:00 am – 10:00 am AND 1:00 pm – 3:00 pm",
+        "Hot Meals Served in To-Go Containers Monday Through Friday: 11:00 am – 11:45 am"
+      ],
+      "hours_es": [
+        "Reparto de alimentos del USDA el 3.er miércoles del mes de 8:00 am a 10:00 am",
+        "Bolsas de emergencia de lunes a viernes de 8:00 am a 10:00 am Y de 1:00 pm a 3:00 pm",
+        "Comidas calientes en recipientes para llevar de lunes a viernes: 11:00 am a 11:45 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 347-4741",
+      "contact_es": "(760) 347-4741",
+      "phones": [
+        "+17603474741"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Mon",
+            "Tue",
+            "Wed",
+            "Thu",
+            "Fri"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 55,
+      "name": "Nueva Jerusalem",
+      "city": "Indio",
+      "address": "83155 Indio Blvd, Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions 1st and 3rd Thrusday of Each Month from 4:00pm – 6:00pm or until all food is distributed."
+      ],
+      "hours_es": [
+        "Repartos de comida el 1.er y 3.er jueves de cada mes de 4:00 pm a 6:00 pm o hasta que se reparta toda la comida."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": null,
+      "contact_es": null,
+      "phones": [],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ],
+          "weeks": [
+            1,
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 56,
+      "name": "St. John’s Episcopal Church",
+      "city": "Indio",
+      "address": "45319 Deglet Noor St. Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Drive-Thru Food Distribution on the 4th Thursday of Each Month from 2:30 pm – 5:30 pm"
+      ],
+      "hours_es": [
+        "Reparto de comida en auto (drive-thru) el 4.º jueves de cada mes de 2:30 pm a 5:30 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 347-3265",
+      "contact_es": "(760) 347-3265",
+      "phones": [
+        "+17603473265"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ],
+          "weeks": [
+            4
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 57,
+      "name": "Love of Christ",
+      "city": "Indio",
+      "address": "43640 Burr St. Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "2nd Friday of the Month from 6:30 pm – 7:30 pm"
+      ],
+      "hours_es": [
+        "2.º viernes del mes de 6:30 pm a 7:30 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)777-2825",
+      "contact_es": "(760)777-2825",
+      "phones": [
+        "+17607772825"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Fri"
+          ],
+          "weeks": [
+            2
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 58,
+      "name": "FIND Mobile Market Distribution - Shadow Hills High School",
+      "city": "Indio",
+      "address": "39225 Jefferson St. Indio, CA 92201",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "1st Saturday of the month from 8:00 am – 10:00 am"
+      ],
+      "hours_es": [
+        "1.er sábado del mes de 8:00 am a 10:00 am"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 59,
+      "name": "FIND Mobile Market - Mathis Brothers",
+      "city": "Indio",
+      "address": "81410 CA-111, Indio, CA 92201",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "3rd Saturday of the month from 6:30am – 8:30am"
+      ],
+      "hours_es": [
+        "3.er sábado del mes de 6:30 am a 8:30 am"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            3
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 60,
+      "name": "Abundant Life Church",
+      "city": "Indio",
+      "address": "82025 Bliss St. Indio, CA 92201",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Every Saturday from 8:00 am – 9:30 am"
+      ],
+      "hours_es": [
+        "Repartos de comida todos los sábados de 8:00 am a 9:30 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)775-5959",
+      "contact_es": "(760)775-5959",
+      "phones": [
+        "+17607755959"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 62,
+      "name": "Food Now",
+      "city": "Desert Hot Springs",
+      "address": "14080 Palm Dr., Ste E, Desert Hot Springs, CA 92240",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "USDA Foods & Emergency Food Available the 3rd Wednesday & Thursday from 7:30 am – 10:30am",
+        "Drive-Thru Food Distributions on Wednesdays and Thursdays 7:30am – 10:30am"
+      ],
+      "hours_es": [
+        "Alimentos del USDA y comida de emergencia el 3.er miércoles y jueves de 7:30 am a 10:30 am",
+        "Repartos de comida en auto (drive-thru) los miércoles y jueves de 7:30 am a 10:30 am"
+      ],
+      "notes": [
+        "Note: NEW CLIENTS MUST REGISTER FIRST.",
+        "Clients need to register to receive services.",
+        "MUST BRING PROOF OF RESIDENCY, PROOF OF INCOME, AND PROOF OF NUMBER OF DEPENDENTS IN HOUSEHOLD."
+      ],
+      "notes_es": [
+        "Nota: LOS CLIENTES NUEVOS DEBEN INSCRIBIRSE PRIMERO.",
+        "Los clientes deben inscribirse para recibir servicios.",
+        "DEBE TRAER COMPROBANTE DE DOMICILIO, COMPROBANTE DE INGRESOS Y COMPROBANTE DEL NÚMERO DE DEPENDIENTES EN EL HOGAR."
+      ],
+      "contact": "Tom Tragesser – (760) 288-7878",
+      "contact_es": "Tom Tragesser – (760) 288-7878",
+      "phones": [
+        "+17602887878"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Wed",
+            "Thu"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 63,
+      "name": "St. Elizabeth’s Pantry",
+      "city": "Desert Hot Springs",
+      "address": "66700 Pierson Blvd. Desert Hot Springs, CA 92240",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distribution on Tuesdays from 8:30am – 10:30am"
+      ],
+      "hours_es": [
+        "Reparto de comida los martes de 8:30 am a 10:30 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 329 8794",
+      "contact_es": "(760) 329 8794",
+      "phones": [
+        "+17603298794"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 64,
+      "name": "Family Worship Center",
+      "city": "Coachella",
+      "address": "85901 Vista Del Norte, Coachella, CA 92236",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Every Thursday from 6:00 pm – 7:00 pm"
+      ],
+      "hours_es": [
+        "Repartos de comida todos los jueves de 6:00 pm a 7:00 pm"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "Raul Reyes (760) 574-0583",
+      "contact_es": "Raul Reyes (760) 574-0583",
+      "phones": [
+        "+17605740583"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Thu"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 65,
+      "name": "F.I.S.H.",
+      "city": "Coachella",
+      "address": "1612 1st St. Coachella, CA 92236",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "Food Distributions Tuesday, Wednesday & Friday from 8:00 am – 9:00 am"
+      ],
+      "hours_es": [
+        "Repartos de comida martes, miércoles y viernes de 8:00 am a 9:00 am"
+      ],
+      "notes": [
+        "Note: Picture I.D. required for first-time visitors."
+      ],
+      "notes_es": [
+        "Nota: Se requiere identificación con foto para quienes vienen por primera vez."
+      ],
+      "contact": "Ruby (760) 398-9000",
+      "contact_es": "Ruby (760) 398-9000",
+      "phones": [
+        "+17603989000"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue",
+            "Wed",
+            "Fri"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 66,
+      "name": "Centro Libre",
+      "city": "Coachella",
+      "address": "83246 Ave. 50, Coachella, CA 92236",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "USDA Food Distribution on the Last Tuesday of the Month from 5:00 pm – 7:00 pm (May through September)"
+      ],
+      "hours_es": [
+        "Reparto de alimentos del USDA el último martes del mes de 5:00 pm a 7:00 pm (de mayo a septiembre)"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "Lupita Ramirez 760-698-3191",
+      "contact_es": "Lupita Ramirez 760-698-3191",
+      "phones": [
+        "+17606983191"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ],
+          "weeks": [
+            "last"
+          ],
+          "months": [
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 67,
+      "name": "Calvary Christian Center",
+      "city": "Cathedral City",
+      "address": "68550 Dinah Shore Dr. Cathedral City, CA 92234",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "USDA Food Distribution is Saturday (After the 2nd Thursday) 8:00am-10:00am"
+      ],
+      "hours_es": [
+        "El reparto de alimentos del USDA es el sábado (después del 2.º jueves) de 8:00 am a 10:00 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "Kathie Cawthon (760) 656-3525",
+      "contact_es": "Kathie Cawthon (760) 656-3525",
+      "phones": [
+        "+17606563525"
+      ],
+      "schedule": null,
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 68,
+      "name": "Salvation Army",
+      "city": "Cathedral City",
+      "address": "30400 Landau Blvd. Cathedral City, CA 92234",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "USDA Food Distribution 3rd Tuesday of the month 1:00pm-4:00pm",
+        "Emergency Food Distribution every Monday and Friday from 9:00 AM to 10:00 AM."
+      ],
+      "hours_es": [
+        "Reparto de alimentos del USDA el 3.er martes del mes de 1:00 pm a 4:00 pm",
+        "Reparto de comida de emergencia todos los lunes y viernes de 9:00 AM a 10:00 AM."
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 324-2275",
+      "contact_es": "(760) 324-2275",
+      "phones": [
+        "+17603242275"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Tue"
+          ],
+          "weeks": [
+            3
+          ]
+        },
+        {
+          "days": [
+            "Mon",
+            "Fri"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 69,
+      "name": "Cathedral City Senior Center",
+      "city": "Cathedral City",
+      "address": "37171 W. Buddy Rogers Ave. Cathedral City, CA 92234",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "FOOD DISTRIBUTION – Every Monday from 8:30 to 11am"
+      ],
+      "hours_es": [
+        "REPARTO DE COMIDA – Todos los lunes de 8:30 a 11 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760) 321-1548",
+      "contact_es": "(760) 321-1548",
+      "phones": [
+        "+17603211548"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Mon"
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 70,
+      "name": "Vision Eterna",
+      "city": "Cathedral City",
+      "address": "35688 Cathedral Canyon Dr. Ste. 101, Cathedral City, CA 92234",
+      "types": [
+        "pantry"
+      ],
+      "hours": [
+        "1st Saturday of the Month from 8:00 am – 10:00 am"
+      ],
+      "hours_es": [
+        "1.er sábado del mes de 8:00 am a 10:00 am"
+      ],
+      "notes": [],
+      "notes_es": [],
+      "contact": "(760)883-9216",
+      "contact_es": "(760)883-9216",
+      "phones": [
+        "+17608839216"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    },
+    {
+      "id": 71,
+      "name": "FIND Mobile Market - Agua Caliente Elementary School",
+      "city": "Cathedral City",
+      "address": "30800 San Luis Rey Dr. Cathedral City, CA 92234",
+      "types": [
+        "mobile"
+      ],
+      "hours": [
+        "1st Saturday 9:00am-10:00am"
+      ],
+      "hours_es": [
+        "1.er sábado de 9:00 am a 10:00 am"
+      ],
+      "notes": [
+        "See Mobile Market Calendar Each Month for Updates"
+      ],
+      "notes_es": [
+        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+      ],
+      "contact": "FIND Food Bank at (760) 775-3663",
+      "contact_es": "FIND Food Bank al (760) 775-3663",
+      "phones": [
+        "+17607753663"
+      ],
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "weeks": [
+            1
+          ]
+        }
+      ],
+      "confirmed": false,
+      "confirmed_on": null
+    }
+  ]
+}
