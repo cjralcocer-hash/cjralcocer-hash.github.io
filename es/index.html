@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Comida gratis en el Valle de Coachella | Comida Cerca</title>
+<meta name="description" content="Despensas de comida, mercados móviles y comidas calientes gratis en el Valle de Coachella. Busque por ciudad, vea qué abre hoy, llame o vea cómo llegar.">
+<!-- Spanish page. Made from ../index.html: if the English layout changes, update this page too. -->
+<link rel="canonical" href="https://cjralcocer-hash.github.io/es/">
+<link rel="alternate" hreflang="en" href="https://cjralcocer-hash.github.io/">
+<link rel="alternate" hreflang="es" href="https://cjralcocer-hash.github.io/es/">
+<link rel="alternate" hreflang="x-default" href="https://cjralcocer-hash.github.io/">
+
+<!-- Open Graph: how the link looks when shared in WhatsApp, Facebook, texts, etc. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Food Near You · Comida Cerca">
+<meta property="og:title" content="Comida gratis en el Valle de Coachella · Free food in the Coachella Valley">
+<meta property="og:description" content="Despensas de comida, mercados móviles y comidas calientes. Busque por ciudad, vea qué abre hoy, llame o vea cómo llegar. En español e inglés.">
+<meta property="og:url" content="https://cjralcocer-hash.github.io/es/">
+<meta property="og:image" content="https://cjralcocer-hash.github.io/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Comida Cerca: Comida gratis en el Valle de Coachella. Free food in the Coachella Valley.">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#FBF6EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1C1713" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip" href="#results" data-i18n="skip">Ir a la lista</a>
+
+<div class="draft" role="note">
+  <strong data-i18n="draftTitle">Borrador:</strong>
+  <span data-i18n="draftText">los horarios aún no se han verificado. Por favor llame antes de ir.</span>
+</div>
+
+<header class="site">
+  <div class="top">
+    <div class="logo">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M9 7c0-1.5 1-2 1-3.5M14 7c0-1.5 1-2 1-3.5"/></svg></span>
+      <span data-i18n="siteName">Comida Cerca</span>
+    </div>
+    <nav class="lang" aria-label="Language / Idioma">
+      <a href="../" lang="en" hreflang="en">English</a>
+      <a href="./" lang="es" hreflang="es" aria-current="page">Español</a>
+    </nav>
+  </div>
+  <h1 data-i18n="title">Lugares de comida gratis en el Valle de Coachella</h1>
+  <p class="lead" data-i18n="lead">Despensas de comida, mercados móviles y comidas calientes. Busque o filtre, y luego llame o vea cómo llegar.</p>
+</header>
+
+<main>
+  <section class="tools" aria-labelledby="tools-title">
+    <h2 id="tools-title" class="sr-only" data-i18n="toolsTitle">Búsqueda y filtros</h2>
+    <div class="field">
+      <label for="q" data-i18n="searchLabel">Buscar</label>
+      <div class="search">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+        <input id="q" type="search" autocomplete="off" data-i18n-ph="searchPh" placeholder="Nombre, ciudad o calle">
+      </div>
+    </div>
+    <div class="two">
+      <div class="field">
+        <label for="city" data-i18n="cityLabel">Ciudad</label>
+        <select id="city"><option value="" data-i18n="allCities">Todas las ciudades</option></select>
+      </div>
+      <div class="field">
+        <label for="type" data-i18n="typeLabel">Tipo</label>
+        <select id="type">
+          <option value="" data-i18n="allTypes">Todos los tipos</option>
+          <option value="pantry" data-i18n="type_pantry">Despensa de comida</option>
+          <option value="mobile" data-i18n="type_mobile">Mercado móvil</option>
+          <option value="meals" data-i18n="type_meals">Comidas calientes</option>
+        </select>
+      </div>
+    </div>
+    <label class="today" for="today">
+      <input id="today" type="checkbox" role="switch">
+      <span class="today-text"><span data-i18n="openToday">Abierto hoy</span> <span id="todayName" class="today-day"></span></span>
+      <span class="sw" aria-hidden="true"></span>
+    </label>
+  </section>
+
+  <div class="status">
+    <p id="count" aria-live="polite" data-i18n="loading">Cargando la lista…</p>
+    <button type="button" id="clear" class="link-btn" hidden data-i18n="clear">Borrar filtros</button>
+  </div>
+  <p id="unclearNote" class="hint" hidden></p>
+
+  <div id="results" tabindex="-1"></div>
+
+  <noscript><p class="hint">Esta lista necesita JavaScript activado. / This list needs JavaScript turned on.</p></noscript>
+</main>
+
+<footer class="site">
+  <p data-i18n="footer1">Proyecto estudiantil para el Sello Estatal de Compromiso Cívico de California. No lo administra FIND Food Bank.</p>
+  <p><span data-i18n="footer2">La información se copió de la página pública del mapa de FIND Food Bank el 19 de noviembre de 2026. Los horarios pueden cambiar, así que por favor llame antes de ir.</span>
+    <a href="https://findfoodbank.org/map/" rel="noopener" data-i18n="footerSource">Ver la lista original</a></p>
+  <p data-i18n="footer3">Este sitio no recoge ninguna información personal.</p>
+  <p><a href="#top" id="toTop" data-i18n="toTop">Volver arriba</a></p>
+</footer>
+
+<script src="../app.js"></script>
+</body>
+</html>
