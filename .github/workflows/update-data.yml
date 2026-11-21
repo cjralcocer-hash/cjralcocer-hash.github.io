@@ -1,0 +1,43 @@
+name: Update listing data
+
+on:
+  schedule:
+    - cron: '17 14 * * 1'   # every Monday, 14:17 UTC
+  workflow_dispatch:         # "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write   # commit the new "Last checked" date
+  issues: write     # open or update the "needs a human check" issue
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Check listings against FIND Food Bank
+        run: node scripts/update-data.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+      - name: Commit safe changes
+        run: |
+          if git diff --quiet -- data.json; then
+            echo "No changes to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data.json
+            git commit -m "Update last checked date (automatic weekly check)"
+            git push
+          fi
