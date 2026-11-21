@@ -1,8 +1,9 @@
 {
   "source": {
     "url": "https://findfoodbank.org/map/",
-    "copied_on": "2026-11-19",
-    "note": "English text is copied as written on the source page (Coachella Valley cities only). hours_es, notes_es and contact_es are our Spanish translations. types and schedule were worked out from the text. schedule null means the text does not say which days. Nothing is confirmed by phone yet."
+    "calendar_url": "https://findfoodbank.org/map/",
+    "checked_on": "2026-11-20",
+    "note": "Listings come from FIND Food Bank's public map page, checked against FIND's November 2026 Mobile Market calendar on 2026-11-20. Where the two disagree, the calendar is used. Hours are written in plain words in English (hours, notes, contact) and Spanish (hours_es, notes_es, contact_es). Spanish is our translation. types and schedule were worked out from the hours text. schedule null means the text does not say which days. Joslyn Community Food Bank details were checked on joslyncenter.org."
   },
   "places": [
     {
@@ -14,15 +15,15 @@
         "mobile"
       ],
       "hours": [
-        "Food Distributions Every Friday from 7:00 am – 8:30 am"
+        "Every Friday, 7:00 AM to 8:30 AM."
       ],
       "hours_es": [
-        "Repartos de comida todos los viernes de 7:00 am a 8:30 am"
+        "Todos los viernes, de 7:00 AM a 8:30 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)775-3663",
-      "contact_es": "(760)775-3663",
+      "contact": "(760) 775-3663",
+      "contact_es": "(760) 775-3663",
       "phones": [
         "+17607753663"
       ],
@@ -33,8 +34,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 2,
@@ -45,15 +45,15 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Every 2nd Saturday from 9:00 am – 11:00 am"
+        "The 2nd Saturday of each month, 9:00 AM to 11:00 AM."
       ],
       "hours_es": [
-        "Repartos de comida cada 2.º sábado de 9:00 am a 11:00 am"
+        "El segundo sábado de cada mes, de 9:00 AM a 11:00 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)775-6200",
-      "contact_es": "(760)775-6200",
+      "contact": "(760) 775-6200",
+      "contact_es": "(760) 775-6200",
       "phones": [
         "+17607756200"
       ],
@@ -66,9 +66,7 @@
             2
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 3,
@@ -79,15 +77,15 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Every 3rd Thursday from 4 p.m. until the food runs out"
+        "The 3rd Thursday of each month, starting at 4 PM, until the food runs out."
       ],
       "hours_es": [
-        "Repartos de comida cada 3.er jueves desde las 4 p.m. hasta que se acabe la comida"
+        "El tercer jueves de cada mes, desde las 4 PM hasta que se acabe la comida."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)836-1160",
-      "contact_es": "(760)836-1160",
+      "contact": "(760) 836-1160",
+      "contact_es": "(760) 836-1160",
       "phones": [
         "+17608361160"
       ],
@@ -100,9 +98,7 @@
             3
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 4,
@@ -113,10 +109,10 @@
         "pantry"
       ],
       "hours": [
-        "2nd Saturday 7:00am-9:00am"
+        "The 2nd Saturday of each month, 7:00 AM to 9:00 AM."
       ],
       "hours_es": [
-        "2.º sábado de 7:00 am a 9:00 am"
+        "El segundo sábado de cada mes, de 7:00 AM a 9:00 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -134,9 +130,7 @@
             2
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 5,
@@ -147,16 +141,16 @@
         "mobile"
       ],
       "hours": [
-        "3rd Friday 7:00am-9:00am"
+        "The 2nd Monday of each month, 7:00 AM to 9:00 AM."
       ],
       "hours_es": [
-        "3.er viernes de 7:00 am a 9:00 am"
+        "El segundo lunes de cada mes, de 7:00 AM a 9:00 AM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -166,15 +160,14 @@
       "schedule": [
         {
           "days": [
-            "Fri"
+            "Mon"
           ],
           "weeks": [
-            3
+            2
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 6,
@@ -185,16 +178,16 @@
         "mobile"
       ],
       "hours": [
-        "2nd and 4th Friday 4:00pm-6:00pm"
+        "The 2nd and 4th Friday of each month, 4:00 PM to 6:00 PM."
       ],
       "hours_es": [
-        "2.º y 4.º viernes de 4:00 pm a 6:00 pm"
+        "El segundo y cuarto viernes de cada mes, de 4:00 PM a 6:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -212,8 +205,15 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "add_dates": [
+        "2026-11-20"
+      ],
+      "temp": {
+        "until": "2026-11-30",
+        "en": "In November: Friday, Nov. 13 and Friday, Nov. 20 (moved from Nov. 27).",
+        "es": "En noviembre: viernes 13 y viernes 20 de noviembre (cambiado del 27)."
+      },
+      "on_calendar": true
     },
     {
       "id": 7,
@@ -224,16 +224,16 @@
         "mobile"
       ],
       "hours": [
-        "4th Tuesday 4:00pm-6:00pm"
+        "The 4th Tuesday of each month, 4:00 PM to 6:00 PM."
       ],
       "hours_es": [
-        "4.º martes de 4:00 pm a 6:00 pm"
+        "El cuarto martes de cada mes, de 4:00 PM a 6:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -250,28 +250,29 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 8,
       "name": "FIND Mobile Market - La Quinta Library (Walk-Up + Seniors Only)",
       "city": "La Quinta",
-      "address": "78275 Calle Tampico, La Quinta, CA 92253 – Walk-up + Seniors Only",
+      "address": "78275 Calle Tampico, La Quinta, CA 92253",
       "types": [
         "mobile"
       ],
       "hours": [
-        "4th Saturday 7:00am-9:00am"
+        "The 4th Saturday of each month, 7:00 AM to 9:00 AM."
       ],
       "hours_es": [
-        "4.º sábado de 7:00 am a 9:00 am"
+        "El cuarto sábado de cada mes, de 7:00 AM a 9:00 AM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Walk-up only. For seniors only.",
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Solo para quienes llegan a pie. Solo para personas mayores.",
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -288,28 +289,35 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "add_dates": [
+        "2026-11-21"
+      ],
+      "temp": {
+        "until": "2026-11-30",
+        "en": "In November: Saturday, Nov. 21 (moved from Nov. 28).",
+        "es": "En noviembre: sábado 21 de noviembre (cambiado del 28)."
+      },
+      "on_calendar": true
     },
     {
       "id": 9,
       "name": "FIND Mobile Market - West Shores High School",
-      "city": "Thermal",
-      "address": "2381 Shores Hawk, Thermal, CA 92274",
+      "city": "Salton City",
+      "address": "2381 Shore Hawk Ave, Salton City, CA",
       "types": [
         "mobile"
       ],
       "hours": [
-        "2nd Wednesday 8:00am-10:00am"
+        "The 2nd Wednesday of each month, 8:30 AM to 10:00 AM."
       ],
       "hours_es": [
-        "2.º miércoles de 8:00 am a 10:00 am"
+        "El segundo miércoles de cada mes, de 8:30 AM a 10:00 AM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -326,8 +334,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 14,
@@ -338,10 +345,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Every Monday from 8:30 am – 9:30 am"
+        "Every Monday, 8:30 AM to 9:30 AM."
       ],
       "hours_es": [
-        "Repartos de comida todos los lunes de 8:30 am a 9:30 am"
+        "Todos los lunes, de 8:30 AM a 9:30 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -356,9 +363,7 @@
             "Mon"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 15,
@@ -369,12 +374,12 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions every 3rd Wednesday from 9 to 11am or until all food is distributed.",
-        "Desert Hot Springs Senior Center only serves seniors over 55 years old."
+        "The 3rd Wednesday of each month, 9:00 AM to 11:00 AM, or until all the food is gone.",
+        "Only for seniors over 55 years old."
       ],
       "hours_es": [
-        "Repartos de comida cada 3.er miércoles de 9 a 11 am o hasta que se reparta toda la comida.",
-        "El Desert Hot Springs Senior Center solo atiende a personas mayores de 55 años."
+        "El tercer miércoles de cada mes, de 9:00 AM a 11:00 AM, o hasta que se acabe la comida.",
+        "Solo para personas mayores de 55 años."
       ],
       "notes": [],
       "notes_es": [],
@@ -392,9 +397,7 @@
             3
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 18,
@@ -405,10 +408,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distribution every 3rd Tuesday"
+        "The 3rd Tuesday of each month. The time is not listed."
       ],
       "hours_es": [
-        "Reparto de comida cada 3.er martes"
+        "El tercer martes de cada mes. No se indica la hora."
       ],
       "notes": [],
       "notes_es": [],
@@ -426,9 +429,7 @@
             3
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 19,
@@ -439,10 +440,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distribution Every 1st Tuesday of the month from 5:00 pm – 6:00 pm or until all food is distributed."
+        "The 1st Tuesday of each month, 5:00 PM to 6:00 PM, or until all the food is gone."
       ],
       "hours_es": [
-        "Reparto de comida cada 1.er martes del mes de 5:00 pm a 6:00 pm o hasta que se reparta toda la comida."
+        "El primer martes de cada mes, de 5:00 PM a 6:00 PM, o hasta que se acabe la comida."
       ],
       "notes": [],
       "notes_es": [],
@@ -460,9 +461,7 @@
             1
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 20,
@@ -473,15 +472,15 @@
         "pantry"
       ],
       "hours": [
-        "Food Distribution 1st Friday of the Month from 9am – 10am"
+        "The 1st Friday of each month, 9:00 AM to 10:00 AM."
       ],
       "hours_es": [
-        "Reparto de comida el 1.er viernes del mes de 9 am a 10 am"
+        "El primer viernes de cada mes, de 9:00 AM a 10:00 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)844-6629 or (442)275-6213",
-      "contact_es": "(760)844-6629 o (442)275-6213",
+      "contact": "(760) 844-6629 or (442) 275-6213",
+      "contact_es": "(760) 844-6629 o (442) 275-6213",
       "phones": [
         "+17608446629",
         "+14422756213"
@@ -495,9 +494,7 @@
             1
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 21,
@@ -508,10 +505,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distribution every 1st Tuesday of the month from 5:00 pm to 6:00 pm or until all food is distributed."
+        "The 1st Tuesday of each month, 5:00 PM to 6:00 PM, or until all the food is gone."
       ],
       "hours_es": [
-        "Reparto de comida cada 1.er martes del mes de 5:00 pm a 6:00 pm o hasta que se reparta toda la comida."
+        "El primer martes de cada mes, de 5:00 PM a 6:00 PM, o hasta que se acabe la comida."
       ],
       "notes": [],
       "notes_es": [],
@@ -529,9 +526,7 @@
             1
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 25,
@@ -542,16 +537,16 @@
         "mobile"
       ],
       "hours": [
-        "3rd Tuesday 4:00pm-5:00pm"
+        "The 3rd Tuesday of each month, 4:00 PM to 5:00 PM."
       ],
       "hours_es": [
-        "3.er martes de 4:00 pm a 5:00 pm"
+        "El tercer martes de cada mes, de 4:00 PM a 5:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -568,8 +563,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 28,
@@ -580,16 +574,16 @@
         "mobile"
       ],
       "hours": [
-        "2nd Monday 4:00pm-6:00pm"
+        "The 2nd Monday of each month, 4:00 PM to 6:00 PM."
       ],
       "hours_es": [
-        "2.º lunes de 4:00 pm a 6:00 pm"
+        "El segundo lunes de cada mes, de 4:00 PM a 6:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -606,8 +600,12 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": false,
+      "temp": {
+        "until": "2026-11-30",
+        "en": "Not on FIND's November calendar. Call FIND to check: (760) 775-3663.",
+        "es": "No aparece en el calendario de noviembre de FIND. Llame a FIND para confirmar: (760) 775-3663."
+      }
     },
     {
       "id": 29,
@@ -618,16 +616,16 @@
         "mobile"
       ],
       "hours": [
-        "3rd Wednesday 4:00pm-6:00pm"
+        "The 3rd Wednesday of each month, 4:00 PM to 6:00 PM."
       ],
       "hours_es": [
-        "3.er miércoles de 4:00 pm a 6:00 pm"
+        "El tercer miércoles de cada mes, de 4:00 PM a 6:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -644,28 +642,27 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 30,
       "name": "FIND Mobile Market - Cabot Yerxa Elementary School",
       "city": "Desert Hot Springs",
-      "address": "67067 Desert View Ave. Desert Hot Springs, CA 92240",
+      "address": "67076 Desert View Ave. Desert Hot Springs, CA 92240",
       "types": [
         "mobile"
       ],
       "hours": [
-        "4th Monday 9:00am-11:00am"
+        "The 4th Monday of each month, 8:30 AM to 10:00 AM."
       ],
       "hours_es": [
-        "4.º lunes de 9:00 am a 11:00 am"
+        "El cuarto lunes de cada mes, de 8:30 AM a 10:00 AM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -682,8 +679,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 33,
@@ -694,16 +690,16 @@
         "mobile"
       ],
       "hours": [
-        "1st Monday 11:00am-12:00pm"
+        "The 1st Monday of each month, 11:00 AM to 12:00 PM."
       ],
       "hours_es": [
-        "1.er lunes de 11:00 am a 12:00 pm"
+        "El primer lunes de cada mes, de 11:00 AM a 12:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -720,8 +716,12 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": false,
+      "temp": {
+        "until": "2026-11-30",
+        "en": "Not on FIND's November calendar. Call FIND to check: (760) 775-3663.",
+        "es": "No aparece en el calendario de noviembre de FIND. Llame a FIND para confirmar: (760) 775-3663."
+      }
     },
     {
       "id": 34,
@@ -733,12 +733,12 @@
         "meals"
       ],
       "hours": [
-        "Food Distributions on Saturdays at 6:00 am (until all food is distributed)",
-        "Monday through Friday: Hot Lunch – Call for location"
+        "Food giveaway: Saturdays at 6:00 AM, until all the food is gone.",
+        "Hot lunch: Monday to Friday. Call for the location."
       ],
       "hours_es": [
-        "Repartos de comida los sábados a las 6:00 am (hasta que se reparta toda la comida)",
-        "De lunes a viernes: almuerzo caliente – llame para saber el lugar"
+        "Reparto de comida: los sábados a las 6:00 AM, hasta que se acabe la comida.",
+        "Almuerzo caliente: de lunes a viernes. Llame para saber el lugar."
       ],
       "notes": [],
       "notes_es": [],
@@ -762,9 +762,7 @@
             "Fri"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 35,
@@ -775,15 +773,15 @@
         "pantry"
       ],
       "hours": [
-        "2nd and 4th Saturday of each month from 7:00 am – 8:00 am"
+        "The 2nd and 4th Saturday of each month, 7:00 AM to 8:00 AM."
       ],
       "hours_es": [
-        "2.º y 4.º sábado de cada mes de 7:00 am a 8:00 am"
+        "El segundo y cuarto sábado de cada mes, de 7:00 AM a 8:00 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "760-327-2772",
-      "contact_es": "760-327-2772",
+      "contact": "(760) 327-2772",
+      "contact_es": "(760) 327-2772",
       "phones": [
         "+17603272772"
       ],
@@ -797,28 +795,30 @@
             4
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 36,
       "name": "St. Theresa’s Catholic Church",
       "city": "Palm Springs",
-      "address": "2800 E. Ramon Rd. Palm Springs, CA 92264 – Distributions take place in the school gym, located behind the church.",
+      "address": "2800 E. Ramon Rd. Palm Springs, CA 92264",
       "types": [
         "pantry"
       ],
       "hours": [
-        "Food Distributions on Mondays from 7:30am – 11:30am",
-        "Emergency food may be picked up on other days during the week, if available. Please call the contact listed below."
+        "Food giveaway: Mondays, 7:30 AM to 11:30 AM.",
+        "Emergency food may be picked up on other days of the week, if there is any. Please call the number below."
       ],
       "hours_es": [
-        "Repartos de comida los lunes de 7:30 am a 11:30 am",
-        "Se puede recoger comida de emergencia otros días de la semana, si hay disponible. Por favor llame al contacto que aparece abajo."
+        "Reparto de comida: los lunes, de 7:30 AM a 11:30 AM.",
+        "Se puede recoger comida de emergencia otros días de la semana, si hay. Por favor llame al número de abajo."
       ],
-      "notes": [],
-      "notes_es": [],
+      "notes": [
+        "Food is given out in the school gym, behind the church."
+      ],
+      "notes_es": [
+        "La comida se reparte en el gimnasio de la escuela, detrás de la iglesia."
+      ],
       "contact": "(760) 323-2669",
       "contact_es": "(760) 323-2669",
       "phones": [
@@ -830,26 +830,28 @@
             "Mon"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 37,
       "name": "The Center",
       "city": "Palm Springs",
-      "address": "The Community Food Bank: 2901 E. Alejo Rd. Palm Springs, CA 92262",
+      "address": "2901 E. Alejo Rd. Palm Springs, CA 92262",
       "types": [
         "pantry"
       ],
       "hours": [
-        "Food Distributions on Thursdays from 5:00 pm – 7:00 pm"
+        "Every Thursday, 5:00 PM to 7:00 PM."
       ],
       "hours_es": [
-        "Repartos de comida los jueves de 5:00 pm a 7:00 pm"
+        "Todos los jueves, de 5:00 PM a 7:00 PM."
       ],
-      "notes": [],
-      "notes_es": [],
+      "notes": [
+        "This is the Community Food Bank."
+      ],
+      "notes_es": [
+        "Este es el Community Food Bank."
+      ],
       "contact": "(760) 416-7790",
       "contact_es": "(760) 416-7790",
       "phones": [
@@ -861,9 +863,7 @@
             "Thu"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 38,
@@ -874,16 +874,16 @@
         "mobile"
       ],
       "hours": [
-        "2nd and 4th Thursday 4:00pm-6:00pm"
+        "The 2nd and 4th Thursday of each month, 4:00 PM to 6:00 PM."
       ],
       "hours_es": [
-        "2.º y 4.º jueves de 4:00 pm a 6:00 pm"
+        "El segundo y cuarto jueves de cada mes, de 4:00 PM a 6:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -901,8 +901,15 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "add_dates": [
+        "2026-11-19"
+      ],
+      "temp": {
+        "until": "2026-11-30",
+        "en": "In November: Thursday, Nov. 12 and Thursday, Nov. 19 (moved from Nov. 26).",
+        "es": "En noviembre: jueves 12 y jueves 19 de noviembre (cambiado del 26)."
+      },
+      "on_calendar": true
     },
     {
       "id": 39,
@@ -913,16 +920,16 @@
         "mobile"
       ],
       "hours": [
-        "1st Thursday 4:00pm-5:30pm"
+        "The 1st Thursday of each month, 4:00 PM to 6:00 PM."
       ],
       "hours_es": [
-        "1.er jueves de 4:00 pm a 5:30 pm"
+        "El primer jueves de cada mes, de 4:00 PM a 6:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -939,8 +946,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 40,
@@ -951,10 +957,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distribution Every Saturday from 7:30 am – 8:30 am"
+        "Every Saturday, 7:30 AM to 8:30 AM."
       ],
       "hours_es": [
-        "Reparto de comida todos los sábados de 7:30 am a 8:30 am"
+        "Todos los sábados, de 7:30 AM a 8:30 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -969,9 +975,7 @@
             "Sat"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 41,
@@ -982,17 +986,17 @@
         "pantry"
       ],
       "hours": [
-        "Every Friday from 8:00 am – 10:00 am (or until all food is distributed)",
+        "Every Friday, 8:00 AM to 10:00 AM, or until all the food is gone.",
         "Open to all ages in the Cove Community."
       ],
       "hours_es": [
-        "Todos los viernes de 8:00 am a 10:00 am (o hasta que se reparta toda la comida)",
+        "Todos los viernes, de 8:00 AM a 10:00 AM, o hasta que se acabe la comida.",
         "Abierto a todas las edades de la comunidad de Cove."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "For additional information on the Joslyn Community Food Bank, contact Alex Garcia, at 760-895-4652 or [email protected]",
-      "contact_es": "Para más información sobre el Joslyn Community Food Bank, comuníquese con Alex Garcia al 760-895-4652 o [email protected]",
+      "contact": "Alex Garcia, (760) 895-4652",
+      "contact_es": "Alex Garcia, (760) 895-4652",
       "phones": [
         "+17608954652"
       ],
@@ -1003,8 +1007,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "email": "AlexG@JoslynCenter.org"
     },
     {
       "id": 42,
@@ -1015,15 +1018,15 @@
         "pantry"
       ],
       "hours": [
-        "3rd Saturday of the month from 7:00 am – 8:00 am"
+        "The 3rd Saturday of each month, 7:00 AM to 8:00 AM."
       ],
       "hours_es": [
-        "3.er sábado del mes de 7:00 am a 8:00 am"
+        "El tercer sábado de cada mes, de 7:00 AM a 8:00 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "CALL TO CONFIRM – (760) 345-2122",
-      "contact_es": "LLAME PARA CONFIRMAR – (760) 345-2122",
+      "contact": "Call to confirm: (760) 345-2122",
+      "contact_es": "Llame para confirmar: (760) 345-2122",
       "phones": [
         "+17603452122"
       ],
@@ -1036,9 +1039,7 @@
             3
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 43,
@@ -1049,15 +1050,15 @@
         "pantry"
       ],
       "hours": [
-        "Every Tuesday 10:00 am – 5:00 pm"
+        "Every Tuesday, 10:00 AM to 5:00 PM."
       ],
       "hours_es": [
-        "Todos los martes de 10:00 am a 5:00 pm"
+        "Todos los martes, de 10:00 AM a 5:00 PM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "Program Director, Zoey Masterson 760-346-2697-x 102",
-      "contact_es": "Dirección del programa: Zoey Masterson 760-346-2697-x 102",
+      "contact": "Program Director, Zoey Masterson, (760) 346-2697 ext. 102",
+      "contact_es": "Responsable del programa: Zoey Masterson, (760) 346-2697 ext. 102",
       "phones": [
         "+17603462697,102"
       ],
@@ -1067,9 +1068,7 @@
             "Tue"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 44,
@@ -1080,16 +1079,16 @@
         "mobile"
       ],
       "hours": [
-        "4th Wednesday 4:30pm-6:00pm"
+        "The 4th Wednesday of each month, 4:30 PM to 6:00 PM."
       ],
       "hours_es": [
-        "4.º miércoles de 4:30 pm a 6:00 pm"
+        "El cuarto miércoles de cada mes, de 4:30 PM a 6:00 PM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -1106,8 +1105,12 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": false,
+      "temp": {
+        "until": "2026-11-30",
+        "en": "Not on FIND's November calendar. Call FIND to check: (760) 775-3663.",
+        "es": "No aparece en el calendario de noviembre de FIND. Llame a FIND para confirmar: (760) 775-3663."
+      }
     },
     {
       "id": 45,
@@ -1118,21 +1121,19 @@
         "pantry"
       ],
       "hours": [
-        "Every other Thursday at 8pm"
+        "Every other Thursday at 8:00 PM."
       ],
       "hours_es": [
-        "Cada dos jueves a las 8 pm"
+        "Cada dos jueves, a las 8:00 PM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760) 238 – 2186",
-      "contact_es": "(760) 238 – 2186",
+      "contact": "(760) 238-2186",
+      "contact_es": "(760) 238-2186",
       "phones": [
         "+17602382186"
       ],
-      "schedule": null,
-      "confirmed": false,
-      "confirmed_on": null
+      "schedule": null
     },
     {
       "id": 46,
@@ -1143,17 +1144,17 @@
         "pantry"
       ],
       "hours": [
-        "Thursdays 3:00pm – Until All Food is Distributed",
-        "Registration begins at 3:00pm."
+        "Thursdays, starting at 3:00 PM, until all the food is gone.",
+        "Sign-up starts at 3:00 PM."
       ],
       "hours_es": [
-        "Jueves desde las 3:00 pm hasta que se reparta toda la comida",
-        "La inscripción empieza a las 3:00 pm."
+        "Los jueves, desde las 3:00 PM hasta que se acabe la comida.",
+        "La inscripción empieza a las 3:00 PM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "760-396-9100",
-      "contact_es": "760-396-9100",
+      "contact": "(760) 396-9100",
+      "contact_es": "(760) 396-9100",
       "phones": [
         "+17603969100"
       ],
@@ -1163,9 +1164,7 @@
             "Thu"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 47,
@@ -1176,10 +1175,10 @@
         "pantry"
       ],
       "hours": [
-        "Wednesdays 8:00am-9:15am"
+        "Wednesdays, 8:00 AM to 9:15 AM."
       ],
       "hours_es": [
-        "Miércoles de 8:00 am a 9:15 am"
+        "Los miércoles, de 8:00 AM a 9:15 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1192,9 +1191,7 @@
             "Wed"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 48,
@@ -1205,10 +1202,10 @@
         "pantry"
       ],
       "hours": [
-        "Wednesdays 8:00am-9:15am"
+        "Wednesdays, 8:00 AM to 9:15 AM."
       ],
       "hours_es": [
-        "Miércoles de 8:00 am a 9:15 am"
+        "Los miércoles, de 8:00 AM a 9:15 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1221,9 +1218,7 @@
             "Wed"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 50,
@@ -1234,14 +1229,14 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Every Monday, Wednesday & Friday from 9:30 am – 11:30 am",
-        "2nd and 4th Wednesday Evening of Each Month from 5:00pm – 6:30pm",
-        "1st Saturday of Each Month from 9:30am – 11:30am"
+        "Every Monday, Wednesday and Friday, 9:30 AM to 11:30 AM.",
+        "The 2nd and 4th Wednesday evening of each month, 5:00 PM to 6:30 PM.",
+        "The 1st Saturday of each month, 9:30 AM to 11:30 AM."
       ],
       "hours_es": [
-        "Repartos de comida todos los lunes, miércoles y viernes de 9:30 am a 11:30 am",
-        "2.º y 4.º miércoles por la tarde de cada mes de 5:00 pm a 6:30 pm",
-        "1.er sábado de cada mes de 9:30 am a 11:30 am"
+        "Todos los lunes, miércoles y viernes, de 9:30 AM a 11:30 AM.",
+        "El segundo y cuarto miércoles por la tarde de cada mes, de 5:00 PM a 6:30 PM.",
+        "El primer sábado de cada mes, de 9:30 AM a 11:30 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1264,9 +1259,7 @@
             1
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 51,
@@ -1278,23 +1271,17 @@
         "meals"
       ],
       "hours": [
-        "Food Distribution: Wednesdays 8:00am-10:00am",
-        "Hot Meals available Daily",
-        "Breakfast: 6:00am",
-        "Lunch: 12:00pm",
-        "Dinner: 5:00pm"
+        "Food giveaway: Wednesdays, 8:00 AM to 10:00 AM.",
+        "Hot meals every day: breakfast at 6:00 AM, lunch at 12:00 PM, dinner at 5:00 PM."
       ],
       "hours_es": [
-        "Reparto de comida: miércoles de 8:00 am a 10:00 am",
-        "Comidas calientes todos los días",
-        "Desayuno: 6:00 am",
-        "Almuerzo: 12:00 pm",
-        "Cena: 5:00 pm"
+        "Reparto de comida: los miércoles, de 8:00 AM a 10:00 AM.",
+        "Comidas calientes todos los días: desayuno a las 6:00 AM, almuerzo a las 12:00 PM, cena a las 5:00 PM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)347-3512",
-      "contact_es": "(760)347-3512",
+      "contact": "(760) 347-3512",
+      "contact_es": "(760) 347-3512",
       "phones": [
         "+17603473512"
       ],
@@ -1310,9 +1297,7 @@
             "Sat"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 52,
@@ -1323,10 +1308,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Every Saturday from 8:00 am – 9:00 am"
+        "Every Saturday, 8:00 AM to 9:00 AM."
       ],
       "hours_es": [
-        "Repartos de comida todos los sábados de 8:00 am a 9:00 am"
+        "Todos los sábados, de 8:00 AM a 9:00 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1341,9 +1326,7 @@
             "Sat"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 53,
@@ -1354,15 +1337,15 @@
         "pantry"
       ],
       "hours": [
-        "1st Friday 6:30pm-8:00pm"
+        "The 1st Friday of each month, 6:30 PM to 8:00 PM."
       ],
       "hours_es": [
-        "1.er viernes de 6:30 pm a 8:00 pm"
+        "El primer viernes de cada mes, de 6:30 PM a 8:00 PM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)574-8065",
-      "contact_es": "(760)574-8065",
+      "contact": "(760) 574-8065",
+      "contact_es": "(760) 574-8065",
       "phones": [
         "+17605748065"
       ],
@@ -1375,9 +1358,7 @@
             1
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 54,
@@ -1389,14 +1370,14 @@
         "meals"
       ],
       "hours": [
-        "USDA Food Distribution on the 3rd Wednesday of the Month from 8:00 am – 10:00 am",
-        "Emergency Bags Available Monday Through Friday from 8:00 am – 10:00 am AND 1:00 pm – 3:00 pm",
-        "Hot Meals Served in To-Go Containers Monday Through Friday: 11:00 am – 11:45 am"
+        "USDA food giveaway: the 3rd Wednesday of each month, 8:00 AM to 10:00 AM.",
+        "Emergency food bags: Monday to Friday, 8:00 AM to 10:00 AM and 1:00 PM to 3:00 PM.",
+        "Hot meals in to-go containers: Monday to Friday, 11:00 AM to 11:45 AM."
       ],
       "hours_es": [
-        "Reparto de alimentos del USDA el 3.er miércoles del mes de 8:00 am a 10:00 am",
-        "Bolsas de emergencia de lunes a viernes de 8:00 am a 10:00 am Y de 1:00 pm a 3:00 pm",
-        "Comidas calientes en recipientes para llevar de lunes a viernes: 11:00 am a 11:45 am"
+        "Reparto de alimentos del USDA: el tercer miércoles de cada mes, de 8:00 AM a 10:00 AM.",
+        "Bolsas de comida de emergencia: de lunes a viernes, de 8:00 AM a 10:00 AM y de 1:00 PM a 3:00 PM.",
+        "Comidas calientes en recipientes para llevar: de lunes a viernes, de 11:00 AM a 11:45 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1415,9 +1396,7 @@
             "Fri"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 55,
@@ -1428,10 +1407,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions 1st and 3rd Thrusday of Each Month from 4:00pm – 6:00pm or until all food is distributed."
+        "The 1st and 3rd Thursday of each month, 4:00 PM to 6:00 PM, or until all the food is gone."
       ],
       "hours_es": [
-        "Repartos de comida el 1.er y 3.er jueves de cada mes de 4:00 pm a 6:00 pm o hasta que se reparta toda la comida."
+        "El primer y tercer jueves de cada mes, de 4:00 PM a 6:00 PM, o hasta que se acabe la comida."
       ],
       "notes": [],
       "notes_es": [],
@@ -1448,9 +1427,7 @@
             3
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 56,
@@ -1461,10 +1438,10 @@
         "pantry"
       ],
       "hours": [
-        "Drive-Thru Food Distribution on the 4th Thursday of Each Month from 2:30 pm – 5:30 pm"
+        "Drive-thru food giveaway: the 4th Thursday of each month, 2:30 PM to 5:30 PM."
       ],
       "hours_es": [
-        "Reparto de comida en auto (drive-thru) el 4.º jueves de cada mes de 2:30 pm a 5:30 pm"
+        "Reparto de comida en auto (drive-thru): el cuarto jueves de cada mes, de 2:30 PM a 5:30 PM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1482,9 +1459,7 @@
             4
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 57,
@@ -1495,15 +1470,15 @@
         "pantry"
       ],
       "hours": [
-        "2nd Friday of the Month from 6:30 pm – 7:30 pm"
+        "The 2nd Friday of each month, 6:30 PM to 7:30 PM."
       ],
       "hours_es": [
-        "2.º viernes del mes de 6:30 pm a 7:30 pm"
+        "El segundo viernes de cada mes, de 6:30 PM a 7:30 PM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)777-2825",
-      "contact_es": "(760)777-2825",
+      "contact": "(760) 777-2825",
+      "contact_es": "(760) 777-2825",
       "phones": [
         "+17607772825"
       ],
@@ -1516,9 +1491,7 @@
             2
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 58,
@@ -1529,16 +1502,16 @@
         "mobile"
       ],
       "hours": [
-        "1st Saturday of the month from 8:00 am – 10:00 am"
+        "The 1st Saturday of each month, 8:00 AM to 10:00 AM."
       ],
       "hours_es": [
-        "1.er sábado del mes de 8:00 am a 10:00 am"
+        "El primer sábado de cada mes, de 8:00 AM a 10:00 AM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -1555,8 +1528,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 59,
@@ -1567,16 +1539,16 @@
         "mobile"
       ],
       "hours": [
-        "3rd Saturday of the month from 6:30am – 8:30am"
+        "The 3rd Saturday of each month, 6:30 AM to 8:30 AM."
       ],
       "hours_es": [
-        "3.er sábado del mes de 6:30 am a 8:30 am"
+        "El tercer sábado de cada mes, de 6:30 AM a 8:30 AM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -1593,8 +1565,7 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     },
     {
       "id": 60,
@@ -1605,15 +1576,15 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Every Saturday from 8:00 am – 9:30 am"
+        "Every Saturday, 8:00 AM to 9:30 AM."
       ],
       "hours_es": [
-        "Repartos de comida todos los sábados de 8:00 am a 9:30 am"
+        "Todos los sábados, de 8:00 AM a 9:30 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)775-5959",
-      "contact_es": "(760)775-5959",
+      "contact": "(760) 775-5959",
+      "contact_es": "(760) 775-5959",
       "phones": [
         "+17607755959"
       ],
@@ -1623,9 +1594,7 @@
             "Sat"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 62,
@@ -1636,22 +1605,22 @@
         "pantry"
       ],
       "hours": [
-        "USDA Foods & Emergency Food Available the 3rd Wednesday & Thursday from 7:30 am – 10:30am",
-        "Drive-Thru Food Distributions on Wednesdays and Thursdays 7:30am – 10:30am"
+        "USDA food and emergency food: the 3rd Wednesday and Thursday of each month, 7:30 AM to 10:30 AM.",
+        "Drive-thru food giveaway: Wednesdays and Thursdays, 7:30 AM to 10:30 AM."
       ],
       "hours_es": [
-        "Alimentos del USDA y comida de emergencia el 3.er miércoles y jueves de 7:30 am a 10:30 am",
-        "Repartos de comida en auto (drive-thru) los miércoles y jueves de 7:30 am a 10:30 am"
+        "Alimentos del USDA y comida de emergencia: el tercer miércoles y jueves de cada mes, de 7:30 AM a 10:30 AM.",
+        "Reparto de comida en auto (drive-thru): los miércoles y jueves, de 7:30 AM a 10:30 AM."
       ],
       "notes": [
-        "Note: NEW CLIENTS MUST REGISTER FIRST.",
-        "Clients need to register to receive services.",
-        "MUST BRING PROOF OF RESIDENCY, PROOF OF INCOME, AND PROOF OF NUMBER OF DEPENDENTS IN HOUSEHOLD."
+        "New clients must sign up first.",
+        "Clients need to register to get services.",
+        "Bring proof of where you live, proof of income, and proof of how many people (dependents) live in your home."
       ],
       "notes_es": [
-        "Nota: LOS CLIENTES NUEVOS DEBEN INSCRIBIRSE PRIMERO.",
+        "Los clientes nuevos deben inscribirse primero.",
         "Los clientes deben inscribirse para recibir servicios.",
-        "DEBE TRAER COMPROBANTE DE DOMICILIO, COMPROBANTE DE INGRESOS Y COMPROBANTE DEL NÚMERO DE DEPENDIENTES EN EL HOGAR."
+        "Traiga comprobante de domicilio, comprobante de ingresos y comprobante de cuántas personas (dependientes) viven en su hogar."
       ],
       "contact": "Tom Tragesser – (760) 288-7878",
       "contact_es": "Tom Tragesser – (760) 288-7878",
@@ -1665,9 +1634,7 @@
             "Thu"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 63,
@@ -1678,15 +1645,15 @@
         "pantry"
       ],
       "hours": [
-        "Food Distribution on Tuesdays from 8:30am – 10:30am"
+        "Tuesdays, 8:30 AM to 10:30 AM."
       ],
       "hours_es": [
-        "Reparto de comida los martes de 8:30 am a 10:30 am"
+        "Los martes, de 8:30 AM a 10:30 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760) 329 8794",
-      "contact_es": "(760) 329 8794",
+      "contact": "(760) 329-8794",
+      "contact_es": "(760) 329-8794",
       "phones": [
         "+17603298794"
       ],
@@ -1696,9 +1663,7 @@
             "Tue"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 64,
@@ -1709,10 +1674,10 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Every Thursday from 6:00 pm – 7:00 pm"
+        "Every Thursday, 6:00 PM to 7:00 PM."
       ],
       "hours_es": [
-        "Repartos de comida todos los jueves de 6:00 pm a 7:00 pm"
+        "Todos los jueves, de 6:00 PM a 7:00 PM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1727,9 +1692,7 @@
             "Thu"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 65,
@@ -1740,16 +1703,16 @@
         "pantry"
       ],
       "hours": [
-        "Food Distributions Tuesday, Wednesday & Friday from 8:00 am – 9:00 am"
+        "Tuesdays, Wednesdays and Fridays, 8:00 AM to 9:00 AM."
       ],
       "hours_es": [
-        "Repartos de comida martes, miércoles y viernes de 8:00 am a 9:00 am"
+        "Los martes, miércoles y viernes, de 8:00 AM a 9:00 AM."
       ],
       "notes": [
-        "Note: Picture I.D. required for first-time visitors."
+        "Photo ID is required the first time you visit."
       ],
       "notes_es": [
-        "Nota: Se requiere identificación con foto para quienes vienen por primera vez."
+        "Se pide identificación con foto la primera vez que venga."
       ],
       "contact": "Ruby (760) 398-9000",
       "contact_es": "Ruby (760) 398-9000",
@@ -1764,9 +1727,7 @@
             "Fri"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 66,
@@ -1777,15 +1738,15 @@
         "pantry"
       ],
       "hours": [
-        "USDA Food Distribution on the Last Tuesday of the Month from 5:00 pm – 7:00 pm (May through September)"
+        "USDA food giveaway: the last Tuesday of each month, 5:00 PM to 7:00 PM. May through September only."
       ],
       "hours_es": [
-        "Reparto de alimentos del USDA el último martes del mes de 5:00 pm a 7:00 pm (de mayo a septiembre)"
+        "Reparto de alimentos del USDA: el último martes de cada mes, de 5:00 PM a 7:00 PM. Solo de mayo a septiembre."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "Lupita Ramirez 760-698-3191",
-      "contact_es": "Lupita Ramirez 760-698-3191",
+      "contact": "Lupita Ramirez (760) 698-3191",
+      "contact_es": "Lupita Ramirez (760) 698-3191",
       "phones": [
         "+17606983191"
       ],
@@ -1805,9 +1766,7 @@
             9
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 67,
@@ -1818,10 +1777,10 @@
         "pantry"
       ],
       "hours": [
-        "USDA Food Distribution is Saturday (After the 2nd Thursday) 8:00am-10:00am"
+        "USDA food giveaway: the Saturday after the 2nd Thursday of each month, 8:00 AM to 10:00 AM."
       ],
       "hours_es": [
-        "El reparto de alimentos del USDA es el sábado (después del 2.º jueves) de 8:00 am a 10:00 am"
+        "Reparto de alimentos del USDA: el sábado después del segundo jueves de cada mes, de 8:00 AM a 10:00 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1830,9 +1789,17 @@
       "phones": [
         "+17606563525"
       ],
-      "schedule": null,
-      "confirmed": false,
-      "confirmed_on": null
+      "schedule": [
+        {
+          "days": [
+            "Sat"
+          ],
+          "dom": [
+            10,
+            16
+          ]
+        }
+      ]
     },
     {
       "id": 68,
@@ -1843,12 +1810,12 @@
         "pantry"
       ],
       "hours": [
-        "USDA Food Distribution 3rd Tuesday of the month 1:00pm-4:00pm",
-        "Emergency Food Distribution every Monday and Friday from 9:00 AM to 10:00 AM."
+        "USDA food giveaway: the 3rd Tuesday of each month, 1:00 PM to 4:00 PM.",
+        "Emergency food: every Monday and Friday, 9:00 AM to 10:00 AM."
       ],
       "hours_es": [
-        "Reparto de alimentos del USDA el 3.er martes del mes de 1:00 pm a 4:00 pm",
-        "Reparto de comida de emergencia todos los lunes y viernes de 9:00 AM a 10:00 AM."
+        "Reparto de alimentos del USDA: el tercer martes de cada mes, de 1:00 PM a 4:00 PM.",
+        "Comida de emergencia: todos los lunes y viernes, de 9:00 AM a 10:00 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1872,9 +1839,7 @@
             "Fri"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 69,
@@ -1885,10 +1850,10 @@
         "pantry"
       ],
       "hours": [
-        "FOOD DISTRIBUTION – Every Monday from 8:30 to 11am"
+        "Every Monday, 8:30 AM to 11:00 AM."
       ],
       "hours_es": [
-        "REPARTO DE COMIDA – Todos los lunes de 8:30 a 11 am"
+        "Todos los lunes, de 8:30 AM a 11:00 AM."
       ],
       "notes": [],
       "notes_es": [],
@@ -1903,9 +1868,7 @@
             "Mon"
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 70,
@@ -1916,15 +1879,15 @@
         "pantry"
       ],
       "hours": [
-        "1st Saturday of the Month from 8:00 am – 10:00 am"
+        "The 1st Saturday of each month, 8:00 AM to 10:00 AM."
       ],
       "hours_es": [
-        "1.er sábado del mes de 8:00 am a 10:00 am"
+        "El primer sábado de cada mes, de 8:00 AM a 10:00 AM."
       ],
       "notes": [],
       "notes_es": [],
-      "contact": "(760)883-9216",
-      "contact_es": "(760)883-9216",
+      "contact": "(760) 883-9216",
+      "contact_es": "(760) 883-9216",
       "phones": [
         "+17608839216"
       ],
@@ -1937,9 +1900,7 @@
             1
           ]
         }
-      ],
-      "confirmed": false,
-      "confirmed_on": null
+      ]
     },
     {
       "id": 71,
@@ -1950,16 +1911,16 @@
         "mobile"
       ],
       "hours": [
-        "1st Saturday 9:00am-10:00am"
+        "The 1st Saturday of each month, 9:00 AM to 10:00 AM."
       ],
       "hours_es": [
-        "1.er sábado de 9:00 am a 10:00 am"
+        "El primer sábado de cada mes, de 9:00 AM a 10:00 AM."
       ],
       "notes": [
-        "See Mobile Market Calendar Each Month for Updates"
+        "Dates can change each month. See FIND's Mobile Market calendar."
       ],
       "notes_es": [
-        "Consulte el calendario del Mercado Móvil cada mes para ver cambios"
+        "Las fechas pueden cambiar cada mes. Vea el calendario del Mercado Móvil de FIND."
       ],
       "contact": "FIND Food Bank at (760) 775-3663",
       "contact_es": "FIND Food Bank al (760) 775-3663",
@@ -1976,8 +1937,30 @@
           ]
         }
       ],
-      "confirmed": false,
-      "confirmed_on": null
+      "on_calendar": true
     }
-  ]
+  ],
+  "calendar_month": "2026-11",
+  "closure": {
+    "from": "2026-11-26",
+    "to": "2026-11-28",
+    "applies_to": "mobile"
+  },
+  "notices": [
+    {
+      "from": "2026-11-01",
+      "until": "2026-11-28",
+      "en": "FIND Food Bank is closed from Thursday, Nov. 26 to Saturday, Nov. 28, for the holiday. FIND mobile markets do not run on those days.",
+      "es": "FIND Food Bank estará cerrado del jueves 26 al sábado 28 de noviembre por el feriado. Los mercados móviles de FIND no se hacen esos días."
+    }
+  ],
+  "find": {
+    "name": "FIND Food Bank",
+    "address": "83775 Citrus Ave, Indio, CA 92201",
+    "phone": "+17607753663",
+    "phone_display": "(760) 775-3663",
+    "email": "info@findfoodbank.org",
+    "hours_en": "Phone: Monday to Friday, 8 AM to 4:30 PM.",
+    "hours_es": "Teléfono: de lunes a viernes, de 8 AM a 4:30 PM."
+  }
 }

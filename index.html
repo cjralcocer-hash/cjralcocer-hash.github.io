@@ -38,10 +38,7 @@
 
 <p id="langHint" class="lang-hint" hidden><a href="es/" lang="es" hreflang="es">¿Prefiere español? Ver esta página en español</a></p>
 
-<div class="draft" role="note">
-  <strong data-i18n="draftTitle">Draft:</strong>
-  <span data-i18n="draftText">hours are not checked yet. Please call before you go.</span>
-</div>
+<div id="notice" class="notice" role="status" hidden></div>
 
 <header class="site">
   <div class="top">
@@ -101,9 +98,21 @@
   <noscript><p class="hint">This list needs JavaScript turned on. / Esta lista necesita JavaScript activado.</p></noscript>
 </main>
 
+<section class="help" id="contact" aria-labelledby="help-title">
+  <h2 id="help-title" data-i18n="contactTitle">Need help? Contact FIND Food Bank</h2>
+  <p data-i18n="contactLead">FIND Food Bank keeps the list of places and the monthly Mobile Market calendar. They can help if a place has no phone number or if you are not sure where to go.</p>
+  <a class="btn fill" href="tel:+17607753663"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="contactCall">Call (760) 775-3663</span></a>
+  <dl class="help-list">
+    <div><dt data-i18n="contactAddressLabel">Address</dt><dd data-i18n="contactAddress">83775 Citrus Ave, Indio, CA 92201</dd></div>
+    <div><dt data-i18n="contactEmailLabel">Email</dt><dd><a href="mailto:info@findfoodbank.org">info@findfoodbank.org</a></dd></div>
+  </dl>
+  <p class="hint" data-i18n="contactHours">Phone hours: Monday to Friday, 8 AM to 4:30 PM.</p>
+  <p><a class="text-link" href="https://findfoodbank.org/map/" rel="noopener" data-i18n="contactCalendar">See FIND's Mobile Market calendar</a></p>
+</section>
+
 <footer class="site">
   <p data-i18n="footer1">A student project for the California State Seal of Civic Engagement. Not run by FIND Food Bank.</p>
-  <p><span data-i18n="footer2">Information was copied from FIND Food Bank's public map page on November 19, 2026. Hours can change, so please call before you go.</span>
+  <p><span data-i18n="footer2">Information comes from FIND Food Bank's public map page and its November 2026 Mobile Market calendar, checked on November 20, 2026. Hours can change, so please call before you go.</span>
     <a href="https://findfoodbank.org/map/" rel="noopener" data-i18n="footerSource">See the original list</a></p>
   <p data-i18n="footer3">This site does not collect any personal information.</p>
   <p><a href="#top" id="toTop" data-i18n="toTop">Back to top</a></p>

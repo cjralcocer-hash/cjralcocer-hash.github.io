@@ -8,8 +8,6 @@
   var STR = {
     en: {
       skip: 'Skip to the list',
-      draftTitle: 'Draft:',
-      draftText: 'hours are not checked yet. Please call before you go.',
       siteName: 'Food Near You',
       title: 'Free food places in the Coachella Valley',
       lead: 'Food pantries, mobile markets and hot meals. Search or filter, then call or get directions.',
@@ -26,33 +24,38 @@
       openToday: 'Open today',
       loading: 'Loading the list…',
       clear: 'Clear filters',
+      contactTitle: 'Need help? Contact FIND Food Bank',
+      contactLead: 'FIND Food Bank keeps the list of places and the monthly Mobile Market calendar. They can help if a place has no phone number or if you are not sure where to go.',
+      contactCall: 'Call (760) 775-3663',
+      contactAddressLabel: 'Address',
+      contactAddress: '83775 Citrus Ave, Indio, CA 92201',
+      contactEmailLabel: 'Email',
+      contactHours: 'Phone hours: Monday to Friday, 8 AM to 4:30 PM.',
+      contactCalendar: "See FIND's Mobile Market calendar",
       footer1: 'A student project for the California State Seal of Civic Engagement. Not run by FIND Food Bank.',
-      footer2: "Information was copied from FIND Food Bank's public map page on November 19, 2026. Hours can change, so please call before you go.",
+      footer2: "Information comes from FIND Food Bank's public map page and its November 2026 Mobile Market calendar, checked on November 20, 2026. Hours can change, so please call before you go.",
       footerSource: 'See the original list',
       footer3: 'This site does not collect any personal information.',
       toTop: 'Back to top',
       docTitle: 'Free Food in the Coachella Valley | Food Near You',
       count: function (n, total) { return n === total ? 'Showing all ' + total + ' places' : 'Showing ' + n + ' of ' + total + ' places'; },
       none: 'No places match your search.',
-      notConfirmed: 'Not confirmed yet',
-      confirmedOn: function (d) { return 'Confirmed by phone on ' + d; },
       openTodayBadge: 'Open today',
       address: 'Address',
       hours: 'Hours',
-      note: 'Note',
       contact: 'Contact:',
-      map: 'Open map',
-      mapHint: '(opens Google Maps)',
+      email: 'Email:',
+      directions: 'Directions',
+      directionsHint: '(opens Google Maps)',
       call: function (num) { return 'Call ' + num; },
+      callFind: function (num) { return 'Call FIND Food Bank ' + num; },
       ext: 'ext.',
-      noPhone: 'No phone number listed',
+      noPhone: 'No phone number is listed for this site. FIND Food Bank can help.',
       unclear: function (n) { return n === 1 ? '1 place has hours that do not say which days, so "Open today" hides it.' : n + ' places have hours that do not say which days, so "Open today" hides them.'; },
       loadError: 'Sorry, the list could not load. Please refresh the page.'
     },
     es: {
       skip: 'Ir a la lista',
-      draftTitle: 'Borrador:',
-      draftText: 'los horarios aún no se han verificado. Por favor llame antes de ir.',
       siteName: 'Comida Cerca',
       title: 'Lugares de comida gratis en el Valle de Coachella',
       lead: 'Despensas de comida, mercados móviles y comidas calientes. Busque o filtre, y luego llame o vea cómo llegar.',
@@ -69,26 +72,33 @@
       openToday: 'Abierto hoy',
       loading: 'Cargando la lista…',
       clear: 'Borrar filtros',
+      contactTitle: '¿Necesita ayuda? Contacte a FIND Food Bank',
+      contactLead: 'FIND Food Bank mantiene la lista de lugares y el calendario mensual del Mercado Móvil. Pueden ayudarle si un lugar no tiene número de teléfono o si no sabe a dónde ir.',
+      contactCall: 'Llamar al (760) 775-3663',
+      contactAddressLabel: 'Dirección',
+      contactAddress: '83775 Citrus Ave, Indio, CA 92201',
+      contactEmailLabel: 'Correo electrónico',
+      contactHours: 'Horario de teléfono: de lunes a viernes, de 8 AM a 4:30 PM.',
+      contactCalendar: 'Ver el calendario del Mercado Móvil de FIND',
       footer1: 'Proyecto estudiantil para el Sello Estatal de Compromiso Cívico de California. No lo administra FIND Food Bank.',
-      footer2: 'La información se copió de la página pública del mapa de FIND Food Bank el 19 de noviembre de 2026. Los horarios pueden cambiar, así que por favor llame antes de ir.',
+      footer2: 'La información viene de la página pública del mapa de FIND Food Bank y de su calendario del Mercado Móvil de noviembre de 2026, revisados el 20 de noviembre de 2026. Los horarios pueden cambiar, así que por favor llame antes de ir.',
       footerSource: 'Ver la lista original',
       footer3: 'Este sitio no recoge ninguna información personal.',
       toTop: 'Volver arriba',
       docTitle: 'Comida gratis en el Valle de Coachella | Comida Cerca',
       count: function (n, total) { return n === total ? 'Mostrando los ' + total + ' lugares' : 'Mostrando ' + n + ' de ' + total + ' lugares'; },
       none: 'Ningún lugar coincide con su búsqueda.',
-      notConfirmed: 'Aún no confirmado',
-      confirmedOn: function (d) { return 'Confirmado por teléfono el ' + d; },
       openTodayBadge: 'Abierto hoy',
       address: 'Dirección',
       hours: 'Horario',
-      note: 'Nota',
       contact: 'Contacto:',
-      map: 'Ver mapa',
-      mapHint: '(abre Google Maps)',
+      email: 'Correo electrónico:',
+      directions: 'Cómo llegar',
+      directionsHint: '(abre Google Maps)',
       call: function (num) { return 'Llamar al ' + num; },
+      callFind: function (num) { return 'Llamar a FIND Food Bank ' + num; },
       ext: 'ext.',
-      noPhone: 'No hay número de teléfono',
+      noPhone: 'No hay número de teléfono para este lugar. FIND Food Bank puede ayudarle.',
       unclear: function (n) { return n === 1 ? '1 lugar tiene un horario que no dice qué días, así que "Abierto hoy" lo oculta.' : n + ' lugares tienen horarios que no dicen qué días, así que "Abierto hoy" los oculta.'; },
       loadError: 'Lo sentimos, la lista no se pudo cargar. Por favor recargue la página.'
     }
@@ -99,9 +109,7 @@
     clock: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
     info: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>',
     phone: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
-    map: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2z"/><path d="M9 4v14M15 6v14"/></svg>',
-    warn: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3 2 21h20L12 3z"/><path d="M12 10v5M12 18v.5"/></svg>',
-    check: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5 9-10"/></svg>',
+    nav: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-8-8-2z"/></svg>',
     sun: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>'
   };
 
@@ -110,10 +118,11 @@
   var $ = function (id) { return document.getElementById(id); };
   var els = {
     q: $('q'), city: $('city'), type: $('type'), today: $('today'), todayName: $('todayName'),
-    count: $('count'), clear: $('clear'), unclear: $('unclearNote'), results: $('results')
+    count: $('count'), clear: $('clear'), unclear: $('unclearNote'), results: $('results'), notice: $('notice')
   };
 
   var places = [];
+  var info = { calendarMonth: '', closure: null, find: null, notices: [] };
   var lang = document.documentElement.lang === 'es' ? 'es' : 'en';
   // data.json sits next to app.js, so find it from this script's own address (works on both pages).
   var dataUrl = new URL('data.json', document.currentScript ? document.currentScript.src : location.href).href;
@@ -123,6 +132,11 @@
   function testDate() {
     var m = /[?&]date=(\d{4})-(\d{2})-(\d{2})/.exec(location.search);
     return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+  }
+
+  function iso(d) {
+    var m = d.getMonth() + 1, day = d.getDate();
+    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
   }
 
   // On the English page, if the phone is set to Spanish, show a link to the Spanish page. No automatic redirect.
@@ -142,11 +156,16 @@
   }
 
   function norm(s) {
-    return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+    return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   }
 
-  // Is this place giving out food on this date, based on its schedule rules?
+  // Is this place giving out food on this date? Uses its schedule rules, then the November calendar and closure.
   function openOn(p, date) {
+    var today = iso(date);
+    var mobile = p.types.indexOf('mobile') !== -1;
+    if (mobile && info.closure && today >= info.closure.from && today <= info.closure.to) return false;
+    if (p.add_dates && p.add_dates.indexOf(today) !== -1) return true;
+    if (mobile && p.on_calendar === false && info.calendarMonth && today.indexOf(info.calendarMonth) === 0) return false;
     if (!p.schedule) return false;
     var dow = DAYS[date.getDay()];
     var dom = date.getDate();
@@ -157,6 +176,7 @@
     return p.schedule.some(function (r) {
       if (r.days.indexOf(dow) === -1) return false;
       if (r.weeks && !r.weeks.some(function (w) { return w === nth || (w === 'last' && isLast); })) return false;
+      if (r.dom && (dom < r.dom[0] || dom > r.dom[1])) return false;
       if (r.months && r.months.indexOf(month) === -1) return false;
       return true;
     });
@@ -168,16 +188,14 @@
     return '(' + m[1] + ') ' + m[2] + '-' + m[3] + (m[4] ? ' ' + t('ext') + ' ' + m[4] : '');
   }
 
-  function mapUrl(address) {
+  function cleanAddress(address) {
     var a = address.slice(Math.max(0, address.search(/\d/)));
     var m = /^(.*?\bCA,?\s+\d{5})/.exec(a);
-    return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(m ? m[1] : a);
+    return m ? m[1] : a;
   }
 
-  function formatDate(iso) {
-    var p = iso.split('-');
-    var d = new Date(+p[0], +p[1] - 1, +p[2]);
-    return d.toLocaleDateString(lang === 'es' ? 'es-US' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  function directionsUrl(address) {
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(cleanAddress(address));
   }
 
   function applyStaticText() {
@@ -192,6 +210,18 @@
     for (var j = 0; j < ph.length; j++) ph[j].placeholder = t(ph[j].getAttribute('data-i18n-ph'));
     var day = now.toLocaleDateString(lang === 'es' ? 'es-US' : 'en-US', { weekday: 'long' });
     els.todayName.textContent = '(' + day + ')';
+  }
+
+  // Short notices from data.json (for example the holiday closure). They show only between their dates.
+  function showNotices() {
+    var today = iso(now);
+    var list = info.notices.filter(function (n) { return today >= n.from && today <= n.until; });
+    els.notice.textContent = '';
+    list.forEach(function (n) {
+      var p = el('p', null, n[lang]);
+      els.notice.appendChild(p);
+    });
+    els.notice.hidden = !list.length;
   }
 
   function buildCityOptions() {
@@ -213,6 +243,28 @@
     return words.every(function (w) { return hay.indexOf(w) !== -1; });
   }
 
+  function listRow(cls, icon, srLabel, lines) {
+    var row = el('div', 'row' + (cls ? ' ' + cls : ''));
+    row.innerHTML = icon;
+    var box = el('div');
+    if (srLabel) box.appendChild(el('span', 'sr-only', srLabel + ': '));
+    var ul = el('ul');
+    lines.forEach(function (h) { ul.appendChild(el('li', null, h.replace(/(\d) (AM|PM)/g, '$1\u00a0$2'))); });
+    box.appendChild(ul);
+    row.appendChild(box);
+    return row;
+  }
+
+  function button(href, icon, label, fill, external, hint) {
+    var a = el('a', 'btn' + (fill ? ' fill' : ''));
+    a.href = href;
+    if (external) { a.target = '_blank'; a.rel = 'noopener'; }
+    a.innerHTML = icon;
+    a.appendChild(document.createTextNode(label));
+    if (hint) a.appendChild(el('span', 'sr-only', ' ' + hint));
+    return a;
+  }
+
   function card(p, isOpenToday) {
     var c = el('article', 'card');
 
@@ -228,11 +280,6 @@
 
     c.appendChild(el('h2', null, p.name));
 
-    var flag = el('span', p.confirmed ? 'badge ok' : 'badge warn');
-    flag.innerHTML = p.confirmed ? ICON.check : ICON.warn;
-    flag.appendChild(document.createTextNode(p.confirmed && p.confirmed_on ? t('confirmedOn')(formatDate(p.confirmed_on)) : t('notConfirmed')));
-    c.appendChild(flag);
-
     var meta = el('div', 'meta');
 
     var addr = el('div', 'row');
@@ -243,51 +290,39 @@
     addr.appendChild(addrText);
     meta.appendChild(addr);
 
-    var hrs = el('div', 'row');
-    hrs.innerHTML = ICON.clock;
-    var hrsBox = el('div');
-    hrsBox.appendChild(el('span', 'sr-only', t('hours') + ': '));
-    var ul = el('ul');
-    (lang === 'es' ? p.hours_es : p.hours).forEach(function (h) { ul.appendChild(el('li', null, h)); });
-    hrsBox.appendChild(ul);
-    hrs.appendChild(hrsBox);
-    meta.appendChild(hrs);
+    meta.appendChild(listRow('', ICON.clock, t('hours'), lang === 'es' ? p.hours_es : p.hours));
 
-    var notes = lang === 'es' ? p.notes_es : p.notes;
-    if (notes.length) {
-      var nr = el('div', 'row note');
-      nr.innerHTML = ICON.info;
-      var nul = el('ul');
-      notes.forEach(function (n) { nul.appendChild(el('li', null, n)); });
-      nr.appendChild(nul);
-      meta.appendChild(nr);
-    }
+    var notes = (lang === 'es' ? p.notes_es : p.notes).slice();
+    if (p.temp && iso(now) <= p.temp.until) notes.push(p.temp[lang]);
+    if (notes.length) meta.appendChild(listRow('note', ICON.info, '', notes));
 
     var contact = lang === 'es' ? p.contact_es : p.contact;
     if (contact && /[A-Za-zÁÉÍÓÚáéíóúñÑ]{3,}/.test(contact)) {
       // keep phone numbers on one line (non-breaking hyphen)
-      meta.appendChild(el('p', 'contact', t('contact') + ' ' + contact.replace(/(\d)-(\d)/g, '$1\u2011$2').replace(/\) (\d)/g, ')\u00a0$1')));
+      meta.appendChild(el('p', 'contact', t('contact') + ' ' + contact.replace(/(\d)-(\d)/g, '$1‑$2').replace(/\) (\d)/g, ') $1')));
+    }
+    if (p.email) {
+      var mail = el('p', 'contact');
+      mail.appendChild(document.createTextNode(t('email') + ' '));
+      var ma = el('a', 'mail', p.email);
+      ma.href = 'mailto:' + p.email;
+      mail.appendChild(ma);
+      meta.appendChild(mail);
     }
     c.appendChild(meta);
 
+    // Every listing gets a Call button and a Directions button.
     var btns = el('div', 'btns');
-    p.phones.forEach(function (tel) {
-      var a = el('a', 'btn fill');
-      a.href = 'tel:' + tel;
-      a.innerHTML = ICON.phone;
-      a.appendChild(document.createTextNode(t('call')(formatPhone(tel))));
-      btns.appendChild(a);
-    });
-    var m = el('a', 'btn');
-    m.href = mapUrl(p.address);
-    m.target = '_blank';
-    m.rel = 'noopener';
-    m.innerHTML = ICON.map;
-    m.appendChild(document.createTextNode(t('map')));
-    m.appendChild(el('span', 'sr-only', ' ' + t('mapHint')));
-    btns.appendChild(m);
-    if (!p.phones.length) btns.appendChild(el('p', 'nophone', t('noPhone')));
+    if (p.phones.length) {
+      p.phones.forEach(function (tel) {
+        btns.appendChild(button('tel:' + tel, ICON.phone, t('call')(formatPhone(tel)), true));
+      });
+    } else if (info.find) {
+      btns.appendChild(button('tel:' + info.find.phone, ICON.phone, t('callFind')(info.find.phone_display), true));
+    }
+    btns.appendChild(button(directionsUrl(p.address), ICON.nav, t('directions'), false, true, t('directionsHint')));
     c.appendChild(btns);
+    if (!p.phones.length) c.appendChild(el('p', 'nophone', t('noPhone')));
     return c;
   }
 
@@ -350,11 +385,16 @@
   fetch(dataUrl)
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (data) {
+      info.calendarMonth = data.calendar_month || '';
+      info.closure = data.closure || null;
+      info.find = data.find || null;
+      info.notices = data.notices || [];
       places = data.places.slice().sort(function (a, b) {
         return a.city.localeCompare(b.city) || a.name.localeCompare(b.name);
       });
       els.count.removeAttribute('data-i18n');
       buildCityOptions();
+      showNotices();
       render();
     })
     .catch(function () {
