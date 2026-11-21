@@ -412,3 +412,32 @@
       els.count.textContent = t('loadError');
     });
 })();
+
+/* Background palm trees grow with scroll position (CSS reads --grow, 0 to 1).
+   One passive listener, at most one update per animation frame. */
+(function () {
+  'use strict';
+  var root = document.documentElement;
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+  var queued = false;
+  var last = -1;
+
+  function update() {
+    queued = false;
+    var max = root.scrollHeight - window.innerHeight;
+    var g = max > 0 ? Math.min(1, Math.max(0, (window.pageYOffset || root.scrollTop) / max)) : 1;
+    if (Math.abs(g - last) < 0.004 && g !== 1 && g !== 0) return;
+    last = g;
+    root.style.setProperty('--grow', g.toFixed(3));
+  }
+  function queue() {
+    if (queued || (still && still.matches)) return;
+    queued = true;
+    requestAnimationFrame(update);
+  }
+
+  window.addEventListener('scroll', queue, { passive: true });
+  window.addEventListener('resize', queue, { passive: true });
+  window.addEventListener('load', queue);  // the list loads after first paint and changes the page height
+  queue();
+})();
