@@ -1,6 +1,6 @@
 /* Food Near You / Comida Cerca
    Loads data.json and shows the list. No libraries, no tracking, nothing saved on the phone.
-   The English page is /index.html and the Spanish page is /es/index.html. Both use this file.
+   The Spanish page is /index.html and the English page is /en/index.html. Both use this file.
    The page language comes from <html lang="..."> on each page. */
 (function () {
   'use strict';
@@ -11,6 +11,7 @@
       siteName: 'Food Near You',
       title: 'Free food places in the Coachella Valley',
       lead: 'Food pantries, mobile markets and hot meals. Search or filter, then call or get directions.',
+      checkedLine: 'Information from FIND Food Bank. Last checked {date}.',
       toolsTitle: 'Search and filters',
       searchLabel: 'Search',
       searchPh: 'Name, city or street',
@@ -33,7 +34,7 @@
       contactHours: 'Phone hours: Monday to Friday, 8 AM to 4:30 PM.',
       contactCalendar: "See FIND's Mobile Market calendar",
       footer1: 'A student project for the California State Seal of Civic Engagement. Not run by FIND Food Bank.',
-      footer2: "Information comes from FIND Food Bank's public map page and its November 2026 Mobile Market calendar, checked on November 20, 2026. Hours can change, so please call before you go.",
+      footer2: "Information comes from FIND Food Bank's public map page and its monthly Mobile Market calendar. Hours can change, so please call before you go.",
       footerSource: 'See the original list',
       footer3: 'This site does not collect any personal information.',
       toTop: 'Back to top',
@@ -59,6 +60,7 @@
       siteName: 'Comida Cerca',
       title: 'Lugares de comida gratis en el Valle de Coachella',
       lead: 'Despensas de comida, mercados móviles y comidas calientes. Busque o filtre, y luego llame o vea cómo llegar.',
+      checkedLine: 'Información de FIND Food Bank. Última revisión: {date}.',
       toolsTitle: 'Búsqueda y filtros',
       searchLabel: 'Buscar',
       searchPh: 'Nombre, ciudad o calle',
@@ -81,7 +83,7 @@
       contactHours: 'Horario de teléfono: de lunes a viernes, de 8 AM a 4:30 PM.',
       contactCalendar: 'Ver el calendario del Mercado Móvil de FIND',
       footer1: 'Proyecto estudiantil para el Sello Estatal de Compromiso Cívico de California. No lo administra FIND Food Bank.',
-      footer2: 'La información viene de la página pública del mapa de FIND Food Bank y de su calendario del Mercado Móvil de noviembre de 2026, revisados el 20 de noviembre de 2026. Los horarios pueden cambiar, así que por favor llame antes de ir.',
+      footer2: 'La información viene de la página pública del mapa de FIND Food Bank y de su calendario mensual del Mercado Móvil. Los horarios pueden cambiar, así que por favor llame antes de ir.',
       footerSource: 'Ver la lista original',
       footer3: 'Este sitio no recoge ninguna información personal.',
       toTop: 'Volver arriba',
@@ -110,6 +112,9 @@
     info: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>',
     phone: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
     nav: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-8-8-2z"/></svg>',
+    truck: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>',
+    basket: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16l-1.5 10h-13z"/><path d="M8 10l3-6M16 10l-3-6"/></svg>',
+    bowl: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M9 8c0-1.5 1-2 1-3.5M14 8c0-1.5 1-2 1-3.5"/></svg>',
     sun: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>'
   };
 
@@ -118,7 +123,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var els = {
     q: $('q'), city: $('city'), type: $('type'), today: $('today'), todayName: $('todayName'),
-    count: $('count'), clear: $('clear'), unclear: $('unclearNote'), results: $('results'), notice: $('notice')
+    count: $('count'), clear: $('clear'), unclear: $('unclearNote'), results: $('results'), notice: $('notice'), checked: $('checked')
   };
 
   var places = [];
@@ -137,13 +142,6 @@
   function iso(d) {
     var m = d.getMonth() + 1, day = d.getDate();
     return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
-  }
-
-  // On the English page, if the phone is set to Spanish, show a link to the Spanish page. No automatic redirect.
-  function showSpanishHint() {
-    var hint = document.getElementById('langHint');
-    var list = navigator.languages || [navigator.language || 'en'];
-    if (hint && lang === 'en' && /^es\b/i.test(list[0] || '')) hint.hidden = false;
   }
 
   function t(key) { return STR[lang][key]; }
@@ -196,6 +194,11 @@
 
   function directionsUrl(address) {
     return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(cleanAddress(address));
+  }
+
+  function formatDate(isoDate) {
+    var p = isoDate.split('-');
+    return new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString(lang === 'es' ? 'es-US' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
   }
 
   function applyStaticText() {
@@ -269,7 +272,13 @@
     var c = el('article', 'card');
 
     var tags = el('div', 'tags');
-    tags.appendChild(el('span', 'type', p.types.map(function (x) { return t('type_' + x); }).join(' · ')));
+    var TYPE_ICON = { pantry: ICON.basket, mobile: ICON.truck, meals: ICON.bowl };
+    p.types.forEach(function (x) {
+      var ty = el('span', 'type');
+      ty.innerHTML = TYPE_ICON[x] || '';
+      ty.appendChild(document.createTextNode(t('type_' + x)));
+      tags.appendChild(ty);
+    });
     if (isOpenToday) {
       var b = el('span', 'badge now');
       b.innerHTML = ICON.sun;
@@ -380,7 +389,6 @@
   els.clear.addEventListener('click', clearAll);
 
   applyStaticText();
-  showSpanishHint();
 
   fetch(dataUrl)
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -389,6 +397,9 @@
       info.closure = data.closure || null;
       info.find = data.find || null;
       info.notices = data.notices || [];
+      if (data.source && data.source.checked_on && els.checked) {
+        els.checked.textContent = t('checkedLine').replace('{date}', formatDate(data.source.checked_on));
+      }
       places = data.places.slice().sort(function (a, b) {
         return a.city.localeCompare(b.city) || a.name.localeCompare(b.name);
       });

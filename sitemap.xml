@@ -4,13 +4,15 @@
   <url>
     <loc>https://cjralcocer-hash.github.io/</loc>
     <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cjralcocer-hash.github.io/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://cjralcocer-hash.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cjralcocer-hash.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cjralcocer-hash.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cjralcocer-hash.github.io/"/>
   </url>
   <url>
-    <loc>https://cjralcocer-hash.github.io/es/</loc>
+    <loc>https://cjralcocer-hash.github.io/en/</loc>
     <lastmod>2026-11-20</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cjralcocer-hash.github.io/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://cjralcocer-hash.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cjralcocer-hash.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cjralcocer-hash.github.io/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cjralcocer-hash.github.io/"/>
   </url>
 </urlset>
