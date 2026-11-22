@@ -1,0 +1,94 @@
+{
+  "checked_on": "2026-11-21",
+  "note": "Free food places run by churches and community groups (not FIND Food Bank sites), plus corrections to FIND listings. Every entry was checked on the organization's own website or a dated news report; see community-sources.md for the evidence. Spanish is our translation. data.json is not changed by this file.",
+  "places": [
+    {
+      "id": "c1",
+      "name": "Desert Christian Community Church",
+      "org": "The Narrow Door",
+      "city": "Thousand Palms",
+      "address": "31280 Sierra del Sol, Thousand Palms, CA",
+      "types": ["pantry"],
+      "hours": ["Drive-thru food giveaway: the 1st Tuesday of each month, 9:00 AM to 11:00 AM."],
+      "hours_es": ["Reparto de comida en auto (drive-thru): el primer martes de cada mes, de 9:00 AM a 11:00 AM."],
+      "notes": ["Run by The Narrow Door. All are welcome."],
+      "notes_es": ["Lo organiza The Narrow Door. Todos son bienvenidos."],
+      "contact": "The Narrow Door, (760) 775-6200",
+      "contact_es": "The Narrow Door, (760) 775-6200",
+      "phones": ["+17607756200"],
+      "email": "info@thenarrowdoor.org",
+      "schedule": [{ "days": ["Tue"], "weeks": [1] }],
+      "source": {
+        "url": "https://www.thenarrowdoor.org/help",
+        "title": "The Narrow Door: Need Help (drive-thru distributions)",
+        "page_date": "2026-11-18",
+        "checked_on": "2026-11-21"
+      }
+    },
+    {
+      "id": "c2",
+      "name": "El Jardin Apartments",
+      "org": "The Narrow Door",
+      "city": "Coachella",
+      "address": "84711 Avenue 51, Coachella, CA",
+      "types": ["pantry"],
+      "hours": ["Drive-thru food giveaway: the 1st Saturday of each month, 9:00 AM to 10:30 AM."],
+      "hours_es": ["Reparto de comida en auto (drive-thru): el primer sábado de cada mes, de 9:00 AM a 10:30 AM."],
+      "notes": ["Behind the apartments. Enter from the side street.", "Run by The Narrow Door. All are welcome."],
+      "notes_es": ["Detrás de los apartamentos. Entre por la calle lateral.", "Lo organiza The Narrow Door. Todos son bienvenidos."],
+      "contact": "The Narrow Door, (760) 775-6200",
+      "contact_es": "The Narrow Door, (760) 775-6200",
+      "phones": ["+17607756200"],
+      "email": "info@thenarrowdoor.org",
+      "schedule": [{ "days": ["Sat"], "weeks": [1] }],
+      "source": {
+        "url": "https://www.thenarrowdoor.org/help",
+        "title": "The Narrow Door: Need Help (drive-thru distributions)",
+        "page_date": "2026-11-18",
+        "checked_on": "2026-11-21"
+      }
+    },
+    {
+      "id": "c3",
+      "name": "Northgate Community Church",
+      "org": "The Narrow Door",
+      "city": "Cathedral City",
+      "address": "30010 Date Palm Dr, Cathedral City, CA",
+      "types": ["pantry"],
+      "hours": ["Drive-thru food giveaway: the 4th Saturday of each month, 8:00 AM to 10:00 AM."],
+      "hours_es": ["Reparto de comida en auto (drive-thru): el cuarto sábado de cada mes, de 8:00 AM a 10:00 AM."],
+      "notes": ["Run by The Narrow Door. All are welcome."],
+      "notes_es": ["Lo organiza The Narrow Door. Todos son bienvenidos."],
+      "contact": "The Narrow Door, (760) 775-6200",
+      "contact_es": "The Narrow Door, (760) 775-6200",
+      "phones": ["+17607756200"],
+      "email": "info@thenarrowdoor.org",
+      "schedule": [{ "days": ["Sat"], "weeks": [4] }],
+      "source": {
+        "url": "https://www.thenarrowdoor.org/help",
+        "title": "The Narrow Door: Need Help (drive-thru distributions)",
+        "page_date": "2026-11-18",
+        "checked_on": "2026-11-21"
+      }
+    }
+  ],
+  "updates": [
+    {
+      "find_id": 34,
+      "alert": {
+        "en": "The Saturday food giveaway was suspended in September 2026, when Well in the Desert left its building on North Indian Canyon Drive (NBC Palm Springs, Sept. 2, 2026). Weekday meals for people without housing continue through partner churches. Call before you go.",
+        "es": "El reparto de comida de los sábados se suspendió en septiembre de 2026, cuando Well in the Desert dejó su local en North Indian Canyon Drive (NBC Palm Springs, 2 de septiembre de 2026). Las comidas entre semana para personas sin vivienda siguen en iglesias asociadas. Llame antes de ir."
+      },
+      "hours": ["Saturday food giveaway: suspended since September 2026.", "Hot lunch: Monday to Friday. Call for the location."],
+      "hours_es": ["Reparto de comida de los sábados: suspendido desde septiembre de 2026.", "Almuerzo caliente: de lunes a viernes. Llame para saber el lugar."],
+      "schedule": [{ "days": ["Mon", "Tue", "Wed", "Thu", "Fri"] }],
+      "no_directions": true,
+      "source": {
+        "url": "https://www.nbcpalmsprings.com/local-and-community/2026/09/02/well-in-the-desert-suspends-saturday-food-bank-after-palm-springs-move",
+        "title": "NBC Palm Springs: Well in the Desert suspends Saturday food bank after Palm Springs move",
+        "page_date": "2026-09-02",
+        "checked_on": "2026-11-21"
+      }
+    }
+  ]
+}

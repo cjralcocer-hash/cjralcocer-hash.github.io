@@ -29,8 +29,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#F6F1E1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#101D18" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f9f0da" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#091d15" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -38,8 +38,8 @@
 
 <nav class="langbar" aria-label="Idioma / Language">
   <div class="langbar-in">
-    <a class="lb lb-cur" href="./" lang="es" hreflang="es" aria-current="page">Español</a>
-    <a class="lb lb-other" href="en/" lang="en" hreflang="en"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.500 18.300 12 21c-2.500-2.700-3.800-5.700-3.800-9S9.500 5.700 12 3z"/></svg><span>Read in English</span></a>
+    <span class="lb-cur" lang="es"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>Español</span>
+    <a class="lb-other" href="en/" lang="en" hreflang="en">Read in English <span aria-hidden="true">→</span></a>
   </div>
 </nav>
 
@@ -54,24 +54,14 @@
   </div>
   <h1 data-i18n="title">Lugares de comida gratis en el Valle de Coachella</h1>
   <p class="lead" data-i18n="lead">Despensas de comida, mercados móviles y comidas calientes. Busque o filtre, y luego llame o vea cómo llegar.</p>
-  <p class="checked" id="checked">Información de FIND Food Bank. Última revisión: 20 de noviembre de 2026.</p>
-  <svg class="hero-art" viewBox="0 0 640 200" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid slice">
-      <rect class="a-sky" width="640" height="200"/>
-      <circle class="a-sun" cx="440" cy="92" r="30"/>
-      <path class="a-far" d="M0 120 L60 92 L130 108 L215 58 L250 74 L300 102 L380 112 L470 96 L560 110 L640 88 V200 H0Z"/>
-      <path class="a-mid" d="M0 146 C80 122 150 122 230 142 S390 164 470 140 S590 122 640 134 V200 H0Z"/>
-      <path class="a-palm" d="M556 164 C558 142 556 122 551 100"/>
-      <path class="a-palm" d="M551 100 C534 92 522 94 512 104 M551 100 C540 86 528 84 518 86 M551 100 C558 84 570 80 582 84 M551 100 C566 94 580 98 588 108 M551 100 C549 88 552 80 558 74"/>
-      <path class="a-ocotillo" d="M300 176 C296 150 288 128 280 108 M300 176 C300 146 302 120 308 100 M300 176 C306 154 318 136 330 124 M300 176 C292 158 276 146 262 142"/>
-      <circle class="a-bloom" cx="280" cy="106" r="4"/><circle class="a-bloom" cx="308" cy="98" r="4"/><circle class="a-bloom" cx="330" cy="122" r="4"/><circle class="a-bloom" cx="262" cy="140" r="4"/>
-      <path class="a-near" d="M0 178 C100 156 200 164 300 182 S520 188 640 168 V200 H0Z"/>
-      <path class="a-handle" d="M86 150 C90 108 168 108 172 150"/>
-      <circle class="a-fruit" cx="104" cy="142" r="15"/>
-      <circle class="a-fruit2" cx="130" cy="134" r="17"/>
-      <circle class="a-fruit" cx="156" cy="143" r="14"/>
-      <path class="a-leaf" d="M128 118 C132 108 142 106 148 108 C146 116 138 120 128 118Z"/>
-      <path class="a-basket" d="M76 150 H182 L168 192 H90Z"/>
-      <path class="a-weave" d="M82 163 H176 M86 176 H172"/>
+  <p class="checked" id="checked">FIND Food Bank: revisado el 20 nov 2026</p>
+  <svg class="hero-art" viewBox="0 0 800 260" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMax slice">
+      <path class="h-far" d="M0 150L40 146 90 139 140 134 190 128 240 121 290 116 340 107 390 100 432 93 470 85 506 77 540 70 570 61 598 54 622 49 640 45 652 50 664 58 676 70 690 84 706 104 726 125 748 145 772 161 800 171V260H0Z"/>
+      <path class="h-turb" d="M664 201V181M664 181l7.5 6M664 181l-9 3.5M664 181l1.5 -9.5M690 200V175M690 175l11.4 3.7M690 175l-8.9 8M690 175l-2.5 -11.7M716 198V176M716 176l2.2 10.3M716 176l-10 -3.3M716 176l7.9 -7.1M744 196V169M744 169l12.8 2M744 169l-8.1 10.1M744 169l-4.7 -12.1M774 192V169M774 169l4.8 9.9M774 169l-11 -0.8M774 169l6.2 -9.1"/>
+      <path class="h-near" d="M0 92L26 86 52 81 78 75 100 71 120 67 136 72 154 69 176 76 198 73 222 84 248 91 272 100 300 110 330 119 362 132 396 143 430 156 466 167 504 179 548 189 600 197 680 201 800 203V260H0Z"/>
+      <path class="h-floor" d="M0 206C200 199 600 199 800 204V260H0Z"/>
+      <path class="h-rows" d="M136 212L-440 260M161.1 212L-360 260M186.3 212L-280 260M211.4 212L-200 260M236.6 212L-120 260M261.7 212L-40 260M286.9 212L40 260M312 212L120 260M337.1 212L200 260M362.3 212L280 260M387.4 212L360 260M412.6 212L440 260M437.7 212L520 260M462.9 212L600 260M488 212L680 260M513.1 212L760 260M538.3 212L840 260M563.4 212L920 260M588.6 212L1000 260M613.7 212L1080 260M638.9 212L1160 260M664 212L1240 260"/>
+      <g class="h-palm"><path class="t" d="M182 224q-0.4 -16.5 -2.2 -33.1M240 224q0.1 -16.1 0.6 -32.1M298 224q-0.2 -15.7 -1 -31.4M356 224q0.2 -16 0.9 -32M414 224q0 -17.3 0.1 -34.5M472 224q-0.5 -17 -2.3 -33.9M150 252q0.3 -27.8 1.7 -55.5M210 252q-0.1 -26.8 -0.6 -53.6M270 252q-0.1 -26.6 -0.5 -53.2M330 252q-0.1 -27.5 -0.7 -55.1M390 252q-0.5 -26.7 -2.5 -53.3M450 252q0.4 -25.5 2 -51"/><path d="M179.8 190.9q-7.3 -6.1 -13.3 1.9M179.8 190.9q-6.5 -8.8 -11.9 -1.3M179.8 190.9q-4 -12.1 -7.4 -5.4M179.8 190.9q-1.9 -13.3 -3.4 -6.9M179.8 190.9q0.8 -13.6 1.4 -7.2M179.8 190.9q3.9 -12.2 7.1 -5.5M179.8 190.9q6.4 -9 11.7 -1.6M179.8 190.9q7.2 -6.7 13.1 1.2M240.6 191.9q-7 -6.6 -12.7 1M240.6 191.9q-6 -9.2 -10.9 -2.2M240.6 191.9q-4 -11.7 -7.2 -5.2M240.6 191.9q-0.7 -13.2 -1.2 -7M240.6 191.9q0.7 -13.2 1.3 -7M240.6 191.9q4.2 -11.5 7.7 -4.9M240.6 191.9q5.9 -9.4 10.7 -2.4M240.6 191.9q7 -6.5 12.7 1.2M297 192.6q-6.9 -6.2 -12.5 1.3M297 192.6q-6.1 -8.5 -11.1 -1.5M297 192.6q-3.7 -11.6 -6.7 -5.3M297 192.6q-1.1 -12.8 -1.9 -6.7M297 192.6q1.1 -12.8 2 -6.7M297 192.6q3.8 -11.5 6.9 -5.1M297 192.6q5.6 -9.5 10.1 -2.7M297 192.6q6.8 -6.4 12.4 1M356.9 192q-7.1 -5.8 -12.9 2M356.9 192q-6.1 -8.9 -11.2 -1.7M356.9 192q-3.7 -11.8 -6.8 -5.4M356.9 192q-1.3 -13 -2.4 -6.8M356.9 192q1 -13.1 1.8 -6.9M356.9 192q4.2 -11.5 7.5 -5M356.9 192q6.1 -8.8 11.2 -1.7M356.9 192q7 -6.3 12.8 1.4M414.1 189.5q-7.5 -7 -13.7 1.3M414.1 189.5q-6.3 -10.1 -11.5 -2.6M414.1 189.5q-4.4 -12.5 -8 -5.5M414.1 189.5q-0.7 -14.2 -1.3 -7.5M414.1 189.5q0.8 -14.2 1.5 -7.5M414.1 189.5q4 -12.8 7.4 -5.8M414.1 189.5q6.7 -9.4 12.1 -1.8M414.1 189.5q7.5 -6.9 13.7 1.3M469.7 190.1q-7.5 -6.5 -13.6 1.7M469.7 190.1q-6.2 -10 -11.2 -2.6M469.7 190.1q-4 -12.5 -7.3 -5.7M469.7 190.1q-0.8 -13.9 -1.5 -7.3M469.7 190.1q1.1 -13.9 2 -7.3M469.7 190.1q4.3 -12.3 7.8 -5.4M469.7 190.1q6.4 -9.5 11.7 -2M469.7 190.1q7.5 -6.1 13.7 2.2M151.7 196.5q-11 -10.4 -20 1.7M151.7 196.5q-9.5 -14.3 -17.3 -3.2M151.7 196.5q-5.8 -18.8 -10.5 -8.6M151.7 196.5q-2.8 -20.4 -5.2 -10.5M151.7 196.5q2.4 -20.5 4.3 -10.6M151.7 196.5q6.3 -18.4 11.5 -8.1M151.7 196.5q10 -13.3 18.2 -1.9M151.7 196.5q11.3 -8.5 20.6 4M209.4 198.4q-10.7 -9.4 -19.5 2.4M209.4 198.4q-9.6 -12.9 -17.5 -1.9M209.4 198.4q-5.9 -17.9 -10.8 -8M209.4 198.4q-2.5 -19.7 -4.6 -10.2M209.4 198.4q1.2 -20 2.2 -10.6M209.4 198.4q5.1 -18.5 9.3 -8.7M209.4 198.4q9.4 -13.3 17.2 -2.4M209.4 198.4q10.6 -9.8 19.3 1.8M269.5 198.8q-10.6 -9.8 -19.2 1.8M269.5 198.8q-9.5 -12.9 -17.3 -2M269.5 198.8q-5.9 -17.8 -10.7 -7.9M269.5 198.8q-1.8 -19.7 -3.3 -10.3M269.5 198.8q2.6 -19.5 4.8 -10.1M269.5 198.8q6.3 -17.4 11.5 -7.5M269.5 198.8q9.5 -13 17.2 -2.2M269.5 198.8q10.6 -9.4 19.3 2.2M329.3 196.9q-10.9 -10.1 -19.9 1.8M329.3 196.9q-8.9 -15.2 -16.1 -4.3M329.3 196.9q-6.6 -18 -12 -7.7M329.3 196.9q-2.6 -20.3 -4.7 -10.5M329.3 196.9q1.4 -20.5 2.6 -10.8M329.3 196.9q5.6 -18.8 10.1 -8.7M329.3 196.9q9.4 -14.3 17.1 -3.2M329.3 196.9q11.1 -9 20.3 3.2M387.5 198.7q-10.8 -8.7 -19.6 3.1M387.5 198.7q-9.3 -13.6 -16.8 -2.8M387.5 198.7q-5.7 -18 -10.4 -8.1M387.5 198.7q-1 -19.9 -1.9 -10.5M387.5 198.7q2.3 -19.7 4.1 -10.2M387.5 198.7q5.9 -17.9 10.6 -8M387.5 198.7q9.2 -13.6 16.8 -2.8M387.5 198.7q10.8 -8.5 19.7 3.4M452 201q-10.2 -9.2 -18.5 2M452 201q-8.3 -13.9 -15.1 -3.8M452 201q-5.1 -17.4 -9.3 -8.1M452 201q-2 -18.9 -3.7 -9.8M452 201q1.6 -19 3 -9.9M452 201q4.9 -17.6 9 -8.2M452 201q8.9 -13 16.1 -2.7M452 201q10.1 -9.5 18.4 1.5"/></g>
     </svg>
 </header>
 
@@ -122,7 +112,7 @@
 <div class="help-in">
   <h2 id="help-title" data-i18n="contactTitle">¿Necesita ayuda? Contacte a FIND Food Bank</h2>
   <p data-i18n="contactLead">FIND Food Bank mantiene la lista de lugares y el calendario mensual del Mercado Móvil. Pueden ayudarle si un lugar no tiene número de teléfono o si no sabe a dónde ir.</p>
-  <a class="btn fill" href="tel:+17607753663"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="contactCall">Llamar al (760) 775-3663</span></a>
+  <a class="btn call" href="tel:+17607753663"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span data-i18n="contactCall">Llamar al (760) 775-3663</span></a>
   <dl class="help-list">
     <div><dt data-i18n="contactAddressLabel">Dirección</dt><dd data-i18n="contactAddress">83775 Citrus Ave, Indio, CA 92201</dd></div>
     <div><dt data-i18n="contactEmailLabel">Correo electrónico</dt><dd><a href="mailto:info@findfoodbank.org">info@findfoodbank.org</a></dd></div>

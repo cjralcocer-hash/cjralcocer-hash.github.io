@@ -11,7 +11,17 @@
       siteName: 'Food Near You',
       title: 'Free food places in the Coachella Valley',
       lead: 'Food pantries, mobile markets and hot meals. Search or filter, then call or get directions.',
-      checkedLine: 'Information from FIND Food Bank. Last checked {date}.',
+      checkedFind: 'FIND Food Bank: checked {date}',
+      checkedCommunity: 'Churches and groups: checked {date}',
+      sourceFrom: 'Info from {org}',
+      sourceChecked: 'Checked {date}',
+      stale: 'Not re-checked recently — call first',
+      callForLocation: 'Call for the location',
+      callShort: 'Call',
+      callFindShort: 'Call FIND',
+      alertLabel: 'Notice',
+      months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      shortDate: function (d, m, y) { return m + ' ' + d + ', ' + y; },
       toolsTitle: 'Search and filters',
       searchLabel: 'Search',
       searchPh: 'Name, city or street',
@@ -41,11 +51,10 @@
       docTitle: 'Free Food in the Coachella Valley | Food Near You',
       count: function (n, total) { return n === total ? 'Showing all ' + total + ' places' : 'Showing ' + n + ' of ' + total + ' places'; },
       none: 'No places match your search.',
-      openTodayBadge: 'Open today',
       address: 'Address',
       hours: 'Hours',
-      contact: 'Contact:',
-      email: 'Email:',
+      contact: 'Contact',
+      email: 'Email',
       directions: 'Directions',
       directionsHint: '(opens Google Maps)',
       call: function (num) { return 'Call ' + num; },
@@ -60,7 +69,17 @@
       siteName: 'Comida Cerca',
       title: 'Lugares de comida gratis en el Valle de Coachella',
       lead: 'Despensas de comida, mercados móviles y comidas calientes. Busque o filtre, y luego llame o vea cómo llegar.',
-      checkedLine: 'Información de FIND Food Bank. Última revisión: {date}.',
+      checkedFind: 'FIND Food Bank: revisado el {date}',
+      checkedCommunity: 'Iglesias y grupos: revisado el {date}',
+      sourceFrom: 'Información de {org}',
+      sourceChecked: 'Revisado el {date}',
+      stale: 'No se ha revisado hace tiempo — llame antes de ir',
+      callForLocation: 'Llame para saber el lugar',
+      callShort: 'Llamar',
+      callFindShort: 'Llamar a FIND',
+      alertLabel: 'Aviso',
+      months: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'],
+      shortDate: function (d, m, y) { return d + ' ' + m + ' ' + y; },
       toolsTitle: 'Búsqueda y filtros',
       searchLabel: 'Buscar',
       searchPh: 'Nombre, ciudad o calle',
@@ -90,11 +109,10 @@
       docTitle: 'Comida gratis en el Valle de Coachella | Comida Cerca',
       count: function (n, total) { return n === total ? 'Mostrando los ' + total + ' lugares' : 'Mostrando ' + n + ' de ' + total + ' lugares'; },
       none: 'Ningún lugar coincide con su búsqueda.',
-      openTodayBadge: 'Abierto hoy',
       address: 'Dirección',
       hours: 'Horario',
-      contact: 'Contacto:',
-      email: 'Correo electrónico:',
+      contact: 'Contacto',
+      email: 'Correo electrónico',
       directions: 'Cómo llegar',
       directionsHint: '(abre Google Maps)',
       call: function (num) { return 'Llamar al ' + num; },
@@ -112,11 +130,12 @@
     info: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>',
     phone: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
     nav: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-8-8-2z"/></svg>',
-    truck: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg>',
-    basket: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10h16l-1.5 10h-13z"/><path d="M8 10l3-6M16 10l-3-6"/></svg>',
-    bowl: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18a9 9 0 0 1-18 0z"/><path d="M9 8c0-1.5 1-2 1-3.5M14 8c0-1.5 1-2 1-3.5"/></svg>',
-    sun: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg>'
+    alert: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17v.5"/></svg>',
+    user: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
+    mail: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
+    doc: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>'
   };
+  var TYPES = ['pantry', 'mobile', 'meals'];
 
   var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -129,8 +148,10 @@
   var places = [];
   var info = { calendarMonth: '', closure: null, find: null, notices: [] };
   var lang = document.documentElement.lang === 'es' ? 'es' : 'en';
-  // data.json sits next to app.js, so find it from this script's own address (works on both pages).
-  var dataUrl = new URL('data.json', document.currentScript ? document.currentScript.src : location.href).href;
+  // data.json and community.json sit next to app.js, so find them from this script's own address (works on both pages).
+  var base = document.currentScript ? document.currentScript.src : location.href;
+  var dataUrl = new URL('data.json', base).href;
+  var communityUrl = new URL('community.json', base).href;
   var now = testDate() || new Date();
 
   // For testing only: add ?date=2026-11-21 to the address to pretend it is that day.
@@ -157,10 +178,10 @@
     return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
   }
 
-  // Is this place giving out food on this date? Uses its schedule rules, then the November calendar and closure.
+  // Is this place giving out food on this date? Uses its schedule rules, then FIND's monthly calendar and closure.
   function openOn(p, date) {
     var today = iso(date);
-    var mobile = p.types.indexOf('mobile') !== -1;
+    var mobile = !p.community && p.types.indexOf('mobile') !== -1;  // FIND's calendar and closure cover only FIND markets
     if (mobile && info.closure && today >= info.closure.from && today <= info.closure.to) return false;
     if (p.add_dates && p.add_dates.indexOf(today) !== -1) return true;
     if (mobile && p.on_calendar === false && info.calendarMonth && today.indexOf(info.calendarMonth) === 0) return false;
@@ -196,9 +217,22 @@
     return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(cleanAddress(address));
   }
 
-  function formatDate(isoDate) {
-    var p = isoDate.split('-');
-    return new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString(lang === 'es' ? 'es-US' : 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  function parseIso(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
+    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+  }
+
+  // Built by hand: older phones format dates differently. "20 nov 2026" / "Nov 20, 2026".
+  function shortDate(isoDate) {
+    var d = parseIso(isoDate);
+    return t('shortDate')(d.getDate(), t('months')[d.getMonth()], d.getFullYear());
+  }
+
+  // More than 90 days between the source check and today (or ?date=).
+  function isStale(source) {
+    var d = parseIso(source.checked_on);
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return Math.round((today - d) / 864e5) > 90;
   }
 
   function applyStaticText() {
@@ -219,7 +253,7 @@
   function showNotices() {
     var today = iso(now);
     var list = info.notices.filter(function (n) { return today >= n.from && today <= n.until; });
-    els.notice.textContent = '';
+    els.notice.innerHTML = ICON.info;
     list.forEach(function (n) {
       var p = el('p', null, n[lang]);
       els.notice.appendChild(p);
@@ -241,7 +275,7 @@
     if (city && p.city !== city) return false;
     if (type && p.types.indexOf(type) === -1) return false;
     if (!words.length) return true;
-    var hay = norm([p.name, p.city, p.address, p.hours.join(' '), p.hours_es.join(' '),
+    var hay = norm([p.name, p.org, p.city, p.address, p.hours.join(' '), p.hours_es.join(' '),
       p.types.map(function (x) { return STR.en['type_' + x] + ' ' + STR.es['type_' + x]; }).join(' ')].join(' '));
     return words.every(function (w) { return hay.indexOf(w) !== -1; });
   }
@@ -258,47 +292,78 @@
     return row;
   }
 
-  function button(href, icon, label, fill, external, hint) {
-    var a = el('a', 'btn' + (fill ? ' fill' : ''));
-    a.href = href;
-    if (external) { a.target = '_blank'; a.rel = 'noopener'; }
+  // Screen readers hear a comma, eyes see a middle dot.
+  function sep(parent) {
+    parent.appendChild(el('span', 'sr-only', ', '));
+    var s = el('span', null, ' · ');
+    s.setAttribute('aria-hidden', 'true');
+    parent.appendChild(s);
+  }
+
+  function row(cls, icon, nodes) {
+    var r = el('div', 'row' + (cls ? ' ' + cls : ''));
+    r.innerHTML = icon;
+    var box = el('div');
+    nodes.forEach(function (n) { box.appendChild(typeof n === 'string' ? document.createTextNode(n) : n); });
+    r.appendChild(box);
+    return r;
+  }
+
+  function tile(tag, cls, icon, label, sub) {
+    var a = el(tag, 'btn ' + cls);
     a.innerHTML = icon;
-    a.appendChild(document.createTextNode(label));
-    if (hint) a.appendChild(el('span', 'sr-only', ' ' + hint));
+    a.appendChild(el('span', null, label));
+    if (sub) a.appendChild(el('span', 'num', sub));
     return a;
+  }
+
+  function callTile(tel, label, aria) {
+    // keep "(760) 775-3663" on one line; an extension may wrap
+    var a = tile('a', 'call', ICON.phone, label, formatPhone(tel).replace(') ', ') ').replace('-', '‑'));
+    a.href = 'tel:' + tel;
+    a.setAttribute('aria-label', aria);
+    return a;
+  }
+
+  function host(url) {
+    return new URL(url).hostname.replace(/^www\./, '');
   }
 
   function card(p, isOpenToday) {
     var c = el('article', 'card');
-
-    var tags = el('div', 'tags');
-    var TYPE_ICON = { pantry: ICON.basket, mobile: ICON.truck, meals: ICON.bowl };
-    p.types.forEach(function (x) {
-      var ty = el('span', 'type');
-      ty.innerHTML = TYPE_ICON[x] || '';
-      ty.appendChild(document.createTextNode(t('type_' + x)));
-      tags.appendChild(ty);
-    });
-    if (isOpenToday) {
-      var b = el('span', 'badge now');
-      b.innerHTML = ICON.sun;
-      b.appendChild(document.createTextNode(t('openTodayBadge')));
-      tags.appendChild(b);
-    }
-    c.appendChild(tags);
-
+    c.setAttribute('data-id', p.id);
     c.appendChild(el('h2', null, p.name));
 
+    // One quiet line: ● Open today · Food pantry · Indio
+    var sub = el('p', 'sub');
+    if (isOpenToday) {
+      var o = el('span', 'open');
+      o.appendChild(el('span', 'dot'));
+      o.appendChild(document.createTextNode(t('openToday')));
+      sub.appendChild(o);
+      sep(sub);
+    }
+    sub.appendChild(document.createTextNode(p.types.map(function (x, i) {
+      var s = t('type_' + x);
+      return i ? s.toLowerCase() : s;
+    }).join(', ')));
+    sep(sub);
+    sub.appendChild(document.createTextNode(p.city));
+    c.appendChild(sub);
+
+    if (p.alert) {
+      var al = el('div', 'alert');
+      al.innerHTML = ICON.alert;
+      var ap = el('p');
+      ap.appendChild(el('span', 'sr-only', t('alertLabel') + ': '));
+      ap.appendChild(document.createTextNode(p.alert));
+      al.appendChild(ap);
+      c.appendChild(al);
+    }
+
     var meta = el('div', 'meta');
-
-    var addr = el('div', 'row');
-    addr.innerHTML = ICON.pin;
-    var addrText = el('div');
-    addrText.appendChild(el('span', 'sr-only', t('address') + ': '));
-    addrText.appendChild(document.createTextNode(p.address));
-    addr.appendChild(addrText);
-    meta.appendChild(addr);
-
+    // A place marked "no directions" (for example one that left its building) shows no street address.
+    if (!p.noDirections) meta.appendChild(row('', ICON.pin, [el('span', 'sr-only', t('address') + ': '), p.address]));
     meta.appendChild(listRow('', ICON.clock, t('hours'), lang === 'es' ? p.hours_es : p.hours));
 
     var notes = (lang === 'es' ? p.notes_es : p.notes).slice();
@@ -308,31 +373,100 @@
     var contact = lang === 'es' ? p.contact_es : p.contact;
     if (contact && /[A-Za-zÁÉÍÓÚáéíóúñÑ]{3,}/.test(contact)) {
       // keep phone numbers on one line (non-breaking hyphen)
-      meta.appendChild(el('p', 'contact', t('contact') + ' ' + contact.replace(/(\d)-(\d)/g, '$1‑$2').replace(/\) (\d)/g, ') $1')));
+      meta.appendChild(row('small', ICON.user, [t('contact') + ': ' + contact.replace(/(\d)-(\d)/g, '$1\u2011$2').replace(/\)\s(\d)/g, ')\u00a0$1')]));
     }
     if (p.email) {
-      var mail = el('p', 'contact');
-      mail.appendChild(document.createTextNode(t('email') + ' '));
       var ma = el('a', 'mail', p.email);
       ma.href = 'mailto:' + p.email;
-      mail.appendChild(ma);
-      meta.appendChild(mail);
+      meta.appendChild(row('small link', ICON.mail, [el('span', 'sr-only', t('email') + ': '), ma]));
+    }
+    if (p.source) {
+      var sa = el('a', 'src', t('sourceFrom').replace('{org}', p.org || host(p.source.url)));
+      sa.href = p.source.url;
+      sa.rel = 'noopener';
+      meta.appendChild(row('small link src-line', ICON.doc, [sa, el('span', null, t('sourceChecked').replace('{date}', shortDate(p.source.checked_on)))]));
+      if (isStale(p.source)) meta.appendChild(row('warn', ICON.alert, [t('stale')]));
     }
     c.appendChild(meta);
 
-    // Every listing gets a Call button and a Directions button.
-    var btns = el('div', 'btns');
+    // Every listing gets a Call tile and a Directions tile (or a note when the site has no fixed address).
+    var btns = el('div', 'btns' + (p.phones.length > 1 ? ' three' : ''));
     if (p.phones.length) {
       p.phones.forEach(function (tel) {
-        btns.appendChild(button('tel:' + tel, ICON.phone, t('call')(formatPhone(tel)), true));
+        btns.appendChild(callTile(tel, t('callShort'), t('call')(formatPhone(tel))));
       });
     } else if (info.find) {
-      btns.appendChild(button('tel:' + info.find.phone, ICON.phone, t('callFind')(info.find.phone_display), true));
+      btns.appendChild(callTile(info.find.phone, t('callFindShort'), t('callFind')(info.find.phone_display)));
     }
-    btns.appendChild(button(directionsUrl(p.address), ICON.nav, t('directions'), false, true, t('directionsHint')));
+    if (p.noDirections) {
+      btns.appendChild(tile('div', 'nodir', ICON.pin, t('callForLocation')));
+    } else {
+      var d = tile('a', 'dir', ICON.nav, t('directions'));
+      d.href = directionsUrl(p.address);
+      d.target = '_blank';
+      d.rel = 'noopener';
+      d.appendChild(el('span', 'sr-only', ' ' + t('directionsHint')));
+      btns.appendChild(d);
+    }
     c.appendChild(btns);
     if (!p.phones.length) c.appendChild(el('p', 'nophone', t('noPhone')));
     return c;
+  }
+
+  // community.json: church and group sites, plus corrections to FIND listings. Anything malformed is skipped.
+  function str(x) { return typeof x === 'string' && x ? x : null; }
+  function strs(a) { return Array.isArray(a) ? a.filter(str) : []; }
+
+  function cleanSource(s) {
+    return s && /^https?:\/\//.test(s.url) && parseIso(s.checked_on) ? { url: s.url, checked_on: s.checked_on } : null;
+  }
+
+  function cleanSchedule(sc) {
+    if (!Array.isArray(sc) || !sc.length) return null;
+    return sc.every(function (r) {
+      return r && Array.isArray(r.days) && r.days.length && r.days.every(function (d) { return DAYS.indexOf(d) !== -1; }) &&
+        (r.weeks == null || (Array.isArray(r.weeks) && r.weeks.every(function (w) { return w === 'last' || (w >= 1 && w <= 5); }))) &&
+        (r.dom == null || (Array.isArray(r.dom) && r.dom.length === 2)) &&
+        (r.months == null || Array.isArray(r.months));
+    }) ? sc : null;
+  }
+
+  function cleanPlace(c) {
+    if (!c) return null;
+    var name = str(c.name), city = str(c.city), address = str(c.address), source = cleanSource(c.source);
+    var hours = strs(c.hours), hoursEs = strs(c.hours_es);
+    var types = strs(c.types).filter(function (x) { return TYPES.indexOf(x) !== -1; });
+    if (!name || !city || !address || !source || !types.length || !(hours.length || hoursEs.length)) return null;
+    return {
+      id: String(c.id), name: name, org: str(c.org) || name, city: city, address: address, types: types,
+      hours: hours.length ? hours : hoursEs, hours_es: hoursEs.length ? hoursEs : hours,
+      notes: strs(c.notes), notes_es: strs(c.notes_es), contact: str(c.contact), contact_es: str(c.contact_es),
+      phones: strs(c.phones).filter(function (x) { return /^\+\d{8,15}(,\d+)?$/.test(x); }),
+      email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c.email) ? c.email : null,
+      schedule: cleanSchedule(c.schedule), community: true, source: source
+    };
+  }
+
+  // Checks everything first, then changes the list. Returns community.json's checked_on date, or null.
+  function addCommunity(cj) {
+    if (!cj || typeof cj !== 'object') return null;
+    var added = (Array.isArray(cj.places) ? cj.places : []).map(cleanPlace).filter(Boolean);
+    var byId = {};
+    places.forEach(function (p) { byId[p.id] = p; });
+    var changes = (Array.isArray(cj.updates) ? cj.updates : []).map(function (u) {
+      var p = u && byId[u.find_id], source = u && cleanSource(u.source);
+      if (!p || !source) return null;
+      var a = u.alert || {};
+      var c = { source: source, alert: str(a[lang]) || str(a.en) || str(a.es) };
+      if (strs(u.hours).length) c.hours = strs(u.hours);
+      if (strs(u.hours_es).length) c.hours_es = strs(u.hours_es);
+      if ('schedule' in u) c.schedule = cleanSchedule(u.schedule);
+      if (u.no_directions === true) c.noDirections = true;
+      return { p: p, c: c };
+    }).filter(Boolean);
+    changes.forEach(function (x) { for (var k in x.c) x.p[k] = x.c[k]; });
+    places = places.concat(added);
+    return parseIso(cj.checked_on) ? cj.checked_on : null;
   }
 
   function render() {
@@ -390,19 +524,31 @@
 
   applyStaticText();
 
-  fetch(dataUrl)
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (data) {
+  function getJson(url) {
+    return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
+  }
+
+  // community.json is optional: if it is missing or broken, the FIND list shows as before.
+  Promise.all([getJson(dataUrl), getJson(communityUrl).catch(function () { return null; })])
+    .then(function (res) {
+      var data = res[0];
       info.calendarMonth = data.calendar_month || '';
       info.closure = data.closure || null;
       info.find = data.find || null;
       info.notices = data.notices || [];
-      if (data.source && data.source.checked_on && els.checked) {
-        els.checked.textContent = t('checkedLine').replace('{date}', formatDate(data.source.checked_on));
-      }
-      places = data.places.slice().sort(function (a, b) {
+      places = data.places.slice();
+      var communityDate = null;
+      try { communityDate = addCommunity(res[1]); } catch (e) { communityDate = null; }
+      places.sort(function (a, b) {
         return a.city.localeCompare(b.city) || a.name.localeCompare(b.name);
       });
+      if (data.source && data.source.checked_on && els.checked) {
+        els.checked.textContent = t('checkedFind').replace('{date}', shortDate(data.source.checked_on));
+        if (communityDate) {
+          sep(els.checked);
+          els.checked.appendChild(document.createTextNode(t('checkedCommunity').replace('{date}', shortDate(communityDate))));
+        }
+      }
       els.count.removeAttribute('data-i18n');
       buildCityOptions();
       showNotices();
@@ -411,33 +557,4 @@
     .catch(function () {
       els.count.textContent = t('loadError');
     });
-})();
-
-/* Background palm trees grow with scroll position (CSS reads --grow, 0 to 1).
-   One passive listener, at most one update per animation frame. */
-(function () {
-  'use strict';
-  var root = document.documentElement;
-  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
-  var queued = false;
-  var last = -1;
-
-  function update() {
-    queued = false;
-    var max = root.scrollHeight - window.innerHeight;
-    var g = max > 0 ? Math.min(1, Math.max(0, (window.pageYOffset || root.scrollTop) / max)) : 1;
-    if (Math.abs(g - last) < 0.004 && g !== 1 && g !== 0) return;
-    last = g;
-    root.style.setProperty('--grow', g.toFixed(3));
-  }
-  function queue() {
-    if (queued || (still && still.matches)) return;
-    queued = true;
-    requestAnimationFrame(update);
-  }
-
-  window.addEventListener('scroll', queue, { passive: true });
-  window.addEventListener('resize', queue, { passive: true });
-  window.addEventListener('load', queue);  // the list loads after first paint and changes the page height
-  queue();
 })();
