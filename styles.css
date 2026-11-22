@@ -1,63 +1,65 @@
 /* Coachella Valley desert palette, built in OKLCH.
-   Sand and creosote green set the atmosphere, dusk mauve is the mountain-sunset layer,
-   and one coral (ocotillo bloom) draws the eye: the Call button and the "open today" dot.
-   Light colors first, dark (desert night) in the media query below. */
+   Two colors set the atmosphere: sand (the page) and creosote (deep green-black: text, outlines, dark surfaces).
+   Every other tint is a color-mix of those two. One coral accent draws the eye, and only on
+   Call buttons and the "open today" dot. Light colors first, desert night in the media query below. */
 :root {
-  --sand: oklch(95.5% 0.03 88);        /* page: sun-bleached sand */
-  --paper: oklch(98.4% 0.014 90);      /* form fields */
-  --fg: oklch(25% 0.045 155);          /* creosote, deep green-black */
-  --muted: oklch(41% 0.04 155);
-  --sage: oklch(42% 0.085 155);        /* links, switch, outline buttons */
-  --wash: oklch(91% 0.035 330);        /* mauve-tinted sand: note rows */
-  --dusk: oklch(29% 0.065 320);        /* dusk band behind the help section */
-  --dusk-fg: oklch(95.5% 0.025 88);
-  --coral: oklch(51% 0.19 30);         /* fill behind white text, hand-checked above 4.5:1 */
-  --coral-fg: oklch(99% 0.01 88);
-  --coral-ink: oklch(45% 0.17 30);     /* coral as text on sand */
-  --line: oklch(25% 0.045 155 / 0.16);
-  --edge: oklch(25% 0.045 155 / 0.66); /* field and switch outlines, 3:1 */
-  --notice-bg: oklch(88% 0.07 70);
-  --focus: oklch(45% 0.17 275);
-  --palm: oklch(40% 0.07 155);
-  --palm-alpha: 0.11;
-  /* sky and hills in the header scene */
-  --sky: oklch(88% 0.05 345);
-  --hill-far: oklch(76% 0.07 330);
-  --hill-mid: oklch(64% 0.08 322);
-  --hill-near: oklch(50% 0.07 165);
-  --ground: oklch(86% 0.06 85);
-  --date: oklch(36% 0.07 45);
-  --date-lit: oklch(46% 0.1 40);
+  --bg: oklch(95.5% 0.03 88);          /* sun-bleached sand */
+  --ink: oklch(25% 0.045 155);         /* creosote */
+  --coral: oklch(51% 0.19 30);         /* Call buttons and the open-today dot only */
+  --coral-fg: oklch(99% 0.01 88);      /* 6.15:1 on coral */
+  --bar-bg: var(--ink);
+  --bar-fg: var(--bg);
+  /* the valley drawing in the header: dusk */
+  --sky-1: color-mix(in oklch, var(--ink) 24%, var(--bg));
+  --sky-2: color-mix(in oklch, var(--ink) 3%, var(--bg));
+  --ridge-far: color-mix(in oklch, var(--ink) 34%, var(--bg));
+  --ridge-near: color-mix(in oklch, var(--ink) 50%, var(--bg));
+  --floor: color-mix(in oklch, var(--ink) 12%, var(--bg));
+  --rows: color-mix(in oklch, var(--ink) 26%, var(--bg));
+  --palm: color-mix(in oklch, var(--ink) 82%, var(--bg));
+  --turbine: color-mix(in oklch, var(--ink) 42%, var(--bg));
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --r: 8px;                            /* controls */
+  --ease: cubic-bezier(.22, 1, .36, 1);
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --sand: oklch(21% 0.03 165);
-    --paper: oklch(26% 0.03 165);
-    --fg: oklch(93% 0.025 90);
-    --muted: oklch(79% 0.03 100);
-    --sage: oklch(80% 0.1 150);
-    --wash: oklch(28% 0.05 325);
-    --dusk: oklch(27% 0.06 322);
-    --dusk-fg: oklch(94% 0.025 88);
+    --bg: oklch(21% 0.03 165);
+    --ink: oklch(93% 0.025 90);
     --coral: oklch(74% 0.15 35);
-    --coral-fg: oklch(20% 0.03 165);
-    --coral-ink: oklch(78% 0.14 35);
-    --line: oklch(93% 0.025 90 / 0.16);
-    --edge: oklch(93% 0.025 90 / 0.55);
-    --notice-bg: oklch(34% 0.06 60);
-    --focus: oklch(78% 0.12 275);
-    --palm: oklch(78% 0.09 150);
-    --palm-alpha: 0.14;
-    --sky: oklch(30% 0.07 320);
-    --hill-far: oklch(38% 0.08 325);
-    --hill-mid: oklch(31% 0.07 320);
-    --hill-near: oklch(25% 0.04 165);
-    --ground: oklch(23% 0.03 160);
-    --date: oklch(70% 0.09 50);
-    --date-lit: oklch(78% 0.1 55);
+    --coral-fg: oklch(20% 0.03 165);   /* 7.35:1 on coral */
+    --bar-bg: var(--tint-2);
+    --bar-fg: var(--ink);
+    /* night: dark sky, a glow on the horizon, ridges and palms as silhouettes */
+    --sky-1: color-mix(in oklch, var(--ink) 4%, var(--bg));
+    --sky-2: color-mix(in oklch, var(--ink) 30%, var(--bg));
+    --ridge-far: color-mix(in oklch, var(--ink) 18%, var(--bg));
+    --ridge-near: color-mix(in oklch, var(--ink) 10%, var(--bg));
+    --floor: color-mix(in oklch, var(--ink) 14%, var(--bg));
+    --rows: color-mix(in oklch, var(--ink) 24%, var(--bg));
+    --palm: var(--bg);
+    --turbine: color-mix(in oklch, var(--ink) 40%, var(--bg));
+  }
+}
+:root {
+  --muted: color-mix(in oklch, var(--ink) 72%, var(--bg));      /* 6.5:1 on sand, 5.2:1 on a 10% tint */
+  --tint-1: color-mix(in oklch, var(--ink) 5%, var(--bg));
+  --tint-2: color-mix(in oklch, var(--ink) 10%, var(--bg));
+  --tint-3: color-mix(in oklch, var(--ink) 15%, var(--bg));
+  --line: color-mix(in oklch, var(--ink) 14%, transparent);     /* see-through hairlines */
+  --edge: color-mix(in oklch, var(--ink) 60%, transparent);     /* field and switch outlines, over 3:1 */
+  --coral-hover: color-mix(in oklch, var(--coral) 88%, var(--ink));
+  --bar-muted: color-mix(in oklch, var(--bar-fg) 72%, var(--bar-bg));
+}
+/* Older phones (Safari before 16.2) have no color-mix(): the same tokens, worked out ahead of time. */
+@supports not (color: color-mix(in oklch, red, red)) {
+  :root {
+    --bg: #f9f0da; --ink: #0d2818; --coral: #ba2013; --coral-fg: #fffcf4; --muted: #4a5a43; --tint-1: #ece4ce; --tint-2: #dfd9c2; --tint-3: #d3ceb7; --line: rgb(13 40 24 / 0.14); --edge: rgb(13 40 24 / 0.6); --coral-hover: #a62c00; --bar-muted: #b2b29a; --sky-1: #bcbba2; --sky-2: #f1e9d3; --ridge-far: #a4a68d; --ridge-near: #7d856c; --floor: #dad5bd; --rows: #b7b69e; --palm: #344733; --turbine: #90957c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #091d15; --ink: #eee8d6; --coral: #fa8467; --coral-fg: #071a13; --muted: #a7a996; --tint-1: #13251c; --tint-2: #1d2e24; --tint-3: #27372b; --line: rgb(238 232 214 / 0.14); --edge: rgb(238 232 214 / 0.6); --coral-hover: #f9936c; --bar-muted: #aeaf9c; --sky-1: #11231b; --sky-2: #465345; --ridge-far: #2d3c30; --ridge-near: #1d2e24; --floor: #25352a; --rows: #39473a; --palm: #091d15; --turbine: #5c6657;
+    }
   }
 }
 
@@ -65,152 +67,162 @@
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--sand);
-  color: var(--fg);
+  background: var(--bg);
+  color: var(--ink);
   font-family: var(--sans);
   font-size: 1.125rem;
   line-height: 1.5;
 }
 button, input, select { font: inherit; color: inherit; }
-a { color: var(--sage); text-underline-offset: 3px; }
-::selection { background: oklch(54% 0.19 30 / 0.3); }
-input { caret-color: var(--coral-ink); }
-:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+a { color: var(--ink); text-underline-offset: 3px; }
+::selection { background: color-mix(in oklch, var(--ink) 20%, transparent); }
+input { caret-color: var(--ink); }
+::placeholder { color: var(--muted); opacity: 1; }
+:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+svg { flex: none; }
 
-.skip { position: absolute; left: 8px; top: -60px; z-index: 10; background: var(--fg); color: var(--sand); padding: 12px 16px; border-radius: 4px; font-weight: 600; }
+.skip { position: absolute; left: 8px; top: -60px; z-index: 10; background: var(--ink); color: var(--bg); padding: 12px 16px; border-radius: 4px; font-weight: 600; }
 .skip:focus { top: 8px; }
 
-/* Language: two plain links, the current one is marked with a coral rule */
-.langbar { border-bottom: 1px solid var(--line); }
-.langbar-in { max-width: 760px; margin: 0 auto; padding: 0 16px; display: flex; gap: 24px; }
-.lb { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; font-size: 1rem; font-weight: 500; text-decoration: none; color: var(--sage); border-bottom: 3px solid transparent; margin-bottom: -1px; }
-.lb svg { width: 20px; height: 20px; flex: none; stroke-width: 1.75; }
-.lb-cur { color: var(--fg); font-weight: 600; border-bottom-color: var(--coral); }
-.lb-other { margin-left: auto; text-decoration: underline; }
-.lb-other:hover { color: var(--fg); }
+/* Language: a slim creosote bar. The current language is plain text, the other one is the only link. */
+.langbar { background: var(--bar-bg); color: var(--bar-fg); }
+.langbar-in { max-width: 760px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.lb-cur { display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; color: var(--bar-muted); }
+.lb-cur svg { width: 18px; height: 18px; stroke-width: 1.75; }
+.lb-other { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 8px; margin-right: -8px; font-size: 1rem; font-weight: 700; color: var(--bar-fg); text-decoration: none; }
+.lb-other:hover { text-decoration: underline; }
+.langbar :focus-visible { outline-color: var(--bar-fg); outline-offset: -3px; }
 
-/* Header scene: a Coachella Valley dusk. Dates in the basket, ocotillo, a mauve ridge. */
-.hero-art { display: block; width: 100%; height: auto; max-height: 200px; margin-top: 24px; border-radius: 4px; animation: rise .5s cubic-bezier(.16, 1, .3, 1) both; }
-.a-sky { fill: var(--sky); }
-.a-sun { fill: var(--coral); }
-.a-far { fill: var(--hill-far); }
-.a-mid { fill: var(--hill-mid); }
-.a-near { fill: var(--ground); }
-.a-palm, .a-ocotillo { fill: none; stroke: var(--hill-near); stroke-linecap: round; }
-.a-palm { stroke-width: 4; }
-.a-ocotillo { stroke-width: 2.5; }
-.a-bloom { fill: var(--coral); }
-.a-basket { fill: var(--fg); }
-.a-weave { fill: none; stroke: var(--sand); stroke-opacity: .5; stroke-width: 3; stroke-linecap: round; }
-.a-handle { fill: none; stroke: var(--fg); stroke-width: 6; stroke-linecap: round; }
-.a-fruit { fill: var(--date); }
-.a-fruit2 { fill: var(--date-lit); }
-.a-leaf { fill: var(--hill-near); }
-@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
-
-.notice { padding: 12px 16px; background: var(--notice-bg); color: var(--fg); font-size: 1rem; }
-.notice p { max-width: 728px; margin: 0 auto; font-weight: 500; }
-.notice p + p { margin-top: 8px; }
+.notice { display: grid; grid-template-columns: 20px 1fr; gap: 8px 12px; width: calc(100% - 32px); max-width: 728px; margin: 16px auto 0; padding: 12px 16px; background: var(--tint-1); border: 1px solid var(--line); border-radius: 12px; font-size: 1rem; }
+.notice svg { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.25; }
+.notice p { grid-column: 2; margin: 0; font-weight: 600; }
 
 header.site, main, footer.site { max-width: 760px; margin: 0 auto; }
 header.site { padding: 24px 16px 8px; }
-.logo { display: flex; align-items: center; gap: 8px; font-family: var(--serif); font-weight: 600; font-size: 1.25rem; color: var(--fg); }
-.mark { width: 28px; height: 28px; flex: none; color: var(--sage); }
+.logo { display: flex; align-items: center; gap: 8px; font-family: var(--serif); font-weight: 600; font-size: 1.25rem; }
+.mark { width: 28px; height: 28px; flex: none; }
 .mark svg { display: block; width: 100%; height: 100%; stroke-width: 2; }
 
 h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 7vw, 2.75rem); line-height: 1.1; letter-spacing: -0.01em; margin: 24px 0 12px; text-wrap: balance; max-width: 18ch; }
 .lead { margin: 0 0 12px; color: var(--muted); max-width: 52ch; }
 .checked { margin: 0; color: var(--muted); font-size: 1rem; font-variant-numeric: tabular-nums; }
 
+/* The valley at dusk (night in dark mode), looking west: Santa Rosa and San Jacinto, the pass, date groves. */
+.hero-art {
+  display: block; width: 100%; height: auto; aspect-ratio: 2.2; margin-top: 24px; border-radius: 16px;
+  background: linear-gradient(180deg, var(--sky-1), var(--sky-2));
+  background: linear-gradient(180deg in oklch, var(--sky-1), var(--sky-2));
+  animation: rise .5s var(--ease) both;
+}
+.h-far { fill: var(--ridge-far); }
+.h-near { fill: var(--ridge-near); }
+.h-floor { fill: var(--floor); }
+.h-rows { fill: none; stroke: var(--rows); stroke-width: 1.5; }
+.h-turb { fill: none; stroke: var(--turbine); stroke-width: 1.25; stroke-linecap: round; }
+.h-palm { fill: none; stroke: var(--palm); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
+.h-palm .t { stroke-width: 3.4; }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+
 .tools { padding: 20px 16px 4px; display: grid; gap: 16px; }
 .field label { display: block; font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
-.search { display: flex; align-items: center; gap: 8px; background: var(--paper); border: 2px solid var(--edge); border-radius: var(--r); padding: 0 12px; }
-.search:focus-within { border-color: var(--focus); }
-.search svg { width: 20px; height: 20px; flex: none; color: var(--muted); stroke-width: 1.75; }
+.search { display: flex; align-items: center; gap: 8px; background: var(--bg); border: 2px solid var(--edge); border-radius: 12px; padding: 0 12px; }
+.search:focus-within { border-color: var(--ink); }
+.search svg { width: 20px; height: 20px; color: var(--muted); stroke-width: 1.75; }
 .search input { border: 0; background: transparent; flex: 1; min-width: 0; min-height: 48px; font-size: 1.125rem; }
 .search input:focus { outline: none; }
 .two { display: grid; gap: 16px; }
-select { width: 100%; min-height: 52px; border-radius: var(--r); border: 2px solid var(--edge); background: var(--paper); padding: 0 12px; font-size: 1.125rem; cursor: pointer; }
+select { width: 100%; min-height: 52px; border-radius: 12px; border: 2px solid var(--edge); background: var(--bg); padding: 0 12px; font-size: 1.125rem; cursor: pointer; }
 
+/* "Open today" switch: hollow when off, solid creosote when on. Track radius 16, thumb inset 4, thumb radius 12. */
 .today { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 4px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-weight: 600; cursor: pointer; position: relative; }
 .today input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .today-day { font-weight: 400; color: var(--muted); }
-.sw { width: 52px; height: 32px; border-radius: 16px; background: var(--edge); position: relative; margin-left: auto; flex: none; transition: background-color .15s; }
-.sw::after { content: ""; position: absolute; left: 4px; top: 4px; width: 24px; height: 24px; border-radius: 50%; background: var(--paper); transition: left .15s; }
-.today input:checked ~ .sw { background: var(--sage); }
-.today input:checked ~ .sw::after { left: 24px; }
-.today input:focus-visible ~ .sw { outline: 3px solid var(--focus); outline-offset: 2px; }
+.sw { width: 52px; height: 32px; border-radius: 16px; border: 2px solid var(--edge); position: relative; margin-left: auto; flex: none; transition: background-color .15s var(--ease), border-color .15s var(--ease); }
+.sw::after { content: ""; position: absolute; left: 2px; top: 2px; width: 24px; height: 24px; border-radius: 12px; background: var(--ink); transition: left .15s var(--ease), background-color .15s var(--ease); }
+.today input:checked ~ .sw { background: var(--ink); border-color: var(--ink); }
+.today input:checked ~ .sw::after { left: 22px; background: var(--bg); }
+.today input:focus-visible ~ .sw { outline: 3px solid var(--ink); outline-offset: 2px; }
 
 .status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; padding: 12px 16px 0; }
 #count { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
-.link-btn { border: 0; background: none; color: var(--sage); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; min-height: 44px; padding: 0 4px; cursor: pointer; }
+.link-btn { border: 0; background: none; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; min-height: 44px; padding: 0 4px; cursor: pointer; }
 .hint { margin: 8px 16px 0; color: var(--muted); font-size: 1rem; }
 
-/* Listings are a ruled list, not boxes */
+/* Listings: a ruled list like map search results. Name first, then one quiet status line. */
 #results { padding: 8px 16px; }
 #results:focus { outline: none; }
 .card { padding: 24px 0 28px; border-top: 1px solid var(--line); }
-.card:first-child { border-top: 2px solid var(--fg); }
-.tags { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
-.type { display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; font-weight: 600; color: var(--sage); }
-.type svg { width: 20px; height: 20px; flex: none; stroke-width: 2; }
-.card h2 { margin: 8px 0 12px; font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.2; overflow-wrap: anywhere; text-wrap: balance; }
-/* "Open today": a coral sun dot and plain text. The sun icon from app.js is hidden. */
-.badge { display: inline-flex; align-items: center; gap: 8px; font-size: 1rem; font-weight: 600; color: var(--coral-ink); }
-.badge svg { display: none; }
-.badge::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--coral); flex: none; }
-.meta { display: grid; gap: 8px; margin: 12px 0 16px; }
+.card:first-child, .empty { border-top: 2px solid var(--ink); }
+.card h2 { margin: 0; font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.2; overflow-wrap: anywhere; text-wrap: balance; }
+.sub { margin: 6px 0 0; color: var(--muted); font-size: 1rem; }
+.sub .open { color: var(--ink); font-weight: 700; }
+.dot { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; background: var(--coral); vertical-align: 1px; }
+.alert { display: flex; gap: 12px; margin: 16px 0 0; padding: 12px; background: var(--tint-2); border: 1px solid var(--line); border-radius: 12px; font-weight: 600; font-size: 1rem; }
+.alert svg { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.25; }
+.alert p { margin: 0; }
+.meta { display: grid; gap: 8px; margin: 16px 0; }
 .row { display: flex; gap: 12px; align-items: flex-start; }
-.row svg { width: 20px; height: 20px; flex: none; margin-top: 4px; color: var(--muted); stroke-width: 1.75; }
+.row svg { width: 20px; height: 20px; margin-top: 4px; color: var(--muted); stroke-width: 1.75; }
 .row ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; font-variant-numeric: tabular-nums; }
-.row.note { background: var(--wash); border-left: 4px solid var(--hill-mid); border-radius: 0 4px 4px 0; padding: 8px 12px; }
-.meta .contact { margin: 0; color: var(--muted); font-size: 1rem; overflow-wrap: anywhere; }
-.meta .contact + .contact { margin-top: -4px; }
-.btns { display: grid; gap: 12px; }
-.btn { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 4px 16px; border-radius: var(--r); font-weight: 600; text-decoration: none; text-align: center; border: 2px solid var(--sage); color: var(--sage); background: transparent; transition: background-color .15s, color .15s; }
-.btn:hover { background: var(--wash); }
-.btn.fill { background: var(--coral); border-color: var(--coral); color: var(--coral-fg); }
-.btn.fill:hover { background: color-mix(in oklch, var(--coral) 88%, var(--fg)); }
-.btn svg { width: 20px; height: 20px; flex: none; stroke-width: 2; }
+.row.note { background: var(--tint-2); border-radius: 12px; padding: 8px 12px; }
+.row.note svg { color: var(--ink); }
+.row.small { color: var(--muted); font-size: 1rem; overflow-wrap: anywhere; }
+.row.small svg { margin-top: 2px; }
+.row.link svg { margin-top: 12px; }
+.row.warn { font-weight: 600; font-size: 1rem; }
+.row.warn svg { color: var(--ink); stroke-width: 2.25; margin-top: 2px; }
+.mail, .src { display: inline-block; padding: 10px 0; min-height: 44px; font-weight: 600; overflow-wrap: anywhere; }
+.src-line { color: var(--muted); }
+.src-line > div { display: grid; }
+
+/* Action tiles, like map apps: equal width, icon on top, label below. */
+.btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; min-height: 76px; padding: 10px 8px; border: 1px solid transparent; border-radius: 12px; font-weight: 700; line-height: 1.25; text-decoration: none; text-align: center; transition: background-color .15s var(--ease), transform .15s var(--ease); }
+.btn svg { width: 24px; height: 24px; stroke-width: 2.25; }
+.btn:active { transform: scale(.98); }
+.btn .num { font-weight: 600; font-size: 1rem; font-variant-numeric: tabular-nums; }
+.call { background: var(--coral); color: var(--coral-fg); }
+.call:hover { background: var(--coral-hover); }
+.dir { background: var(--tint-1); border-color: var(--line); color: var(--ink); }
+.dir:hover { background: var(--tint-3); }
+.nodir { background: var(--tint-1); border-color: var(--line); color: var(--muted); font-weight: 600; font-size: 1rem; }
+.nodir svg { stroke-width: 1.75; }
+.btns.three .dir, .btns.three .nodir { grid-column: 1 / -1; }
 .nophone { color: var(--muted); font-size: 1rem; margin: 12px 0 0; }
 
-.empty { margin: 16px 0; padding: 24px 0; border-top: 2px solid var(--fg); }
+.empty { margin: 16px 0; padding: 24px 0; }
 
-/* Help: a dusk band, the one deep-color moment below the list */
-.help { margin: 32px 0 0; background: var(--dusk); color: var(--dusk-fg); }
-.help-in { max-width: 760px; margin: 0 auto; padding: 40px 16px 24px; }
+/* Help: a light sand panel in the column, with the one coral Call button. */
+.help { width: calc(100% - 32px); max-width: 728px; margin: 32px auto 0; padding: 24px 20px; background: var(--tint-1); border: 1px solid var(--line); border-radius: 20px; }
 .help h2 { margin: 0 0 12px; font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.2; text-wrap: balance; }
 .help p { margin: 0 0 16px; max-width: 56ch; }
-.help .hint { margin: 0 0 4px; color: color-mix(in oklch, var(--dusk-fg) 82%, var(--dusk)); }
-.help .btn { max-width: 360px; }
-.help .btn.fill { background: oklch(76% 0.13 35); border-color: oklch(76% 0.13 35); color: oklch(20% 0.03 165); }
-.help .btn.fill:hover { background: oklch(82% 0.11 35); }
+.help .hint { margin: 0 0 4px; }
+.help .btn { flex-direction: row; gap: 8px; min-height: 52px; max-width: 360px; padding: 4px 16px; }
 .help-list { margin: 20px 0 8px; display: grid; gap: 12px; }
 .help-list div { display: grid; }
-.help-list dt { font-size: 1rem; font-weight: 600; color: color-mix(in oklch, var(--dusk-fg) 82%, var(--dusk)); }
+.help-list dt { font-size: 1rem; font-weight: 600; color: var(--muted); }
 .help-list dd { margin: 0; overflow-wrap: anywhere; }
-.help a:not(.btn), .mail { display: inline-block; padding: 10px 0; min-height: 44px; font-weight: 600; overflow-wrap: anywhere; }
-.help a:not(.btn) { color: var(--dusk-fg); }
+.help a:not(.btn) { display: inline-block; padding: 10px 0; min-height: 44px; font-weight: 600; overflow-wrap: anywhere; }
 footer.site { padding: 24px 16px 40px; font-size: 1rem; color: var(--muted); }
 footer.site p { margin: 0 0 12px; max-width: 64ch; }
 footer.site a { display: inline-block; padding: 10px 0; min-height: 44px; }
 
 @media (min-width: 560px) {
   .two { grid-template-columns: 1fr 1fr; }
-  .btns { grid-template-columns: 1fr 1fr; }
+  .hero-art { aspect-ratio: 800 / 260; }
+  .btns.three { grid-template-columns: repeat(3, 1fr); }
+  .btns.three .dir, .btns.three .nodir { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   .sw, .sw::after, .btn { transition: none; }
+  .btn:active { transform: none; }
   .hero-art { animation: none; }
 }
 
-/* Palm trees facing each other in the background, tinted from the palette via a mask */
-body::before, body::after { content: ""; position: fixed; bottom: 0; width: min(30vw, 300px); aspect-ratio: 1 / 2; background: var(--palm); -webkit-mask: url("palm.svg") no-repeat bottom / contain; mask: url("palm.svg") no-repeat bottom / contain; opacity: var(--palm-alpha); pointer-events: none; z-index: -1; }
-body::before { left: 0; }
-body::after { right: 0; }
-
-/* Palm trees grow as you scroll: app.js sets --grow (0 at top, 1 at bottom) */
-body::before, body::after { --k: calc(0.3 + 0.7 * var(--grow, 1)); transform-origin: 50% 100%; transform: scale(var(--k)); will-change: transform; }
-body::after { transform: scaleX(-1) scale(var(--k)); }
-@media (prefers-reduced-motion: reduce) { body::before, body::after { --grow: 1; will-change: auto; } }
+/* Two still palms, very faint, on wide screens only */
+@media (min-width: 1024px) {
+  body::before, body::after { content: ""; position: fixed; bottom: 0; width: min(22vw, 280px); aspect-ratio: 1 / 2; background: var(--ink); -webkit-mask: url("palm.svg") no-repeat bottom / contain; mask: url("palm.svg") no-repeat bottom / contain; opacity: .045; pointer-events: none; z-index: -1; }
+  body::before { left: 0; }
+  body::after { right: 0; transform: scaleX(-1); }
+}
