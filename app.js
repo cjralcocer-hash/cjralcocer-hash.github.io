@@ -1,4 +1,4 @@
-/* Food Near You / Comida Cerca
+/* comidacoachellavalley
    Loads data.json and shows the list. No libraries, no tracking, nothing saved on the phone.
    The Spanish page is /index.html and the English page is /en/index.html. Both use this file.
    The page language comes from <html lang="..."> on each page. */
@@ -8,7 +8,7 @@
   var STR = {
     en: {
       skip: 'Skip to the list',
-      siteName: 'Food Near You',
+      siteName: 'comidacoachellavalley',
       title: 'Free food places in the Coachella Valley',
       lead: 'Food pantries, mobile markets and hot meals. Search or filter, then call or get directions.',
       checkedFind: 'FIND Food Bank: checked {date}',
@@ -48,7 +48,7 @@
       footerSource: 'See the original list',
       footer3: 'This site does not collect any personal information.',
       toTop: 'Back to top',
-      docTitle: 'Free Food in the Coachella Valley | Food Near You',
+      docTitle: 'Free Food in the Coachella Valley | comidacoachellavalley',
       count: function (n, total) { return n === total ? 'Showing all ' + total + ' places' : 'Showing ' + n + ' of ' + total + ' places'; },
       none: 'No places match your search.',
       address: 'Address',
@@ -66,7 +66,7 @@
     },
     es: {
       skip: 'Ir a la lista',
-      siteName: 'Comida Cerca',
+      siteName: 'comidacoachellavalley',
       title: 'Lugares de comida gratis en el Valle de Coachella',
       lead: 'Despensas de comida, mercados móviles y comidas calientes. Busque o filtre, y luego llame o vea cómo llegar.',
       checkedFind: 'FIND Food Bank: revisado el {date}',
@@ -106,7 +106,7 @@
       footerSource: 'Ver la lista original',
       footer3: 'Este sitio no recoge ninguna información personal.',
       toTop: 'Volver arriba',
-      docTitle: 'Comida gratis en el Valle de Coachella | Comida Cerca',
+      docTitle: 'Comida gratis en el Valle de Coachella | comidacoachellavalley',
       count: function (n, total) { return n === total ? 'Mostrando los ' + total + ' lugares' : 'Mostrando ' + n + ' de ' + total + ' lugares'; },
       none: 'Ningún lugar coincide con su búsqueda.',
       address: 'Dirección',

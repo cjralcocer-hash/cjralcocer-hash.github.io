@@ -1,4 +1,4 @@
-# Food Near You / Comida Cerca
+# comidacoachellavalley
 
 Static site (GitHub Pages, no build step). The list of places lives in `data.json`. Spanish is the home page (`index.html`), English is `en/index.html`.
 
