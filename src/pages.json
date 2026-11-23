@@ -2,11 +2,13 @@
   "site": "https://comidacoachellavalley.github.io",
   "languages": ["es", "en"],
   "defaultLanguage": "es",
+  "repo": "comidacoachellavalley/comidacoachellavalley.github.io",
   "pages": [
     {
       "id": "home",
       "path": "",
       "skipTo": "results",
+      "list": true,
       "scripts": ["common.js", "list.js"],
       "nav": "nav.home"
     },

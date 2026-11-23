@@ -22,6 +22,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import build  # noqa: E402
+import places  # noqa: E402
 
 errors = []
 warnings = []
@@ -90,6 +91,7 @@ def check_used_keys(cfg, strings):
         if p.get('nav'):
             wanted.append((p['nav'], 'src/pages.json'))
     wanted.append(('navSiteLabel', 'scripts/build.py'))
+    wanted += [(k, 'scripts/places.py') for k in places.KEYS]
     for path in glob.glob(os.path.join(ROOT, '*.js')):
         with open(path, encoding='utf-8') as f:
             text = f.read()

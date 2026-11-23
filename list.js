@@ -156,6 +156,21 @@
     return new URL(url).hostname.replace(/^www\./, '');
   }
 
+  // "Report a problem" opens a new GitHub issue with the place's name filled in. Same link as the build writes.
+  function reportLink(p) {
+    var wrap = el('p', 'report');
+    var base = document.body.getAttribute('data-report');
+    if (!base) return wrap;
+    var a = el('a', null, t('reportLink'));
+    a.href = base + '?title=' + encodeURIComponent(t('reportTitle', { name: p.name })) +
+      '&body=' + encodeURIComponent(t('reportBody', { name: p.name, id: p.id }));
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.setAttribute('aria-label', t('reportAria', { name: p.name }));
+    wrap.appendChild(a);
+    return wrap;
+  }
+
   function card(p, isOpenToday) {
     var c = el('article', 'card');
     c.setAttribute('data-id', p.id);
@@ -237,6 +252,7 @@
     }
     c.appendChild(btns);
     if (!p.phones.length) c.appendChild(el('p', 'nophone', t('noPhone')));
+    c.appendChild(reportLink(p));
     return c;
   }
 

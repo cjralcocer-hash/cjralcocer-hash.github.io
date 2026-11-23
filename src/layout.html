@@ -33,8 +33,9 @@
 <meta name="theme-color" content="#091d15" media="(prefers-color-scheme: dark)">
 <link rel="preload" href="{{v:root}}fonts/alfa-slab-one-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{v:root}}styles.css">
+{{v:jsonld}}
 </head>
-<body class="page-{{v:pageId}}">
+<body class="page-{{v:pageId}}" data-report="{{v:reportUrl}}">
 <a class="skip" href="#{{v:skipTo}}">{{t:skip}}</a>
 
 <nav class="langbar" aria-label="{{t:navLabel}}">

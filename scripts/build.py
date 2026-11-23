@@ -18,7 +18,7 @@ Tokens inside src/ files
   {{p:name}}  page string: looks up "<page id>.<name>" (docTitle, description, ogTitle, ogDescription, ogImageAlt)
   {{es:key}}  string from i18n/es.json whatever the page language (for the bilingual printed flyer)
   {{en:key}}  the same from i18n/en.json
-  {{v:name}}  value computed here: lang, root, site, canonical, pageId, home, siteHost, findTel, ...
+  {{v:name}}  value computed here: lang, root, site, canonical, pageId, home, siteHost, findTel, cards, jsonld, ...
   {{@name}}   a section of the page file
 """
 import json
@@ -27,6 +27,7 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import places  # noqa: E402
 import qr  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -139,7 +140,19 @@ def render_page(cfg, strings, layout, page, lang):
         'nav': nav_html(cfg, page, lang, root, strings),
         'scripts': '\n'.join('<script src="%s%s"></script>' % (root, s) for s in page['scripts']),
         'i18nJson': json_blob,
+        'reportUrl': 'https://github.com/%s/issues/new' % cfg['repo'],
+        'cards': '',
+        'count': '',
+        'jsonld': '',
     }
+    if page.get('list'):
+        try:
+            cards, plist = places.render_cards(lang, strings[lang], values['reportUrl'])
+        except places.PlacesError as e:
+            raise BuildError(str(e))
+        values['cards'] = cards
+        values['count'] = esc(places.count_text(strings[lang], len(plist)))
+        values['jsonld'] = places.json_ld(lang, strings[lang], cfg['site'], values['canonical'], plist)
     sections = split_sections(read('src/pages/%s.html' % page['id']))
 
     def slot(m):

@@ -11,6 +11,8 @@ python3 scripts/build.py          # writes the generated files (Python 3.9+, not
 python3 scripts/check.py          # the same checks CI runs
 ```
 
+The home page also contains the list of places written out as plain HTML, plus schema.org JSON-LD, so it works without JavaScript and search engines can read it (`scripts/places.py`; `list.js` still draws the live list with "Open today"). It is built from `data.json` and `community.json`, so **after editing either file, run the build** or CI will fail. Each card has a "Report a problem" link that opens a prefilled GitHub issue; the repository comes from `repo` in `src/pages.json`.
+
 | What you want to change | Where |
 | --- | --- |
 | Any visible text (both languages) | `i18n/es.json` and `i18n/en.json`: one key per string, same keys in both |

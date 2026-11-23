@@ -44,12 +44,14 @@
   </section>
 
   <div class="status">
-    <p id="count" aria-live="polite">{{t:loading}}</p>
+    <p id="count" aria-live="polite">{{v:count}}</p>
     <button type="button" id="clear" class="link-btn" hidden>{{t:clear}}</button>
   </div>
   <p id="unclearNote" class="hint" hidden></p>
 
-  <div id="results" tabindex="-1"></div>
+  <div id="results" tabindex="-1">
+{{v:cards}}
+</div>
 
   <noscript><p class="hint">{{t:noscript}}</p></noscript>
 </main>

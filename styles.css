@@ -150,6 +150,8 @@ select { width: 100%; min-height: 52px; border-radius: 12px; border: 2px solid v
 .sub { margin: 8px 0 0; color: var(--muted); font-size: 1rem; }
 .sub .open { color: var(--ink); font-weight: 700; }
 .dot { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; background: var(--coral); vertical-align: 1px; }
+.report { margin: 8px 0 0; }
+.report a { display: inline-block; min-height: 44px; padding: 10px 0; color: var(--muted); font-size: 1rem; text-underline-offset: 3px; }
 .alert { display: flex; gap: 12px; margin: 16px 0 0; padding: 12px; background: var(--tint-2); border: 1px solid var(--line); border-radius: 12px; font-weight: 600; font-size: 1rem; }
 .alert svg { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.25; }
 .alert p { margin: 0; }
