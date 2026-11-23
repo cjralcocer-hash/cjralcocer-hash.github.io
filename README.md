@@ -1,6 +1,38 @@
 # comidacoachellavalley
 
-Static site (GitHub Pages, no build step). The list of places lives in `data.json`. Spanish is the home page (`index.html`), English is `en/index.html`.
+Static site on GitHub Pages. Visitors get plain files; no build runs on the server. The list of places lives in `data.json`. Spanish is the home page (`index.html`), English is `en/index.html`.
+
+## How the pages are made
+
+`index.html`, `en/index.html` and `sitemap.xml` are **generated**. Do not edit them by hand. Edit the sources, then run the build and commit the result:
+
+```
+python3 scripts/build.py          # writes the generated files (Python 3.9+, nothing to install)
+python3 scripts/check.py          # the same checks CI runs
+```
+
+| What you want to change | Where |
+| --- | --- |
+| Any visible text (both languages) | `i18n/es.json` and `i18n/en.json`: one key per string, same keys in both |
+| Header, language bar, footer, `<head>` tags | `src/layout.html` |
+| What a page contains | `src/pages/<id>.html`, in sections `<!--@header-->`, `<!--@main-->`, `<!--@band-->` |
+| The list of pages, their scripts and menu entry | `src/pages.json` |
+
+In `src/` files, `{{t:key}}` inserts a string, `{{p:docTitle}}` a page string (`<page id>.docTitle`, also `description`, `ogTitle`, `ogDescription`, `ogImageAlt`), and `{{v:root}}` the path back to the site root.
+
+**Adding a page:** add its entry to `src/pages.json` (give it `"nav": "nav.<id>"` to put it in the menu, which appears once two pages have one), create `src/pages/<id>.html`, add its strings to both language files, and run the build. The page gets the shared header, footer, language switch, hreflang tags and a sitemap entry automatically.
+
+`check.py` runs in GitHub Actions (`.github/workflows/check.yml`) on every push and pull request. It fails if the two languages have different strings, a page uses a missing string, a local link or image is broken, or the generated files do not match their sources.
+
+Scripts: `common.js` (strings, dates and helpers every page can use, as `window.CV`) and `list.js` (search, filters and cards; it does nothing on pages without the list).
+
+### Partners and people (not shown on any page yet)
+
+`partners.json` and `people.json` are empty lists the next pages can fill. Like `community.json`, bad entries are skipped rather than breaking the page, and `check.py` validates them. Text that needs both languages is written as `{ "en": "...", "es": "..." }`.
+
+- partner: `id`, `name`, `kind` (`school`, `church`, `clinic`, `city`, `business` or `other`), `url` (optional), `note` (optional)
+- person: `id`, `name`, `role` (optional), `bio` (optional), `photo` (optional, a file under `images/`). Add someone only with their permission.
+
 
 ## Weekly data check
 

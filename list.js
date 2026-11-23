@@ -1,140 +1,16 @@
-/* comidacoachellavalley
+/* comidacoachellavalley: the list page (search, filters, cards).
    Loads data.json and shows the list. No libraries, no tracking, nothing saved on the phone.
    The Spanish page is /index.html and the English page is /en/index.html. Both use this file.
    The page language comes from <html lang="..."> on each page. */
 (function () {
   'use strict';
 
-  var STR = {
-    en: {
-      skip: 'Skip to the list',
-      siteName: 'comidacoachellavalley',
-      title: 'Free food places in the Coachella Valley',
-      lead: 'Food pantries, mobile markets and hot meals. Search or filter, then call or get directions.',
-      checkedFind: 'FIND Food Bank: checked {date}',
-      checkedCommunity: 'Churches and groups: checked {date}',
-      sourceFrom: 'Info from {org}',
-      sourceChecked: 'Checked {date}',
-      stale: 'Not re-checked recently — call first',
-      callForLocation: 'Call for the location',
-      callShort: 'Call',
-      callFindShort: 'Call FIND',
-      alertLabel: 'Notice',
-      months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      shortDate: function (d, m, y) { return m + ' ' + d + ', ' + y; },
-      toolsTitle: 'Search and filters',
-      searchLabel: 'Search',
-      searchPh: 'Name, city or street',
-      cityLabel: 'City',
-      allCities: 'All cities',
-      typeLabel: 'Type',
-      allTypes: 'All types',
-      type_pantry: 'Food pantry',
-      type_mobile: 'Mobile market',
-      type_meals: 'Hot meals',
-      openToday: 'Open today',
-      loading: 'Loading the list…',
-      clear: 'Clear filters',
-      contactTitle: 'Need help? Contact FIND Food Bank',
-      contactLead: 'FIND Food Bank keeps the list of places and the monthly Mobile Market calendar. They can help if a place has no phone number or if you are not sure where to go.',
-      contactCall: 'Call (760) 775-3663',
-      contactAddressLabel: 'Address',
-      contactAddress: '83775 Citrus Ave, Indio, CA 92201',
-      contactEmailLabel: 'Email',
-      contactHours: 'Phone hours: Monday to Friday, 8 AM to 4:30 PM.',
-      contactCalendar: "See FIND's Mobile Market calendar",
-      footer1: 'A student project for the California State Seal of Civic Engagement. Not run by FIND Food Bank.',
-      footer2: "Information comes from FIND Food Bank's public map page and its monthly Mobile Market calendar. Hours can change, so please call before you go.",
-      footerSource: 'See the original list',
-      footer3: 'This site does not collect any personal information.',
-      toTop: 'Back to top',
-      docTitle: 'Free Food in the Coachella Valley | comidacoachellavalley',
-      count: function (n, total) { return n === total ? 'Showing all ' + total + ' places' : 'Showing ' + n + ' of ' + total + ' places'; },
-      none: 'No places match your search.',
-      address: 'Address',
-      hours: 'Hours',
-      contact: 'Contact',
-      email: 'Email',
-      directions: 'Directions',
-      directionsHint: '(opens Google Maps)',
-      call: function (num) { return 'Call ' + num; },
-      callFind: function (num) { return 'Call FIND Food Bank ' + num; },
-      ext: 'ext.',
-      noPhone: 'No phone number is listed for this site. FIND Food Bank can help.',
-      unclear: function (n) { return n === 1 ? '1 place has hours that do not say which days, so "Open today" hides it.' : n + ' places have hours that do not say which days, so "Open today" hides them.'; },
-      loadError: 'Sorry, the list could not load. Please refresh the page.'
-    },
-    es: {
-      skip: 'Ir a la lista',
-      siteName: 'comidacoachellavalley',
-      title: 'Lugares de comida gratis en el Valle de Coachella',
-      lead: 'Despensas de comida, mercados móviles y comidas calientes. Busque o filtre, y luego llame o vea cómo llegar.',
-      checkedFind: 'FIND Food Bank: revisado el {date}',
-      checkedCommunity: 'Iglesias y grupos: revisado el {date}',
-      sourceFrom: 'Información de {org}',
-      sourceChecked: 'Revisado el {date}',
-      stale: 'No se ha revisado hace tiempo — llame antes de ir',
-      callForLocation: 'Llame para saber el lugar',
-      callShort: 'Llamar',
-      callFindShort: 'Llamar a FIND',
-      alertLabel: 'Aviso',
-      months: ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sept', 'oct', 'nov', 'dic'],
-      shortDate: function (d, m, y) { return d + ' ' + m + ' ' + y; },
-      toolsTitle: 'Búsqueda y filtros',
-      searchLabel: 'Buscar',
-      searchPh: 'Nombre, ciudad o calle',
-      cityLabel: 'Ciudad',
-      allCities: 'Todas las ciudades',
-      typeLabel: 'Tipo',
-      allTypes: 'Todos los tipos',
-      type_pantry: 'Despensa de comida',
-      type_mobile: 'Mercado móvil',
-      type_meals: 'Comidas calientes',
-      openToday: 'Abierto hoy',
-      loading: 'Cargando la lista…',
-      clear: 'Borrar filtros',
-      contactTitle: '¿Necesita ayuda? Contacte a FIND Food Bank',
-      contactLead: 'FIND Food Bank mantiene la lista de lugares y el calendario mensual del Mercado Móvil. Pueden ayudarle si un lugar no tiene número de teléfono o si no sabe a dónde ir.',
-      contactCall: 'Llamar al (760) 775-3663',
-      contactAddressLabel: 'Dirección',
-      contactAddress: '83775 Citrus Ave, Indio, CA 92201',
-      contactEmailLabel: 'Correo electrónico',
-      contactHours: 'Horario de teléfono: de lunes a viernes, de 8 AM a 4:30 PM.',
-      contactCalendar: 'Ver el calendario del Mercado Móvil de FIND',
-      footer1: 'Proyecto estudiantil para el Sello Estatal de Compromiso Cívico de California. No lo administra FIND Food Bank.',
-      footer2: 'La información viene de la página pública del mapa de FIND Food Bank y de su calendario mensual del Mercado Móvil. Los horarios pueden cambiar, así que por favor llame antes de ir.',
-      footerSource: 'Ver la lista original',
-      footer3: 'Este sitio no recoge ninguna información personal.',
-      toTop: 'Volver arriba',
-      docTitle: 'Comida gratis en el Valle de Coachella | comidacoachellavalley',
-      count: function (n, total) { return n === total ? 'Mostrando los ' + total + ' lugares' : 'Mostrando ' + n + ' de ' + total + ' lugares'; },
-      none: 'Ningún lugar coincide con su búsqueda.',
-      address: 'Dirección',
-      hours: 'Horario',
-      contact: 'Contacto',
-      email: 'Correo electrónico',
-      directions: 'Cómo llegar',
-      directionsHint: '(abre Google Maps)',
-      call: function (num) { return 'Llamar al ' + num; },
-      callFind: function (num) { return 'Llamar a FIND Food Bank ' + num; },
-      ext: 'ext.',
-      noPhone: 'No hay número de teléfono para este lugar. FIND Food Bank puede ayudarle.',
-      unclear: function (n) { return n === 1 ? '1 lugar tiene un horario que no dice qué días, así que "Abierto hoy" lo oculta.' : n + ' lugares tienen horarios que no dicen qué días, así que "Abierto hoy" los oculta.'; },
-      loadError: 'Lo sentimos, la lista no se pudo cargar. Por favor recargue la página.'
-    }
-  };
+  // This script belongs to the page with the list. On any other page it does nothing.
+  if (!document.getElementById('results') || !window.CV) return;
 
-  var ICON = {
-    pin: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
-    clock: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
-    info: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>',
-    phone: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
-    nav: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 21 3l-8 18-2-8-8-2z"/></svg>',
-    alert: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17v.5"/></svg>',
-    user: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
-    mail: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
-    doc: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/></svg>'
-  };
+  var CV = window.CV, t = CV.t, lang = CV.lang, el = CV.el, norm = CV.norm, iso = CV.iso, parseIso = CV.parseIso;
+  var shortDate = CV.shortDate, str = CV.str, strs = CV.strs, ICON = CV.ICON, now = CV.now, STR = CV.STR;
+
   var TYPES = ['pantry', 'mobile', 'meals'];
 
   var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -147,36 +23,6 @@
 
   var places = [];
   var info = { calendarMonth: '', closure: null, find: null, notices: [] };
-  var lang = document.documentElement.lang === 'es' ? 'es' : 'en';
-  // data.json and community.json sit next to app.js, so find them from this script's own address (works on both pages).
-  var base = document.currentScript ? document.currentScript.src : location.href;
-  var dataUrl = new URL('data.json', base).href;
-  var communityUrl = new URL('community.json', base).href;
-  var now = testDate() || new Date();
-
-  // For testing only: add ?date=2026-11-21 to the address to pretend it is that day.
-  function testDate() {
-    var m = /[?&]date=(\d{4})-(\d{2})-(\d{2})/.exec(location.search);
-    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
-  }
-
-  function iso(d) {
-    var m = d.getMonth() + 1, day = d.getDate();
-    return d.getFullYear() + '-' + (m < 10 ? '0' : '') + m + '-' + (day < 10 ? '0' : '') + day;
-  }
-
-  function t(key) { return STR[lang][key]; }
-
-  function el(tag, cls, text) {
-    var n = document.createElement(tag);
-    if (cls) n.className = cls;
-    if (text != null) n.textContent = text;
-    return n;
-  }
-
-  function norm(s) {
-    return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  }
 
   // Is this place giving out food on this date? Uses its schedule rules, then FIND's monthly calendar and closure.
   function openOn(p, date) {
@@ -217,17 +63,6 @@
     return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(cleanAddress(address));
   }
 
-  function parseIso(s) {
-    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
-    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
-  }
-
-  // Built by hand: older phones format dates differently. "20 nov 2026" / "Nov 20, 2026".
-  function shortDate(isoDate) {
-    var d = parseIso(isoDate);
-    return t('shortDate')(d.getDate(), t('months')[d.getMonth()], d.getFullYear());
-  }
-
   // More than 90 days between the source check and today (or ?date=).
   function isStale(source) {
     var d = parseIso(source.checked_on);
@@ -235,16 +70,8 @@
     return Math.round((today - d) / 864e5) > 90;
   }
 
+  // The page text itself is written by the build; only the weekday name depends on today's date.
   function applyStaticText() {
-    document.documentElement.lang = lang;
-    document.title = t('docTitle');
-    var nodes = document.querySelectorAll('[data-i18n]');
-    for (var i = 0; i < nodes.length; i++) {
-      var v = STR[lang][nodes[i].getAttribute('data-i18n')];
-      if (typeof v === 'string') nodes[i].textContent = v;
-    }
-    var ph = document.querySelectorAll('[data-i18n-ph]');
-    for (var j = 0; j < ph.length; j++) ph[j].placeholder = t(ph[j].getAttribute('data-i18n-ph'));
     var day = now.toLocaleDateString(lang === 'es' ? 'es-US' : 'en-US', { weekday: 'long' });
     els.todayName.textContent = '(' + day + ')';
   }
@@ -393,10 +220,10 @@
     var btns = el('div', 'btns' + (p.phones.length > 1 ? ' three' : ''));
     if (p.phones.length) {
       p.phones.forEach(function (tel) {
-        btns.appendChild(callTile(tel, t('callShort'), t('call')(formatPhone(tel))));
+        btns.appendChild(callTile(tel, t('callShort'), t('call', { num: formatPhone(tel) })));
       });
     } else if (info.find) {
-      btns.appendChild(callTile(info.find.phone, t('callFindShort'), t('callFind')(info.find.phone_display)));
+      btns.appendChild(callTile(info.find.phone, t('callFindShort'), t('callFind', { num: info.find.phone_display })));
     }
     if (p.noDirections) {
       btns.appendChild(tile('div', 'nodir', ICON.pin, t('callForLocation')));
@@ -414,9 +241,6 @@
   }
 
   // community.json: church and group sites, plus corrections to FIND listings. Anything malformed is skipped.
-  function str(x) { return typeof x === 'string' && x ? x : null; }
-  function strs(a) { return Array.isArray(a) ? a.filter(str) : []; }
-
   function cleanSource(s) {
     return s && /^https?:\/\//.test(s.url) && parseIso(s.checked_on) ? { url: s.url, checked_on: s.checked_on } : null;
   }
@@ -501,10 +325,10 @@
     els.results.textContent = '';
     els.results.appendChild(frag);
 
-    els.count.textContent = t('count')(shown.length, places.length);
+    els.count.textContent = shown.length === places.length ? t('countAll', { total: places.length }) : t('countSome', { n: shown.length, total: places.length });
     els.clear.hidden = !(words.length || city || type || todayOnly);
     els.unclear.hidden = !(todayOnly && hiddenUnclear);
-    els.unclear.textContent = hiddenUnclear ? t('unclear')(hiddenUnclear) : '';
+    els.unclear.textContent = hiddenUnclear ? t(hiddenUnclear === 1 ? 'unclearOne' : 'unclearMany', { n: hiddenUnclear }) : '';
   }
 
   function clearAll() {
@@ -524,12 +348,8 @@
 
   applyStaticText();
 
-  function getJson(url) {
-    return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); });
-  }
-
   // community.json is optional: if it is missing or broken, the FIND list shows as before.
-  Promise.all([getJson(dataUrl), getJson(communityUrl).catch(function () { return null; })])
+  Promise.all([CV.getJson('data.json'), CV.getJson('community.json').catch(function () { return null; })])
     .then(function (res) {
       var data = res[0];
       info.calendarMonth = data.calendar_month || '';
@@ -549,7 +369,6 @@
           els.checked.appendChild(document.createTextNode(t('checkedCommunity').replace('{date}', shortDate(communityDate))));
         }
       }
-      els.count.removeAttribute('data-i18n');
       buildCityOptions();
       showNotices();
       render();

@@ -1,0 +1,6 @@
+_scratch/
+upload-to-github/
+mockups.html
+node_modules/
+__pycache__/
+.DS_Store

@@ -1,0 +1,14 @@
+{
+  "site": "https://comidacoachellavalley.github.io",
+  "languages": ["es", "en"],
+  "defaultLanguage": "es",
+  "pages": [
+    {
+      "id": "home",
+      "path": "",
+      "skipTo": "results",
+      "scripts": ["common.js", "list.js"],
+      "nav": "nav.home"
+    }
+  ]
+}

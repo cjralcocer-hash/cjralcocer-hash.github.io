@@ -86,6 +86,12 @@ h1, h2, .logo { font-family: var(--slab); font-weight: 400; font-synthesis: none
 .lb-other:hover { text-decoration: underline; }
 .langbar :focus-visible, .band :focus-visible { outline-color: var(--bar-fg); }
 .langbar :focus-visible { outline-offset: -3px; }
+/* Site menu: only built when the site has two or more pages (see src/pages.json). */
+.sitenav { background: var(--tint-1); border-bottom: 1px solid var(--line); }
+.sitenav ul { max-width: 760px; margin: 0 auto; padding: 0 16px; display: flex; flex-wrap: wrap; gap: 4px 20px; list-style: none; }
+.sitenav a { display: inline-block; padding: 12px 0; color: var(--ink); font-weight: 600; text-decoration: none; border-bottom: 2px solid transparent; }
+.sitenav a:hover { border-bottom-color: var(--edge); }
+.sitenav a[aria-current="page"] { border-bottom-color: var(--ink); }
 
 .notice { display: grid; grid-template-columns: 20px 1fr; gap: 8px 12px; width: calc(100% - 32px); max-width: 728px; margin: 16px auto 0; padding: 12px 16px; background: var(--tint-1); border: 1px solid var(--line); border-radius: 12px; font-size: 1rem; }
 .notice svg { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.25; }
@@ -99,7 +105,7 @@ header.site { padding: 28px 16px 0; }
 
 h1 { font-size: clamp(2.25rem, 8.4vw, 3.5rem); line-height: 1.04; letter-spacing: 0.005em; margin: 24px 0 16px; text-wrap: balance; max-width: 15ch; }
 .lead { margin: 0 0 12px; color: var(--muted); max-width: 50ch; }
-.checked { margin: 0; color: var(--muted); font-size: 1rem; font-variant-numeric: tabular-nums; }
+.checked { margin: 0; min-height: 1.5em; color: var(--muted); font-size: 1rem; font-variant-numeric: tabular-nums; }  /* the text is filled in by list.js; the height stops the page jumping */
 
 /* The photo, printed edge to edge on phones and wider than the text on big screens.
    Its bottom edge is cut along a ridge line, the way park posters stack mountain layers. */
