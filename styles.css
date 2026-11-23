@@ -1,7 +1,15 @@
-/* Coachella Valley desert palette, built in OKLCH.
-   Two colors set the atmosphere: sand (the page) and creosote (deep green-black: text, outlines, dark surfaces).
+/* Coachella Valley, printed like an old park poster.
+   Two colors set the atmosphere: sand (the page) and creosote (deep green-black: text, the poster bands).
    Every other tint is a color-mix of those two. One coral accent draws the eye, and only on
-   Call buttons and the "open today" dot. Light colors first, desert night in the media query below. */
+   Call buttons and the "open today" dot. The photo is the only other color on the page.
+   Light colors first, desert night in the media query below. */
+@font-face {
+  font-family: "Alfa Slab One";
+  src: url("fonts/alfa-slab-one-latin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --bg: oklch(95.5% 0.03 88);          /* sun-bleached sand */
   --ink: oklch(25% 0.045 155);         /* creosote */
@@ -9,16 +17,7 @@
   --coral-fg: oklch(99% 0.01 88);      /* 6.15:1 on coral */
   --bar-bg: var(--ink);
   --bar-fg: var(--bg);
-  /* the valley drawing in the header: dusk */
-  --sky-1: color-mix(in oklch, var(--ink) 24%, var(--bg));
-  --sky-2: color-mix(in oklch, var(--ink) 3%, var(--bg));
-  --ridge-far: color-mix(in oklch, var(--ink) 34%, var(--bg));
-  --ridge-near: color-mix(in oklch, var(--ink) 50%, var(--bg));
-  --floor: color-mix(in oklch, var(--ink) 12%, var(--bg));
-  --rows: color-mix(in oklch, var(--ink) 26%, var(--bg));
-  --palm: color-mix(in oklch, var(--ink) 82%, var(--bg));
-  --turbine: color-mix(in oklch, var(--ink) 42%, var(--bg));
-  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, serif;
+  --slab: "Alfa Slab One", Rockwell, "Roboto Slab", "Courier New", Georgia, serif;
   --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --ease: cubic-bezier(.22, 1, .36, 1);
 }
@@ -30,15 +29,6 @@
     --coral-fg: oklch(20% 0.03 165);   /* 7.35:1 on coral */
     --bar-bg: var(--tint-2);
     --bar-fg: var(--ink);
-    /* night: dark sky, a glow on the horizon, ridges and palms as silhouettes */
-    --sky-1: color-mix(in oklch, var(--ink) 4%, var(--bg));
-    --sky-2: color-mix(in oklch, var(--ink) 30%, var(--bg));
-    --ridge-far: color-mix(in oklch, var(--ink) 18%, var(--bg));
-    --ridge-near: color-mix(in oklch, var(--ink) 10%, var(--bg));
-    --floor: color-mix(in oklch, var(--ink) 14%, var(--bg));
-    --rows: color-mix(in oklch, var(--ink) 24%, var(--bg));
-    --palm: var(--bg);
-    --turbine: color-mix(in oklch, var(--ink) 40%, var(--bg));
   }
 }
 :root {
@@ -49,16 +39,17 @@
   --line: color-mix(in oklch, var(--ink) 14%, transparent);     /* see-through hairlines */
   --edge: color-mix(in oklch, var(--ink) 60%, transparent);     /* field and switch outlines, over 3:1 */
   --coral-hover: color-mix(in oklch, var(--coral) 88%, var(--ink));
-  --bar-muted: color-mix(in oklch, var(--bar-fg) 72%, var(--bar-bg));
+  --bar-muted: color-mix(in oklch, var(--bar-fg) 76%, var(--bar-bg));
+  --ridge-back: color-mix(in oklch, var(--bar-bg) 45%, var(--bg));
 }
 /* Older phones (Safari before 16.2) have no color-mix(): the same tokens, worked out ahead of time. */
 @supports not (color: color-mix(in oklch, red, red)) {
   :root {
-    --bg: #f9f0da; --ink: #0d2818; --coral: #ba2013; --coral-fg: #fffcf4; --muted: #4a5a43; --tint-1: #ece4ce; --tint-2: #dfd9c2; --tint-3: #d3ceb7; --line: rgb(13 40 24 / 0.14); --edge: rgb(13 40 24 / 0.6); --coral-hover: #a62c00; --bar-muted: #b2b29a; --sky-1: #bcbba2; --sky-2: #f1e9d3; --ridge-far: #a4a68d; --ridge-near: #7d856c; --floor: #dad5bd; --rows: #b7b69e; --palm: #344733; --turbine: #90957c;
+    --bg: #f9f0da; --ink: #0d2818; --coral: #ba2013; --coral-fg: #fffcf4; --muted: #4a5a43; --tint-1: #ece4ce; --tint-2: #dfd9c2; --tint-3: #d3ceb7; --line: rgb(13 40 24 / 0.14); --edge: rgb(13 40 24 / 0.6); --coral-hover: #a62c00; --bar-muted: #c0bfa7; --ridge-back: #98a08c;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #091d15; --ink: #eee8d6; --coral: #fa8467; --coral-fg: #071a13; --muted: #a7a996; --tint-1: #13251c; --tint-2: #1d2e24; --tint-3: #27372b; --line: rgb(238 232 214 / 0.14); --edge: rgb(238 232 214 / 0.6); --coral-hover: #f9936c; --bar-muted: #aeaf9c; --sky-1: #11231b; --sky-2: #465345; --ridge-far: #2d3c30; --ridge-near: #1d2e24; --floor: #25352a; --rows: #39473a; --palm: #091d15; --turbine: #5c6657;
+      --bg: #091d15; --ink: #eee8d6; --coral: #fa8467; --coral-fg: #071a13; --muted: #a7a996; --tint-1: #13251c; --tint-2: #1d2e24; --tint-3: #27372b; --line: rgb(238 232 214 / 0.14); --edge: rgb(238 232 214 / 0.6); --coral-hover: #f9936c; --bar-muted: #b9b9a6; --ridge-back: #13251c;
     }
   }
 }
@@ -81,6 +72,7 @@ input { caret-color: var(--ink); }
 :focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 svg { flex: none; }
+h1, h2, .logo { font-family: var(--slab); font-weight: 400; font-synthesis: none; }
 
 .skip { position: absolute; left: 8px; top: -60px; z-index: 10; background: var(--ink); color: var(--bg); padding: 12px 16px; border-radius: 4px; font-weight: 600; }
 .skip:focus { top: 8px; }
@@ -92,39 +84,33 @@ svg { flex: none; }
 .lb-cur svg { width: 18px; height: 18px; stroke-width: 1.75; }
 .lb-other { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0 8px; margin-right: -8px; font-size: 1rem; font-weight: 700; color: var(--bar-fg); text-decoration: none; }
 .lb-other:hover { text-decoration: underline; }
-.langbar :focus-visible { outline-color: var(--bar-fg); outline-offset: -3px; }
+.langbar :focus-visible, .band :focus-visible { outline-color: var(--bar-fg); }
+.langbar :focus-visible { outline-offset: -3px; }
 
 .notice { display: grid; grid-template-columns: 20px 1fr; gap: 8px 12px; width: calc(100% - 32px); max-width: 728px; margin: 16px auto 0; padding: 12px 16px; background: var(--tint-1); border: 1px solid var(--line); border-radius: 12px; font-size: 1rem; }
 .notice svg { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.25; }
 .notice p { grid-column: 2; margin: 0; font-weight: 600; }
 
-header.site, main, footer.site { max-width: 760px; margin: 0 auto; }
-header.site { padding: 24px 16px 8px; }
-.logo { display: flex; align-items: center; gap: 8px; font-family: var(--serif); font-weight: 600; font-size: 1.25rem; }
-.mark { width: 28px; height: 28px; flex: none; }
-.mark svg { display: block; width: 100%; height: 100%; stroke-width: 2; }
+header.site, main { max-width: 760px; margin: 0 auto; }
+header.site { padding: 28px 16px 0; }
+.logo { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; line-height: 1; }
+.mark { width: 30px; height: 30px; flex: none; }
+.mark svg { display: block; width: 100%; height: 100%; }
 
-h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 7vw, 2.75rem); line-height: 1.1; letter-spacing: -0.01em; margin: 24px 0 12px; text-wrap: balance; max-width: 18ch; }
-.lead { margin: 0 0 12px; color: var(--muted); max-width: 52ch; }
+h1 { font-size: clamp(2.25rem, 8.4vw, 3.5rem); line-height: 1.04; letter-spacing: 0.005em; margin: 24px 0 16px; text-wrap: balance; max-width: 15ch; }
+.lead { margin: 0 0 12px; color: var(--muted); max-width: 50ch; }
 .checked { margin: 0; color: var(--muted); font-size: 1rem; font-variant-numeric: tabular-nums; }
 
-/* The valley at dusk (night in dark mode), looking west: Santa Rosa and San Jacinto, the pass, date groves. */
-.hero-art {
-  display: block; width: 100%; height: auto; aspect-ratio: 2.2; margin-top: 24px; border-radius: 16px;
-  background: linear-gradient(180deg, var(--sky-1), var(--sky-2));
-  background: linear-gradient(180deg in oklch, var(--sky-1), var(--sky-2));
-  animation: rise .5s var(--ease) both;
-}
-.h-far { fill: var(--ridge-far); }
-.h-near { fill: var(--ridge-near); }
-.h-floor { fill: var(--floor); }
-.h-rows { fill: none; stroke: var(--rows); stroke-width: 1.5; }
-.h-turb { fill: none; stroke: var(--turbine); stroke-width: 1.25; stroke-linecap: round; }
-.h-palm { fill: none; stroke: var(--palm); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2; }
-.h-palm .t { stroke-width: 3.4; }
-@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+/* The photo, printed edge to edge on phones and wider than the text on big screens.
+   Its bottom edge is cut along a ridge line, the way park posters stack mountain layers. */
+.hero { position: relative; max-width: 1120px; margin: 28px auto 0; }
+.hero picture { display: block; }
+.hero img { display: block; width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; background: var(--tint-2); }
+.ridge-cut { position: absolute; left: 0; right: 0; bottom: -2px; display: block; width: 100%; height: 16%; }
+.ridge-cut .back { fill: var(--tint-3); }
+.ridge-cut .front { fill: var(--bg); }
 
-.tools { padding: 20px 16px 4px; display: grid; gap: 16px; }
+.tools { padding: 12px 16px 4px; display: grid; gap: 16px; }
 .field label { display: block; font-weight: 600; font-size: 1rem; margin-bottom: 4px; }
 .search { display: flex; align-items: center; gap: 8px; background: var(--bg); border: 2px solid var(--edge); border-radius: 12px; padding: 0 12px; }
 .search:focus-within { border-color: var(--ink); }
@@ -150,12 +136,12 @@ select { width: 100%; min-height: 52px; border-radius: 12px; border: 2px solid v
 .hint { margin: 8px 16px 0; color: var(--muted); font-size: 1rem; }
 
 /* Listings: a ruled list like map search results. Name first, then one quiet status line. */
-#results { padding: 8px 16px; }
+#results { padding: 8px 16px 16px; }
 #results:focus { outline: none; }
 .card { padding: 24px 0 28px; border-top: 1px solid var(--line); }
-.card:first-child, .empty { border-top: 2px solid var(--ink); }
-.card h2 { margin: 0; font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.2; overflow-wrap: anywhere; text-wrap: balance; }
-.sub { margin: 6px 0 0; color: var(--muted); font-size: 1rem; }
+.card:first-child, .empty { border-top: 3px solid var(--ink); }
+.card h2 { margin: 0; font-size: 1.375rem; line-height: 1.2; letter-spacing: 0.01em; overflow-wrap: anywhere; text-wrap: balance; }
+.sub { margin: 8px 0 0; color: var(--muted); font-size: 1rem; }
 .sub .open { color: var(--ink); font-weight: 700; }
 .dot { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; background: var(--coral); vertical-align: 1px; }
 .alert { display: flex; gap: 12px; margin: 16px 0 0; padding: 12px; background: var(--tint-2); border: 1px solid var(--line); border-radius: 12px; font-weight: 600; font-size: 1rem; }
@@ -193,36 +179,60 @@ select { width: 100%; min-height: 52px; border-radius: 12px; border: 2px solid v
 
 .empty { margin: 16px 0; padding: 24px 0; }
 
-/* Help: a light sand panel in the column, with the one coral Call button. */
-.help { width: calc(100% - 32px); max-width: 728px; margin: 32px auto 0; padding: 24px 20px; background: var(--tint-1); border: 1px solid var(--line); border-radius: 20px; }
-.help h2 { margin: 0 0 12px; font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.2; text-wrap: balance; }
-.help p { margin: 0 0 16px; max-width: 56ch; }
-.help .hint { margin: 0 0 4px; }
+/* The poster's bottom band: two ridges rise out of the page, then the help section and footer
+   sit on creosote with the one coral Call button. */
+.ridge-top { display: block; width: 100%; height: clamp(40px, 8vw, 88px); margin-top: 40px; }
+.ridge-top .back { fill: var(--ridge-back); }
+.ridge-top .front { fill: var(--bar-bg); }
+.band { background: var(--bar-bg); color: var(--bar-fg); margin-top: -1px; }
+.band a:not(.btn) { color: var(--bar-fg); }
+.help { max-width: 760px; margin: 0 auto; padding: 16px 16px 8px; }
+.help h2 { margin: 0 0 12px; font-size: 1.625rem; line-height: 1.15; letter-spacing: 0.01em; text-wrap: balance; max-width: 22ch; }
+.help p { margin: 0 0 20px; max-width: 56ch; }
+.help .hint { margin: 0 0 4px; color: var(--bar-muted); }
 .help .btn { flex-direction: row; gap: 8px; min-height: 52px; max-width: 360px; padding: 4px 16px; }
-.help-list { margin: 20px 0 8px; display: grid; gap: 12px; }
+.help-list { margin: 24px 0 8px; display: grid; gap: 12px; }
 .help-list div { display: grid; }
-.help-list dt { font-size: 1rem; font-weight: 600; color: var(--muted); }
+.help-list dt { font-size: 1rem; font-weight: 600; color: var(--bar-muted); }
 .help-list dd { margin: 0; overflow-wrap: anywhere; }
 .help a:not(.btn) { display: inline-block; padding: 10px 0; min-height: 44px; font-weight: 600; overflow-wrap: anywhere; }
-footer.site { padding: 24px 16px 40px; font-size: 1rem; color: var(--muted); }
+footer.site { max-width: 760px; margin: 0 auto; padding: 24px 16px 40px; font-size: 1rem; color: var(--bar-muted); border-top: 1px solid color-mix(in oklch, var(--bar-fg) 18%, transparent); }
 footer.site p { margin: 0 0 12px; max-width: 64ch; }
-footer.site a { display: inline-block; padding: 10px 0; min-height: 44px; }
+/* links inside a sentence stay inline (WCAG 2.5.8 inline exception); the standalone Back to top link gets a full 44px target */
+footer.site #toTop { display: inline-block; padding: 10px 0; min-height: 44px; }
 
-@media (min-width: 560px) {
+@media (min-width: 600px) {
   .two { grid-template-columns: 1fr 1fr; }
-  .hero-art { aspect-ratio: 800 / 260; }
+  .hero { width: calc(100% - 32px); }
+  .hero img { aspect-ratio: 1800 / 693; }
+  .ridge-cut { height: 22%; }
   .btns.three { grid-template-columns: repeat(3, 1fr); }
   .btns.three .dir, .btns.three .nodir { grid-column: auto; }
+  .help { padding-top: 8px; }
 }
+
+/* Two date palms, very faint, on wide screens only: one on each side, leaning in toward the list.
+   They sit in the empty margins and never reach the text column. Where the browser supports it,
+   they grow a little over the first few screens as you scroll. */
+@media (min-width: 1100px) {
+  body::before, body::after {
+    content: ""; position: fixed; bottom: 0; z-index: -1; pointer-events: none;
+    width: min(calc((100vw - 760px) / 2 - 24px), 340px); aspect-ratio: 374 / 686;
+    background: var(--ink);
+    -webkit-mask: url("palm.svg") no-repeat bottom left / contain; mask: url("palm.svg") no-repeat bottom left / contain;
+    opacity: .07;
+    transform-origin: 50% 100%;
+  }
+  body::before { left: 8px; }
+  body::after { right: 8px; transform: scaleX(-1); }
+  @supports (animation-timeline: scroll()) {
+    body::before, body::after { animation: palm-grow linear both; animation-timeline: scroll(root); animation-range: 0 2000px; }
+  }
+}
+@keyframes palm-grow { from { scale: .75; } to { scale: 1; } }
+
 @media (prefers-reduced-motion: reduce) {
   .sw, .sw::after, .btn { transition: none; }
   .btn:active { transform: none; }
-  .hero-art { animation: none; }
-}
-
-/* Two still palms, very faint, on wide screens only */
-@media (min-width: 1024px) {
-  body::before, body::after { content: ""; position: fixed; bottom: 0; width: min(22vw, 280px); aspect-ratio: 1 / 2; background: var(--ink); -webkit-mask: url("palm.svg") no-repeat bottom / contain; mask: url("palm.svg") no-repeat bottom / contain; opacity: .045; pointer-events: none; z-index: -1; }
-  body::before { left: 0; }
-  body::after { right: 0; transform: scaleX(-1); }
+  body::before, body::after { animation: none !important; }
 }
