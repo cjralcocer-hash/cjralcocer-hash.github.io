@@ -1,0 +1,246 @@
+{
+  "note": "Differences between data.json and FIND's map page that a person has looked at. The weekly check (scripts/update-data.mjs) stays quiet about an entry only while FIND's text is exactly what is written here. If FIND changes that text, the entry is reported again. Keep the reasons honest, and remove an entry once the difference is fixed.",
+  "differences": [
+    {
+      "id": 5,
+      "name": "FIND Mobile Market - Rancho Las Flores Park",
+      "reason": "FIND's monthly Mobile Market calendar is used where it disagrees with the map page (see data.json source note). The map page gives the 3rd Friday.",
+      "find": {
+        "name": "FIND Mobile Market - Rancho Las Flores Park",
+        "hours": "3rd Friday 7:00am-9:00am",
+        "location": "48400 Van Buren St. Coachella, CA 92236",
+        "contact": "FIND Food Bank at (760) 775-3663"
+      }
+    },
+    {
+      "id": 8,
+      "name": "FIND Mobile Market - La Quinta Library",
+      "reason": "The map page lists this market under a longer name, \"(Walk-Up + Seniors Only)\". Same address and hours as ours.",
+      "find": {
+        "name": "FIND Mobile Market - La Quinta Library (Walk-Up + Seniors Only)",
+        "hours": "4th Saturday 7:00am-9:00am",
+        "location": "78275 Calle Tampico, La Quinta, CA 92253 – Walk-up + Seniors Only",
+        "contact": "FIND Food Bank at (760) 775-3663"
+      }
+    },
+    {
+      "id": 9,
+      "name": "FIND Mobile Market - West Shores High School",
+      "reason": "FIND's monthly Mobile Market calendar is used where it disagrees with the map page. The map page writes the address differently and gives other hours.",
+      "find": {
+        "name": "FIND Mobile Market - West Shores High School",
+        "hours": "2nd Wednesday 8:00am-10:00am",
+        "location": "2381 Shores Hawk, Thermal, CA 92274",
+        "contact": "FIND Food Bank at (760) 775-3663"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Desert Hot Springs Senior Center",
+      "reason": "FIND writes the time as \"9 to 11am\", which the check cannot read as two times. Same days and hours as ours.",
+      "find": {
+        "name": "Desert Hot Springs Senior Center",
+        "hours": "Food Distributions every 3rd Wednesday from 9 to 11am or until all food is distributed.",
+        "location": "11777 West Dr. Desert Hot Springs, CA 92240",
+        "contact": "(760) 329-0222"
+      }
+    },
+    {
+      "id": 30,
+      "name": "FIND Mobile Market - Cabot Yerxa Elementary School",
+      "reason": "NOT RESOLVED: the house number differs (FIND 67067, ours 67076), and FIND's monthly Mobile Market calendar is used where it disagrees on hours. A person should confirm the address.",
+      "find": {
+        "name": "FIND Mobile Market - Cabot Yerxa Elementary School",
+        "hours": "4th Monday 9:00am-11:00am",
+        "location": "67067 Desert View Ave. Desert Hot Springs, CA 92240",
+        "contact": "FIND Food Bank at (760) 775-3663"
+      }
+    },
+    {
+      "id": 36,
+      "name": "St. Theresa’s Catholic Church",
+      "reason": "FIND adds a note to the address (distributions are in the school gym behind the church). Hours as FIND says; the diocese says 7:30 to 10:00 AM (see community-sources.md).",
+      "find": {
+        "name": "St. Theresa’s Catholic Church",
+        "hours": "Food Distributions on Mondays from 7:30am – 11:30am",
+        "location": "2800 E. Ramon Rd. Palm Springs, CA 92264 – Distributions take place in the school gym, located behind the church.",
+        "contact": "(760) 323-2669"
+      }
+    },
+    {
+      "id": 37,
+      "name": "The Center",
+      "reason": "FIND starts the address with \"The Community Food Bank:\". Same street address and hours as ours.",
+      "find": {
+        "name": "The Center",
+        "hours": "Food Distributions on Thursdays from 5:00 pm – 7:00 pm",
+        "location": "The Community Food Bank: 2901 E. Alejo Rd. Palm Springs, CA 92262",
+        "contact": "(760) 416-7790"
+      }
+    },
+    {
+      "id": 39,
+      "name": "FIND Mobile Market - Palm Springs Convention Center",
+      "reason": "FIND's monthly Mobile Market calendar is used where it disagrees with the map page. The map page gives other hours.",
+      "find": {
+        "name": "FIND Mobile Market - Palm Springs Convention Center",
+        "hours": "1st Thursday 4:00pm-5:30pm",
+        "location": "277 N. Avenida Caballeros, Palm Springs, CA 92262",
+        "contact": "FIND Food Bank at (760) 775-3663"
+      }
+    },
+    {
+      "id": 45,
+      "name": "Iglesia Un Manantial en el Desierto Site",
+      "reason": "FIND writes the phone number with a long dash, \"(760) 238 – 2186\", which the check cannot read. Same number as ours.",
+      "find": {
+        "name": "Iglesia Un Manantial en el Desierto Site",
+        "hours": "Every other Thursday at 8pm",
+        "location": "99241 Access Rd. North Shore, CA 92254",
+        "contact": "(760) 238 – 2186"
+      }
+    },
+    {
+      "id": 47,
+      "name": "Catholic Charities Site #2",
+      "reason": "FIND lists no hours or phone for this site. Our entry has hours.",
+      "find": {
+        "name": "Catholic Charities Site #2",
+        "hours": "",
+        "location": "99-155 Sea View Dr. Mecca, CA 92254",
+        "contact": ""
+      }
+    },
+    {
+      "id": 50,
+      "name": "Community Food Pantry",
+      "reason": "Our entry lists more hours than FIND's one line (Monday, Wednesday and Friday).",
+      "find": {
+        "name": "Community Food Pantry",
+        "hours": "Food Distributions Every Monday, Wednesday & Friday from 9:30 am – 11:30 am",
+        "location": "81050 Harrison St. Thermal, CA 92274",
+        "contact": ""
+      }
+    },
+    {
+      "id": 51,
+      "name": "Coachella Valley Rescue Mission",
+      "reason": "Our entry also lists the daily hot meals; FIND's line has only the Wednesday giveaway.",
+      "find": {
+        "name": "Coachella Valley Rescue Mission",
+        "hours": "Food Distribution: Wednesdays 8:00am-10:00am",
+        "location": "47-470 Van Buren St. Indio, CA 92201",
+        "contact": "(760)347-3512"
+      }
+    },
+    {
+      "id": 55,
+      "name": "Nueva Jerusalem",
+      "reason": "FIND's line has a typo, \"Thrusday\", so the check cannot read the day. Same days and hours as ours.",
+      "find": {
+        "name": "Nueva Jerusalem",
+        "hours": "Food Distributions 1st and 3rd Thrusday of Each Month from 4:00pm – 6:00pm or until all food is distributed.",
+        "location": "83155 Indio Blvd, Indio, CA 92201",
+        "contact": ""
+      }
+    },
+    {
+      "id": 69,
+      "name": "Cathedral City Senior Center",
+      "reason": "FIND writes the time as \"8:30 to 11am\", which the check cannot read as two times. Same hours as ours (see community-sources.md for a conflicting news report).",
+      "find": {
+        "name": "Cathedral City Senior Center",
+        "hours": "FOOD DISTRIBUTION – Every Monday from 8:30 to 11am",
+        "location": "37171 W. Buddy Rogers Ave. Cathedral City, CA 92234",
+        "contact": "(760) 321-1548"
+      }
+    }
+  ],
+  "not_listed": [
+    {
+      "name": "Set Free Church Desert Center",
+      "reason": "Outside the Coachella Valley.",
+      "location": "25980 Kaiser Rd. Desert Center, CA 92239"
+    },
+    {
+      "name": "Set Free Church Blythe",
+      "reason": "Outside the Coachella Valley.",
+      "location": "350 N. Palm Dr. Blythe, CA 92225"
+    },
+    {
+      "name": "Idyllwild Forest Health Project",
+      "reason": "Outside the Coachella Valley.",
+      "location": "29375 CA-243, Mountain Center, CA 92561"
+    },
+    {
+      "name": "First Chistian Church Yucca Valley",
+      "reason": "Outside the Coachella Valley.",
+      "location": ""
+    },
+    {
+      "name": "Ripley Center",
+      "reason": "Outside the Coachella Valley.",
+      "location": "24501 School Rd. Ripley, CA 92225"
+    },
+    {
+      "name": "Colorado River Senior Center",
+      "reason": "Outside the Coachella Valley.",
+      "location": "1 Hidden Valley Rd. Blythe, CA 92225"
+    },
+    {
+      "name": "Five Two Foundation",
+      "reason": "Outside the Coachella Valley.",
+      "location": "57373 Joshual Ln. Yucca Valley, CA 92284"
+    },
+    {
+      "name": "CLEP Community Learning & Equipping Project",
+      "reason": "Outside the Coachella Valley.",
+      "location": "4751 Adobe Rd. Twentynine Palms, CA 92277"
+    },
+    {
+      "name": "Set Free Church 29Palms",
+      "reason": "Outside the Coachella Valley.",
+      "location": "82572 Amboy Rd. Twentynine Palms, CA 92277"
+    },
+    {
+      "name": "Calvary Road Fellowship",
+      "reason": "Outside the Coachella Valley.",
+      "location": "1518 Elbow Rd. Morongo Valley, CA 92256"
+    },
+    {
+      "name": "Calvary Christian Fellowship - Paying it Forward",
+      "reason": "Outside the Coachella Valley.",
+      "location": "288 Old Woman Springs Rd. Yucca Valley, CA 92286"
+    },
+    {
+      "name": "FIND Mobile Market - Copper Mountain College, Joshua Tree",
+      "reason": "Outside the Coachella Valley.",
+      "location": "6162 Rotary Way, Joshua Tree, CA 92252 – Bell Center Parking Lot"
+    },
+    {
+      "name": "Yucca Valley Church of the Nazarene",
+      "reason": "Outside the Coachella Valley.",
+      "location": "56-248 Buena Vista Dr. Yucca Valley, CA 92284"
+    },
+    {
+      "name": "The Way Station",
+      "reason": "Outside the Coachella Valley.",
+      "location": "61-722 Commercial St. Joshua Tree, CA 92252"
+    },
+    {
+      "name": "FIND Mobile Market - Cabazon Community Center",
+      "reason": "Outside the Coachella Valley.",
+      "location": "50390 Carmen Ave. Cabazon, CA 92230"
+    },
+    {
+      "name": "Blythe Emergency Food Pantry",
+      "reason": "Outside the Coachella Valley.",
+      "location": "181 South Main St. Blythe, CA 92225"
+    },
+    {
+      "name": "FIND Mobile Market - Anza Electric Co-op",
+      "reason": "Outside the Coachella Valley.",
+      "location": "54870 CA-371, Anza, CA 92539"
+    }
+  ]
+}

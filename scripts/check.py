@@ -91,13 +91,14 @@ def check_used_keys(cfg, strings):
         if p.get('nav'):
             wanted.append((p['nav'], 'src/pages.json'))
     wanted.append(('navSiteLabel', 'scripts/build.py'))
+    wanted += [(k, 'scripts/build.py') for k in ('suggestTitle', 'suggestBody', 'a11yTitle', 'a11yBody')]
     wanted += [(k, 'scripts/places.py') for k in places.KEYS]
     for path in glob.glob(os.path.join(ROOT, '*.js')):
         with open(path, encoding='utf-8') as f:
             text = f.read()
         for key in re.findall(r"\bt\('([\w.]+)'\s*[,)]", text):
             wanted.append((key, os.path.basename(path)))
-        for key in re.findall(r"'(unclearOne|unclearMany|countAll|countSome)'", text):
+        for key in re.findall(r"'(unclearOne|unclearMany|countAll|countSome|openNowUntil|closesSoon|opensLater|closedToday|distAbout|distApprox|nearOn|nearOff|nearSorted|nearLocating|nearDenied|nearFailed)'", text):
             wanted.append((key, os.path.basename(path)))
     for key, where in wanted:
         used.add(key)
@@ -191,6 +192,53 @@ def check_entries():
                 err('%s: photo "%s" does not exist' % (where, photo))
 
 
+def check_known_differences():
+    """scripts/known-differences.json: what the weekly check should stay quiet about."""
+    data = load_json('scripts/known-differences.json')
+    places = load_json('data.json')
+    if data is None or places is None:
+        return
+    ids = {str(p['id']) for p in places.get('places', [])}
+    seen = set()
+    for i, e in enumerate(data.get('differences', [])):
+        where = 'scripts/known-differences.json difference %d' % (i + 1)
+        if str(e.get('id')) not in ids:
+            err('%s: id %s is not in data.json' % (where, e.get('id')))
+        if str(e.get('id')) in seen:
+            err('%s repeats id %s' % (where, e.get('id')))
+        seen.add(str(e.get('id')))
+        if not e.get('reason'):
+            err('%s needs a "reason"' % where)
+        if not isinstance(e.get('find'), dict) or not all(k in e['find'] for k in ('name', 'hours', 'location', 'contact')):
+            err('%s needs "find" with name, hours, location and contact' % where)
+    for i, e in enumerate(data.get('not_listed', [])):
+        if not e.get('name') or not e.get('reason'):
+            err('scripts/known-differences.json not_listed %d needs a "name" and a "reason"' % (i + 1))
+
+
+def check_geo():
+    """geo.json: every place that has a street address has coordinates, looked up for the address now in use."""
+    geo = load_json('geo.json')
+    if geo is None:
+        return
+    plist, _ = places.merged_places()
+    entries = geo.get('places', {})
+    for p in plist:
+        if p.get('noDirections'):
+            continue
+        e = entries.get(str(p['id']))
+        if not e:
+            err('geo.json has no coordinates for place %s (%s): run  python3 scripts/geocode.py' % (p['id'], p['name']))
+        elif e.get('address') != p['address']:
+            err('geo.json was looked up for a different address than place %s now has: run  python3 scripts/geocode.py' % p['id'])
+        elif not (33.25 <= e.get('lat', 0) <= 34.10 and -117.0 <= e.get('lon', 0) <= -115.4):
+            err('geo.json coordinates for place %s are outside the Coachella Valley' % p['id'])
+    ids = {str(p['id']) for p in plist}
+    for pid in entries:
+        if pid not in ids:
+            warnings.append('geo.json has coordinates for "%s", which is not a place any more' % pid)
+
+
 def main():
     cfg = load_json('src/pages.json')
     check_json_files()
@@ -200,6 +248,8 @@ def main():
         files = check_generated()
         check_links(cfg, files)
     check_entries()
+    check_known_differences()
+    check_geo()
     for w in warnings:
         print('warning: ' + w)
     if errors:

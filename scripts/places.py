@@ -120,15 +120,18 @@ def host(url):
     return re.sub(r'^www\.', '', re.sub(r'^https?://([^/:?#]+).*$', r'\1', url))
 
 
-def report_url(base, strings, p):
-    title = fill(strings['reportTitle'], name=p['name'])
-    body = fill(strings['reportBody'], name=p['name'], id=p['id'])
+def issue_url(base, title, body):
+    """A link that opens a new GitHub issue with the title and text already filled in."""
     return '%s?title=%s&body=%s' % (base, quote(title, safe="!~*'()"), quote(body, safe="!~*'()"))
+
+
+def report_url(base, strings, p):
+    return issue_url(base, fill(strings['reportTitle'], name=p['name']), fill(strings['reportBody'], name=p['name'], id=p['id']))
 
 
 def card(p, lang, strings, find, ic, report_base):
     t = lambda k: strings[k]  # noqa: E731
-    out = ['<article class="card" data-id="%s">' % esc(str(p['id'])), '<h2>%s</h2>' % esc(p['name'])]
+    out = ['<article class="card" id="place-%s" data-id="%s">' % (esc(str(p['id'])), esc(str(p['id']))), '<h2>%s</h2>' % esc(p['name'])]
 
     sep = '<span class="sr-only">, </span><span aria-hidden="true"> · </span>'
     kinds = ', '.join(t('type_' + x) if i == 0 else t('type_' + x).lower() for i, x in enumerate(p['types']))
@@ -194,7 +197,7 @@ def card(p, lang, strings, find, ic, report_base):
     out.append('<div class="btns%s">%s</div>' % (' three' if len(phones) > 1 else '', ''.join(btns)))
     if not phones:
         out.append('<p class="nophone">%s</p>' % esc(t('noPhone')))
-    out.append('<p class="report"><a href="%s" target="_blank" rel="noopener" aria-label="%s">%s</a></p>' % (
+    out.append('<p class="more"><a href="%s" target="_blank" rel="noopener" aria-label="%s">%s</a></p>' % (
         esc(report_url(report_base, strings, p)), esc(fill(t('reportAria'), name=p['name'])), esc(t('reportLink'))))
     out.append('</article>')
     return ''.join(out)

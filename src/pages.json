@@ -13,6 +13,13 @@
       "nav": "nav.home"
     },
     {
+      "id": "about",
+      "path": "about/",
+      "skipTo": "main",
+      "scripts": [],
+      "nav": "nav.about"
+    },
+    {
       "id": "flyer",
       "path": "flyer/",
       "skipTo": "flyer",

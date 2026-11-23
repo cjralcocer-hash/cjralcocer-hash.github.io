@@ -36,6 +36,11 @@
         </select>
       </div>
     </div>
+    <div class="near" id="nearWrap" hidden>
+      <button type="button" class="near-btn" id="near" aria-pressed="false"><span id="nearLabel">{{t:nearOn}}</span></button>
+      <p class="hint" id="nearNote">{{t:nearNote}}</p>
+      <p class="hint" id="nearMsg" role="status" hidden></p>
+    </div>
     <label class="today" for="today">
       <input id="today" type="checkbox" role="switch">
       <span class="today-text"><span>{{t:openToday}}</span> <span id="todayName" class="today-day"></span></span>
@@ -53,6 +58,7 @@
 {{v:cards}}
 </div>
 
+  <p id="live" class="sr-only" role="status"></p>
   <noscript><p class="hint">{{t:noscript}}</p></noscript>
 </main>
 <!--@band-->

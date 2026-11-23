@@ -1,0 +1,310 @@
+{
+ "note": "Map coordinates for \"Near me\" sorting, from OpenStreetMap Nominatim (data (c) OpenStreetMap contributors, ODbL). Made by scripts/geocode.py. \"approx\" means only the city could be found.",
+ "places": {
+  "1": {
+   "address": "83775 Citrus Ave. Indio, CA 92201",
+   "lat": 33.71861,
+   "lon": -116.20244
+  },
+  "14": {
+   "address": "82490 Doctor Carreon Blvd. Indio, CA 92201",
+   "lat": 33.71928,
+   "lon": -116.21881,
+   "approx": true
+  },
+  "15": {
+   "address": "11777 West Dr. Desert Hot Springs, CA 92240",
+   "lat": 33.96265,
+   "lon": -116.51025
+  },
+  "18": {
+   "address": "83151 Requa Ave. Indio, CA 92201",
+   "lat": 33.71755,
+   "lon": -116.21387
+  },
+  "19": {
+   "address": "100110 Compass Dr. North Shore/Mecca, CA 92254",
+   "lat": 33.51479,
+   "lon": -115.90917,
+   "approx": true
+  },
+  "2": {
+   "address": "43052 Madison St, Ste 101 Indio, CA 92201",
+   "lat": 33.73636,
+   "lon": -116.2514
+  },
+  "20": {
+   "address": "68633 C St. Cathedral City, CA 92234",
+   "lat": 33.7773,
+   "lon": -116.46431
+  },
+  "21": {
+   "address": "17400 Bubbling Wells Rd. Desert Hot Springs, CA 92241",
+   "lat": 33.93285,
+   "lon": -116.48447
+  },
+  "25": {
+   "address": "20905 Hot Springs Rd, Desert Hot Springs, CA 92241",
+   "lat": 33.96112,
+   "lon": -116.50168,
+   "approx": true
+  },
+  "28": {
+   "address": "65250 Coahuilla St. Mecca, CA 92254",
+   "lat": 33.57436,
+   "lon": -116.07617
+  },
+  "29": {
+   "address": "86150 Ave 66th Thermal, CA 92274",
+   "lat": 33.62758,
+   "lon": -116.12505,
+   "approx": true
+  },
+  "3": {
+   "address": "83100 Date Ave Indio, CA 92201",
+   "lat": 33.71145,
+   "lon": -116.21444
+  },
+  "30": {
+   "address": "67076 Desert View Ave. Desert Hot Springs, CA 92240",
+   "lat": 33.96112,
+   "lon": -116.50168,
+   "approx": true
+  },
+  "33": {
+   "address": "83800 Airport Blvd. Thermal, CA 92274",
+   "lat": 33.64209,
+   "lon": -116.1119
+  },
+  "35": {
+   "address": "630 S. Sunrise Way, Palm Springs, CA 92264",
+   "lat": 33.81345,
+   "lon": -116.52815
+  },
+  "36": {
+   "address": "2800 E. Ramon Rd. Palm Springs, CA 92264",
+   "lat": 33.81605,
+   "lon": -116.51792
+  },
+  "37": {
+   "address": "2901 E. Alejo Rd. Palm Springs, CA 92262",
+   "lat": 33.83033,
+   "lon": -116.51547
+  },
+  "38": {
+   "address": "480 W Tramview Rd. Palm Springs, CA 92262",
+   "lat": 33.86767,
+   "lon": -116.55209
+  },
+  "39": {
+   "address": "277 N. Avenida Caballeros, Palm Springs, CA 92262",
+   "lat": 33.82631,
+   "lon": -116.53703
+  },
+  "4": {
+   "address": "44-175 Washington St. Indian Wells, CA 92210",
+   "lat": 33.72764,
+   "lon": -116.30678
+  },
+  "40": {
+   "address": "74-200 Country Club Dr. Palm Desert, CA 92260",
+   "lat": 33.75804,
+   "lon": -116.38165
+  },
+  "41": {
+   "address": "73-750 Catalina Way, Palm Desert, CA 92260",
+   "lat": 33.72621,
+   "lon": -116.37881
+  },
+  "42": {
+   "address": "42-695 Washington St. Palm Desert, CA 92211",
+   "lat": 33.75412,
+   "lon": -116.30387
+  },
+  "43": {
+   "address": "47-535 Hwy 74, Palm Desert, CA 92260",
+   "lat": 33.70199,
+   "lon": -116.39781
+  },
+  "44": {
+   "address": "74910 Aztec Rd. Palm Desert, CA 92260",
+   "lat": 33.72882,
+   "lon": -116.38257,
+   "approx": true
+  },
+  "45": {
+   "address": "99241 Access Rd. North Shore, CA 92254",
+   "lat": 33.51479,
+   "lon": -115.90917,
+   "approx": true
+  },
+  "46": {
+   "address": "66-101 Hammond Rd. Mecca, CA 92254",
+   "lat": 33.57465,
+   "lon": -116.08066
+  },
+  "47": {
+   "address": "99-155 Sea View Dr. Mecca, CA 92254",
+   "lat": 33.57726,
+   "lon": -116.06914,
+   "approx": true
+  },
+  "48": {
+   "address": "65-050 Cahuilla St. Mecca, CA 92254",
+   "lat": 33.57726,
+   "lon": -116.06914,
+   "approx": true
+  },
+  "5": {
+   "address": "48400 Van Buren St. Coachella, CA 92236",
+   "lat": 33.69742,
+   "lon": -116.19894
+  },
+  "50": {
+   "address": "81050 Harrison St. Thermal, CA 92274",
+   "lat": 33.62758,
+   "lon": -116.12505,
+   "approx": true
+  },
+  "51": {
+   "address": "47-470 Van Buren St. Indio, CA 92201",
+   "lat": 33.70481,
+   "lon": -116.19895
+  },
+  "52": {
+   "address": "82625 Showcase Parkway, Indio, CA 92203",
+   "lat": 33.74172,
+   "lon": -116.22288
+  },
+  "53": {
+   "address": "43-907 Jackson St. Indio, CA 92201",
+   "lat": 33.67752,
+   "lon": -116.21652
+  },
+  "54": {
+   "address": "83791 Date Ave. Indio, CA 92201",
+   "lat": 33.71149,
+   "lon": -116.20278
+  },
+  "55": {
+   "address": "83155 Indio Blvd, Indio, CA 92201",
+   "lat": 33.71928,
+   "lon": -116.21881,
+   "approx": true
+  },
+  "56": {
+   "address": "45319 Deglet Noor St. Indio, CA 92201",
+   "lat": 33.71916,
+   "lon": -116.2235
+  },
+  "57": {
+   "address": "43640 Burr St. Indio, CA 92201",
+   "lat": 33.73237,
+   "lon": -116.26007
+  },
+  "58": {
+   "address": "39225 Jefferson St. Indio, CA 92201",
+   "lat": 33.76473,
+   "lon": -116.26914
+  },
+  "59": {
+   "address": "81410 CA-111, Indio, CA 92201",
+   "lat": 33.70726,
+   "lon": -116.24396
+  },
+  "6": {
+   "address": "88175 74th Ave. Thermal, CA 92274",
+   "lat": 33.62758,
+   "lon": -116.12505,
+   "approx": true
+  },
+  "60": {
+   "address": "82025 Bliss St. Indio, CA 92201",
+   "lat": 33.71928,
+   "lon": -116.21881,
+   "approx": true
+  },
+  "62": {
+   "address": "14080 Palm Dr., Ste E, Desert Hot Springs, CA 92240",
+   "lat": 33.94602,
+   "lon": -116.50124
+  },
+  "63": {
+   "address": "66700 Pierson Blvd. Desert Hot Springs, CA 92240",
+   "lat": 33.96174,
+   "lon": -116.49803
+  },
+  "64": {
+   "address": "85901 Vista Del Norte, Coachella, CA 92236",
+   "lat": 33.71504,
+   "lon": -116.16104
+  },
+  "65": {
+   "address": "1612 1st St. Coachella, CA 92236",
+   "lat": 33.68338,
+   "lon": -116.17844
+  },
+  "66": {
+   "address": "83246 Ave. 50, Coachella, CA 92236",
+   "lat": 33.68578,
+   "lon": -116.21261
+  },
+  "67": {
+   "address": "68550 Dinah Shore Dr. Cathedral City, CA 92234",
+   "lat": 33.80147,
+   "lon": -116.46621
+  },
+  "68": {
+   "address": "30400 Landau Blvd. Cathedral City, CA 92234",
+   "lat": 33.82832,
+   "lon": -116.47549
+  },
+  "69": {
+   "address": "37171 W. Buddy Rogers Ave. Cathedral City, CA 92234",
+   "lat": 33.7779,
+   "lon": -116.46465
+  },
+  "7": {
+   "address": "99480 70th Ave. Mecca, CA 92254",
+   "lat": 33.57726,
+   "lon": -116.06914,
+   "approx": true
+  },
+  "70": {
+   "address": "35688 Cathedral Canyon Dr. Ste. 101, Cathedral City, CA 92234",
+   "lat": 33.78825,
+   "lon": -116.46669
+  },
+  "71": {
+   "address": "30800 San Luis Rey Dr. Cathedral City, CA 92234",
+   "lat": 33.82588,
+   "lon": -116.49038
+  },
+  "8": {
+   "address": "78275 Calle Tampico, La Quinta, CA 92253",
+   "lat": 33.67755,
+   "lon": -116.29852
+  },
+  "9": {
+   "address": "2381 Shore Hawk Ave, Salton City, CA",
+   "lat": 33.30185,
+   "lon": -115.95715
+  },
+  "c1": {
+   "address": "31280 Sierra del Sol, Thousand Palms, CA",
+   "lat": 33.82165,
+   "lon": -116.3881
+  },
+  "c2": {
+   "address": "84711 Avenue 51, Coachella, CA",
+   "lat": 33.6795,
+   "lon": -116.17628,
+   "approx": true
+  },
+  "c3": {
+   "address": "30010 Date Palm Dr, Cathedral City, CA",
+   "lat": 33.85708,
+   "lon": -116.4582
+  }
+ }
+}

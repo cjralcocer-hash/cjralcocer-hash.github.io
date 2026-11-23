@@ -87,3 +87,16 @@ The site warns "not re-checked recently, call first" on any community place whos
 ### Adding a new place
 
 Add it only if it passes all six rules at the top of `community-sources.md`: an official source, free food with a street address, days and times, current (dated within 12 months or confirmed by a second dated source), no conflicts, open to the public (or eligibility clearly stated), and not already in `data.json`. Use the next free id (`c4`, `c5`, and so on) and write the hours in the same plain-words style in both languages.
+
+## Known differences (`scripts/known-differences.json`)
+
+The weekly check compares `data.json` with FIND's map page. Differences a person has already looked at are listed in `scripts/known-differences.json` with a short reason, so the check stays quiet about them. An entry is quiet only while FIND's text is exactly what the file records: if FIND changes it, the difference is reported again. FIND listings outside the Coachella Valley are listed under `not_listed` so they do not open an issue every week. When a difference is fixed, the check says the entry can be removed. The check still never edits hours, addresses or phones.
+
+## Map spots for "sort by distance" (`geo.json`)
+
+`geo.json` holds coordinates for each place, from OpenStreetMap's Nominatim service. After adding a place or changing an address, run `python3 scripts/geocode.py` (it only looks up what is missing or changed, one request per second). Entries marked `approx` could only be found by city, and the page says so. `python3 scripts/check.py` fails if a place has no coordinates or its address changed since they were looked up. The visitor's own location is used in the browser only, after they press the button; it is never sent or saved.
+
+## Pages and the "open now" status
+
+- `src/pages/about.html` is the About and accessibility page. Its text lives in `i18n/` (keys starting `about`). If you change what the site does for accessibility, update `aboutAccess*` so the statement stays true.
+- "Open now / closes soon" is worked out in `list.js` from the English hours text, and only when the times are unambiguous (one range, or two on one line). Otherwise the card says "Open today". Add `?date=2026-11-21&time=09:30` to the address to test a day and time.

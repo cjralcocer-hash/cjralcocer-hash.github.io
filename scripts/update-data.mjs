@@ -11,6 +11,10 @@
 //     (the "Last checked" date on the site). Nothing else in data.json is touched.
 //   * Anything differs, is missing, or the page cannot be read -> data.json is NOT
 //     changed. A GitHub issue lists what needs a human check.
+//   * scripts/known-differences.json lists differences a person has already looked at.
+//     An entry is quiet only while FIND's text is exactly what the file records; if FIND
+//     changes it, the difference is reported again. FIND listings outside the Coachella
+//     Valley are listed there too, so they do not trigger an issue every week.
 //   * It never writes hours, addresses or phones into data.json. A person does that.
 //
 // Usage
@@ -23,7 +27,9 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
-const DATA_PATH = join(dirname(fileURLToPath(import.meta.url)), '..', 'data.json');
+const HERE = dirname(fileURLToPath(import.meta.url));
+const DATA_PATH = join(HERE, '..', 'data.json');
+const KNOWN_PATH = join(HERE, 'known-differences.json');
 const DRY = process.argv.includes('--dry-run');
 const ISSUE_LABEL = 'data-check';
 const MIN_RESULTS = 10; // a real page has dozens; fewer means the layout changed or the page is broken
@@ -120,6 +126,11 @@ function parseFind(html) {
 
 // ---------- compare ----------
 
+// Does FIND's current text match what a person already looked at? Compared without case or punctuation.
+const squash = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+const pinnedMatches = (pin, c) =>
+  squash(pin.hours) === squash(c.hours) && squash(pin.location) === squash(c.location) && squash(pin.contact) === squash(c.contact);
+
 function compare(place, candidates) {
   const mySched = scheduleOf((place.hours || []).join(' '));
   const myAddr = normAddr(place.address || '');
@@ -133,9 +144,9 @@ function compare(place, candidates) {
     if (theirPhones.join() !== myPhones.join()) problems.push(`phone: ours "${place.contact}", FIND "${c.contact}"`);
     if (!sameSchedule(scheduleOf(c.hours), mySched)) problems.push(`hours: ours "${(place.hours || []).join(' ')}", FIND "${c.hours}"`);
     if (problems.length === 0) return { ok: true };
-    if (!best || problems.length < best.length) best = problems;
+    if (!best || problems.length < best.problems.length) best = { problems, candidate: c };
   }
-  return { ok: false, problems: best };
+  return { ok: false, problems: best.problems, candidate: best.candidate };
 }
 
 // ---------- GitHub issue ----------
@@ -168,6 +179,18 @@ async function openIssue(title, body) {
   } else {
     const made = await gh('/issues', 'POST', { title, body, labels: [ISSUE_LABEL] });
     console.log(`Opened issue #${made.number}`);
+  }
+}
+
+// ---------- known differences ----------
+
+function loadKnown() {
+  try {
+    const k = JSON.parse(readFileSync(KNOWN_PATH, 'utf8'));
+    return { differences: Array.isArray(k.differences) ? k.differences : [], not_listed: Array.isArray(k.not_listed) ? k.not_listed : [] };
+  } catch (err) {
+    console.log(`Could not read scripts/known-differences.json (${err.message}); treating every difference as new.`);
+    return { differences: [], not_listed: [] };
   }
 }
 
@@ -220,22 +243,51 @@ async function main() {
     if (!byName.has(k)) byName.set(k, []);
     byName.get(k).push(f);
   }
+  const knownFile = loadKnown();
+  const knownById = new Map(knownFile.differences.map((k) => [String(k.id), k]));
   const review = []; // { name, lines[] }
   let okCount = 0;
+  let knownCount = 0;
+  const noLongerNeeded = []; // entries in known-differences.json whose difference is gone
   for (const place of data.places) {
+    const k = knownById.get(String(place.id));
     const candidates = byName.get(normName(place.name));
     if (!candidates) {
+      // Not found under our name. A known entry may point at the name FIND uses now.
+      const alt = k && k.find && byName.get(normName(k.find.name));
+      if (alt && alt.some((c) => pinnedMatches(k.find, c))) {
+        knownCount++;
+        continue;
+      }
       review.push({ name: place.name, lines: ['not found on the FIND page under this name (renamed, removed, or listed elsewhere, e.g. a different website)'] });
       continue;
     }
     const r = compare(place, candidates);
-    if (r.ok) okCount++;
-    else review.push({ name: place.name, lines: r.problems });
+    if (r.ok) {
+      okCount++;
+      if (k) noLongerNeeded.push(`${place.name} (id ${place.id})`);
+    } else if (k && k.find && pinnedMatches(k.find, r.candidate)) {
+      knownCount++;
+    } else {
+      const lines = r.problems.slice();
+      if (k) lines.push("this was a known difference, but FIND's text has changed since it was reviewed");
+      review.push({ name: place.name, lines });
+    }
   }
   const known = new Set(data.places.map((p) => normName(p.name)));
-  const newOnFind = [...new Set(found.filter((f) => !known.has(normName(f.name))).map((f) => f.name))];
+  // FIND listings that a person already decided not to list (outside the Coachella Valley).
+  // A known difference may also point at the name FIND uses today, so that name is not "new" either.
+  const notListed = new Set([...knownFile.not_listed.map((n) => normName(n.name)),
+    ...knownFile.differences.filter((k) => k.find && k.find.name).map((k) => normName(k.find.name))]);
+  const newOnFind = [...new Set(found.filter((f) => !known.has(normName(f.name)) && !notListed.has(normName(f.name))).map((f) => f.name))];
+  for (const k of knownFile.differences) {
+    if (!data.places.some((p) => String(p.id) === String(k.id))) noLongerNeeded.push(`id ${k.id} (no such place in data.json)`);
+  }
 
-  console.log(`FIND listings read: ${found.length}. Places in data.json: ${data.places.length}. Match: ${okCount}. Need a human: ${review.length}.`);
+  console.log(`FIND listings read: ${found.length}. Places in data.json: ${data.places.length}. Match: ${okCount}. Known differences: ${knownCount}. Need a human: ${review.length}.`);
+  if (noLongerNeeded.length > 0) {
+    console.log(`Entries in scripts/known-differences.json that can be removed: ${noLongerNeeded.join('; ')}`);
+  }
 
   // 3. Safe change: only the "Last checked" date, and only if nothing needs a human.
   if (review.length === 0) {
@@ -259,7 +311,7 @@ async function main() {
   }
 
   // 4. Ask a human about anything unclear.
-  if (review.length > 0 || newOnFind.length > 0) {
+  if (review.length > 0 || newOnFind.length > 0 || noLongerNeeded.length > 0) {
     const parts = [
       'The weekly check compared `data.json` with FIND Food Bank\'s public map page. **Nothing below was changed automatically.** Please check each item on the FIND page (and by phone if needed), then edit `data.json` by hand.',
       '',
@@ -271,6 +323,9 @@ async function main() {
     }
     if (newOnFind.length > 0) {
       parts.push('### On the FIND page but not in data.json', '', ...newOnFind.map((n) => `- ${n}`), '');
+    }
+    if (noLongerNeeded.length > 0) {
+      parts.push('### Known differences that are gone (remove them from scripts/known-differences.json)', '', ...noLongerNeeded.map((n) => `- ${n}`), '');
     }
     parts.push(
       'Notes: the site\'s "Last checked" date only moves forward when every listing matches. Some differences are expected, for example where FIND\'s monthly calendar overrides the map page (data.json says the calendar wins).',

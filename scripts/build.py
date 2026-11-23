@@ -141,6 +141,8 @@ def render_page(cfg, strings, layout, page, lang):
         'scripts': '\n'.join('<script src="%s%s"></script>' % (root, s) for s in page['scripts']),
         'i18nJson': json_blob,
         'reportUrl': 'https://github.com/%s/issues/new' % cfg['repo'],
+        'suggestUrl': places.issue_url('https://github.com/%s/issues/new' % cfg['repo'], lookup(strings, 'suggestTitle', lang), lookup(strings, 'suggestBody', lang)),
+        'a11yUrl': places.issue_url('https://github.com/%s/issues/new' % cfg['repo'], lookup(strings, 'a11yTitle', lang), lookup(strings, 'a11yBody', lang)),
         'cards': '',
         'count': '',
         'jsonld': '',

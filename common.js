@@ -27,11 +27,15 @@
     return v;
   }
 
-  // For testing only: add ?date=2026-11-21 to the address to pretend it is that day.
+  // For testing only: add ?date=2026-11-21 (and &time=09:30) to the address to pretend it is that day.
+  // With a date but no time it is midnight.
   function testDate() {
     var m = /[?&]date=(\d{4})-(\d{2})-(\d{2})/.exec(location.search);
-    return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+    if (!m) return null;
+    var tm = /[?&]time=(\d{1,2}):(\d{2})/.exec(location.search);
+    return new Date(+m[1], +m[2] - 1, +m[3], tm ? +tm[1] : 0, tm ? +tm[2] : 0);
   }
+  function getNow() { return testDate() || new Date(); }
 
   function iso(d) {
     var m = d.getMonth() + 1, day = d.getDate();
@@ -114,7 +118,7 @@
   };
 
   window.CV = {
-    lang: lang, STR: STR, t: t, now: testDate() || new Date(),
+    lang: lang, STR: STR, t: t, now: getNow(), getNow: getNow,
     iso: iso, parseIso: parseIso, shortDate: shortDate, el: el, norm: norm,
     str: str, strs: strs, text: text, httpUrl: httpUrl,
     getJson: getJson, loadEntries: loadEntries, cleanPartner: cleanPartner, cleanPerson: cleanPerson,

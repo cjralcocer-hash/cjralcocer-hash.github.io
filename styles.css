@@ -94,6 +94,7 @@ h1, h2, .logo { font-family: var(--slab); font-weight: 400; font-synthesis: none
 .sitenav a[aria-current="page"] { border-bottom-color: var(--ink); }
 
 .notice { display: grid; grid-template-columns: 20px 1fr; gap: 8px 12px; width: calc(100% - 32px); max-width: 728px; margin: 16px auto 0; padding: 12px 16px; background: var(--tint-1); border: 1px solid var(--line); border-radius: 12px; font-size: 1rem; }
+.notice[hidden] { display: none; }
 .notice svg { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.25; }
 .notice p { grid-column: 2; margin: 0; font-weight: 600; }
 
@@ -136,6 +137,18 @@ select { width: 100%; min-height: 52px; border-radius: 12px; border: 2px solid v
 .today input:checked ~ .sw::after { left: 22px; background: var(--bg); }
 .today input:focus-visible ~ .sw { outline: 3px solid var(--ink); outline-offset: 2px; }
 
+.near[hidden], #nearMsg[hidden] { display: none; }
+.near-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 52px; padding: 0 16px; border: 2px solid var(--edge); border-radius: 12px; background: var(--bg); color: var(--ink); font: inherit; font-size: 1.125rem; font-weight: 600; cursor: pointer; }
+.near-btn svg { width: 20px; height: 20px; flex: none; stroke-width: 2; }
+.near-btn[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+.near .hint { margin: 8px 0 0; }
+.prose { padding: 8px 16px 32px; }
+.prose section { margin-top: 32px; }
+.prose h2 { margin: 0 0 12px; font-size: 1.625rem; line-height: 1.15; letter-spacing: 0.01em; text-wrap: balance; max-width: 22ch; }
+.prose p, .prose li { max-width: 62ch; }
+.prose p { margin: 0 0 16px; }
+.prose ul { margin: 0 0 16px; padding-left: 1.25em; display: grid; gap: 8px; }
+.prose a { display: inline-block; padding: 10px 0; min-height: 44px; font-weight: 600; text-underline-offset: 3px; overflow-wrap: anywhere; }
 .status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 12px; padding: 12px 16px 0; }
 #count { margin: 0; font-weight: 600; font-variant-numeric: tabular-nums; }
 .link-btn { border: 0; background: none; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; min-height: 44px; padding: 0 4px; cursor: pointer; }
@@ -150,8 +163,10 @@ select { width: 100%; min-height: 52px; border-radius: 12px; border: 2px solid v
 .sub { margin: 8px 0 0; color: var(--muted); font-size: 1rem; }
 .sub .open { color: var(--ink); font-weight: 700; }
 .dot { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; background: var(--coral); vertical-align: 1px; }
-.report { margin: 8px 0 0; }
-.report a { display: inline-block; min-height: 44px; padding: 10px 0; color: var(--muted); font-size: 1rem; text-underline-offset: 3px; }
+.more { display: flex; flex-wrap: wrap; gap: 0 24px; margin: 8px 0 0; }
+.more a, .more button { display: inline-block; min-height: 44px; padding: 10px 0; border: 0; background: none; color: var(--muted); font: inherit; font-size: 1rem; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.card:target { background: var(--tint-1); box-shadow: -16px 0 0 var(--tint-1), 16px 0 0 var(--tint-1); }
+.sub .over { color: var(--muted); font-weight: 600; }
 .alert { display: flex; gap: 12px; margin: 16px 0 0; padding: 12px; background: var(--tint-2); border: 1px solid var(--line); border-radius: 12px; font-weight: 600; font-size: 1rem; }
 .alert svg { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2.25; }
 .alert p { margin: 0; }
