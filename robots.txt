@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cjralcocer-hash.github.io/sitemap.xml
+Sitemap: https://comidacoachellavalley.github.io/sitemap.xml
