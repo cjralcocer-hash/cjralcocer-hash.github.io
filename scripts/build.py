@@ -16,7 +16,9 @@ Tokens inside src/ files
   {{t:key}}   string from i18n, escaped for HTML
   {{h:key}}   string from i18n, inserted as HTML (only for our own strings that hold a link)
   {{p:name}}  page string: looks up "<page id>.<name>" (docTitle, description, ogTitle, ogDescription, ogImageAlt)
-  {{v:name}}  value computed here: lang, root, site, canonical, ...
+  {{es:key}}  string from i18n/es.json whatever the page language (for the bilingual printed flyer)
+  {{en:key}}  the same from i18n/en.json
+  {{v:name}}  value computed here: lang, root, site, canonical, pageId, home, siteHost, findTel, ...
   {{@name}}   a section of the page file
 """
 import json
@@ -24,8 +26,11 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import qr  # noqa: E402
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOKEN = re.compile(r'\{\{(t|h|p|v):([\w.]+)\}\}')
+TOKEN = re.compile(r'\{\{(t|h|p|v|es|en):([\w.]+)\}\}')
 SLOT = re.compile(r'\{\{@(\w+)\}\}')
 SECTION = re.compile(r'<!--@(\w+)-->\n')
 
@@ -97,11 +102,20 @@ def lookup(strings, key, lang):
     return v
 
 
+def load_find():
+    try:
+        find = json.loads(read('data.json'))['find']
+        return {k: find[k] for k in ('phone', 'phone_display', 'hours_es', 'hours_en')}
+    except (KeyError, ValueError, FileNotFoundError):
+        raise BuildError('data.json needs a "find" entry with phone, phone_display, hours_es and hours_en')
+
+
 def render_page(cfg, strings, layout, page, lang):
     root = root_for(cfg, page, lang)
     others = [l for l in cfg['languages'] if l != lang]
     other = others[0]
     default = cfg['defaultLanguage']
+    find = load_find()
     json_blob = json.dumps(strings, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/').replace('<!--', '<\\!--')
     values = {
         'lang': lang,
@@ -114,6 +128,13 @@ def render_page(cfg, strings, layout, page, lang):
         'otherHref': root + lang_prefix(cfg, other) + page['path'],
         'ogLocale': {'es': 'es_US', 'en': 'en_US'}[lang],
         'ogLocaleAlt': {'es': 'es_US', 'en': 'en_US'}[other],
+        'pageId': page['id'],
+        'home': root + lang_prefix(cfg, lang),
+        'siteHost': re.sub(r'^https?://', '', cfg['site']),
+        'findTel': find['phone'],
+        'findPhone': esc(find['phone_display']),
+        'findHoursEs': esc(find['hours_es']),
+        'findHoursEn': esc(find['hours_en']),
         'skipTo': page.get('skipTo', 'main'),
         'nav': nav_html(cfg, page, lang, root, strings),
         'scripts': '\n'.join('<script src="%s%s"></script>' % (root, s) for s in page['scripts']),
@@ -134,6 +155,8 @@ def render_page(cfg, strings, layout, page, lang):
             return values[name]
         if kind == 'p':
             return esc(lookup(strings, page['id'] + '.' + name, lang))
+        if kind in ('es', 'en'):
+            return esc(lookup(strings, name, kind))
         text = lookup(strings, name, lang)
         return text if kind == 'h' else esc(text)
 
@@ -166,6 +189,7 @@ def build_all():
         for lang in cfg['languages']:
             out[out_path(cfg, page, lang)] = render_page(cfg, strings, layout, page, lang)
     out['sitemap.xml'] = sitemap(cfg)
+    out['images/qr-site.svg'] = qr.to_svg(qr.matrix(cfg['site'] + '/'), title=cfg['site'] + '/')
     return out
 
 

@@ -34,7 +34,7 @@
 <link rel="preload" href="{{v:root}}fonts/alfa-slab-one-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{v:root}}styles.css">
 </head>
-<body>
+<body class="page-{{v:pageId}}">
 <a class="skip" href="#{{v:skipTo}}">{{t:skip}}</a>
 
 <nav class="langbar" aria-label="{{t:navLabel}}">
@@ -68,6 +68,7 @@
     <a href="https://findfoodbank.org/map/" rel="noopener">{{t:footerSource}}</a></p>
   <p>{{t:footer3}}</p>
   <p class="credit">{{h:credit}}</p>
+  <p>{{t:footerFlyerLead}} <a href="{{v:home}}flyer/">{{t:footerFlyerLink}}</a></p>
   <p><a href="#top" id="toTop">{{t:toTop}}</a></p>
 </footer>
 </div>

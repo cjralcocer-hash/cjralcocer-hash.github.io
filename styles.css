@@ -242,3 +242,48 @@ footer.site #toTop { display: inline-block; padding: 10px 0; min-height: 44px; }
   .btn:active { transform: none; }
   body::before, body::after { animation: none !important; }
 }
+
+/* Printable flyer (/flyer/ and /en/flyer/).
+   The sheet is one US Letter page of black ink on white paper, even in dark mode, and it must photocopy:
+   no gray text, no filled areas. Every size inside it is in cqw (1% of the sheet's printable width,
+   7.5 in), so the on-screen preview and the printout scale together from one set of numbers. */
+#flyer { padding: 0 16px; }
+.flyer-steps { margin: 20px 0 24px; padding-left: 1.5em; max-width: 56ch; display: grid; gap: 8px; }
+.btn.print { flex-direction: row; gap: 10px; min-height: 52px; max-width: 360px; padding: 4px 20px; margin: 0 0 8px; background: var(--ink); color: var(--bg); font-size: 1.125rem; font-weight: 700; cursor: pointer; }
+.btn.print:hover { background: color-mix(in oklch, var(--ink) 85%, var(--bg)); }
+.btn.print svg { width: 22px; height: 22px; stroke-width: 2.25; }
+.sheet { width: 100%; aspect-ratio: 8.5 / 11; margin: 24px 0 0; padding: 5.882%; display: grid;
+  background: oklch(100% 0 0); color: oklch(0% 0 0); color-scheme: light; border: 1px solid rgb(0 0 0 / 0.12); }
+.sheet-in { container-type: inline-size; display: flex; flex-direction: column; justify-content: space-between; gap: 1cqw; min-height: 0; }
+.sheet p, .sheet figure { margin: 0; }
+.sheet-logo { display: flex; align-items: center; gap: 1.6cqw; font-family: var(--slab); font-size: 3.2cqw; line-height: 1; }
+.sheet-mark { width: 5cqw; height: 5cqw; }
+.sheet-mark svg { display: block; width: 100%; height: 100%; stroke-width: 2.5; }
+.sheet-h1 { font-family: var(--slab); font-size: 11cqw; line-height: 1; letter-spacing: 0.005em; }
+.sheet-h2 { font-family: var(--slab); font-size: 6cqw; line-height: 1.1; margin-top: 1cqw; }
+.sheet-place { font-size: 3.2cqw; font-weight: 700; margin-top: 1.6cqw; }
+.sheet-scan { display: grid; grid-template-columns: 30cqw 1fr; gap: 5cqw; align-items: center; }
+.sheet-qr img { display: block; width: 30cqw; height: 30cqw; }
+.sheet-qr figcaption { margin-top: 0.4cqw; font-size: 2cqw; font-weight: 700; text-align: center; white-space: nowrap; }
+.sheet-scan-text { display: grid; gap: 2.4cqw; font-size: 3cqw; line-height: 1.3; }
+.sheet-scan-text p:first-child { font-weight: 700; }
+.sheet-call { border-top: 0.5cqw solid #000; padding-top: 1.5cqw; text-align: center; }
+.sheet-call-lead { font-size: 2.6cqw; font-weight: 700; }
+.sheet-tel { font-family: var(--slab); font-size: 10.5cqw; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.sheet-hours { display: grid; font-size: 2.4cqw; line-height: 1.3; }
+.sheet-small { display: grid; gap: 0.6cqw; font-size: 1.9cqw; line-height: 1.25; }
+.sheet-strips { flex: none; display: grid; grid-template-columns: repeat(8, 1fr); height: 28cqw; border-top: 0.3cqw dashed #000; }
+.strip { display: flex; justify-content: center; align-items: center; padding: 1cqw; }
+.strip + .strip { border-left: 0.3cqw dashed #000; }
+.strip p { writing-mode: vertical-rl; transform: rotate(180deg); display: grid; gap: 0.8cqw; font-size: 1.8cqw; line-height: 1.15; text-align: center; }
+.strip b, .strip .tel { font-size: 2.1cqw; font-weight: 700; }
+.strip span, .strip b { display: block; }
+
+@media print {
+  body.page-flyer { background: #fff; color: #000; margin: 0; }
+  body.page-flyer::before, body.page-flyer::after { display: none; }
+  body.page-flyer > :not(main), body.page-flyer main > :not(.sheet) { display: none; }
+  body.page-flyer #flyer { padding: 0; max-width: none; margin: 0; }
+  body.page-flyer .sheet { page: flyer; width: 7.5in; height: 9.95in; aspect-ratio: auto; margin: 0; padding: 0; border: 0; break-inside: avoid; overflow: hidden; }
+}
+@page flyer { size: letter; margin: 0.5in; }

@@ -34,6 +34,16 @@ Scripts: `common.js` (strings, dates and helpers every page can use, as `window.
 - person: `id`, `name`, `role` (optional), `bio` (optional), `photo` (optional, a file under `images/`). Add someone only with their permission.
 
 
+## Printable flyer
+
+`/flyer/` (Spanish) and `/en/flyer/` (English) show a one-page US Letter flyer with a QR code, the FIND Food Bank phone number and tear-off strips. A partner opens the page and presses Print. The sheet is bilingual on paper, so both URLs print the same sheet. The page is not in the site menu; it is linked from the footer.
+
+- The page is `src/pages/flyer.html`. Its text is in `i18n/` under the `flyer*` keys (the page around the sheet) and the `sheet*` keys (the sheet itself). The sheet also reuses `footer1`, and the phone number and hours come from `find` in `data.json`.
+- In `src/` files, `{{es:key}}` and `{{en:key}}` give a string in that language whatever language the page is in.
+- The QR code is `images/qr-site.svg`. It is generated from `site` in `src/pages.json` by `scripts/qr.py` (a small encoder, no packages), so changing the domain and running `python3 scripts/build.py` regenerates it. `python3 scripts/check.py` fails if it is out of date.
+- To prove the QR code still scans, run `python3 scripts/verify_qr.py`. It decodes test codes with Apple's QR detector through Swift, so it only runs on a Mac.
+- The printing rules are the last block of `styles.css` and only affect the flyer page; printing the home page is unchanged.
+
 ## Weekly data check
 
 A GitHub Action (`.github/workflows/update-data.yml`) runs `scripts/update-data.mjs` every Monday and on demand. The script needs Node 18 or newer and has no dependencies.

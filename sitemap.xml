@@ -13,4 +13,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://comidacoachellavalley.github.io/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://comidacoachellavalley.github.io/"/>
   </url>
+  <url>
+    <loc>https://comidacoachellavalley.github.io/flyer/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comidacoachellavalley.github.io/flyer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comidacoachellavalley.github.io/en/flyer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comidacoachellavalley.github.io/flyer/"/>
+  </url>
+  <url>
+    <loc>https://comidacoachellavalley.github.io/en/flyer/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://comidacoachellavalley.github.io/flyer/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://comidacoachellavalley.github.io/en/flyer/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://comidacoachellavalley.github.io/flyer/"/>
+  </url>
 </urlset>

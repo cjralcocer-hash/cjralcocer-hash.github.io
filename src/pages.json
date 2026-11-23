@@ -9,6 +9,12 @@
       "skipTo": "results",
       "scripts": ["common.js", "list.js"],
       "nav": "nav.home"
+    },
+    {
+      "id": "flyer",
+      "path": "flyer/",
+      "skipTo": "flyer",
+      "scripts": ["common.js", "flyer.js"]
     }
   ]
 }

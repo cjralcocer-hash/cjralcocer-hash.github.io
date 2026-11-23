@@ -80,7 +80,7 @@ def check_used_keys(cfg, strings):
         with open(os.path.join(ROOT, rel), encoding='utf-8') as f:
             text = f.read()
         for kind, name in build.TOKEN.findall(text):
-            if kind in ('t', 'h'):
+            if kind in ('t', 'h', 'es', 'en'):
                 wanted.append((name, rel))
             elif kind == 'p':
                 ids = [page_id] if page_id else [p['id'] for p in cfg['pages']]

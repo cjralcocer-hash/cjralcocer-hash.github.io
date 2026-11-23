@@ -1,0 +1,54 @@
+<!--@header-->
+<h1>{{t:flyerTitle}}</h1>
+  <p class="lead">{{t:flyerLead}}</p>
+<!--@main-->
+<main id="flyer">
+  <ol class="flyer-steps">
+    <li>{{t:flyerStep1}}</li>
+    <li>{{t:flyerStep2}}</li>
+    <li>{{t:flyerStep3}}</li>
+  </ol>
+  <button type="button" id="print" class="btn print"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9V3h10v6"/><path d="M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg><span>{{t:flyerPrint}}</span></button>
+  <noscript><p class="hint">{{t:flyerNoJs}}</p></noscript>
+
+  <article class="sheet" aria-label="{{t:flyerPreviewLabel}}">
+    <div class="sheet-in">
+      <div class="sheet-logo"><span class="sheet-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 21.5c.3-4.6 1.4-8.6 3.6-12"/><path d="M13.1 9.5c-2.6-2.4-6-2.6-8.6-.4M13.1 9.5c-.4-3-2.6-5.4-5.6-5.8M13.1 9.5c1.2-2.8 4-4.4 7-3.9M13.1 9.5c2.9.3 5.4 2.2 6.5 4.9"/><path d="M2.5 21.5h19"/></svg></span><span>{{t:siteName}}</span></div>
+      <div class="sheet-head">
+        <p class="sheet-h1" lang="es">{{es:sheetHeadline}}</p>
+        <p class="sheet-h2" lang="en">{{en:sheetHeadline}}</p>
+        <p class="sheet-place"><span lang="es">{{es:sheetPlace}}</span> · <span lang="en">{{en:sheetPlace}}</span></p>
+      </div>
+      <div class="sheet-scan">
+        <figure class="sheet-qr">
+          <img src="{{v:root}}images/qr-site.svg" alt="{{t:sheetQrAlt}}">
+          <figcaption>{{v:siteHost}}</figcaption>
+        </figure>
+        <div class="sheet-scan-text">
+          <p lang="es">{{es:sheetScan}}</p>
+          <p lang="en">{{en:sheetScan}}</p>
+        </div>
+      </div>
+      <div class="sheet-call">
+        <p class="sheet-call-lead"><span lang="es">{{es:sheetNoInternet}}</span> · <span lang="en">{{en:sheetNoInternet}}</span></p>
+        <p class="sheet-tel">{{v:findPhone}}</p>
+        <p class="sheet-hours"><span lang="es">{{v:findHoursEs}}</span><span lang="en">{{v:findHoursEn}}</span></p>
+      </div>
+      <div class="sheet-small">
+        <p><span lang="es">{{es:sheetPrivacy}}</span> <span lang="en">{{en:sheetPrivacy}}</span></p>
+        <p><span lang="es">{{es:footer1}}</span> <span lang="en">{{en:footer1}}</span></p>
+      </div>
+      <div class="sheet-strips" aria-hidden="true">
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+        <div class="strip"><p><b>{{es:sheetHeadline}} · {{en:sheetHeadline}}</b><span>{{v:siteHost}}</span><span class="tel">{{v:findPhone}}</span></p></div>
+      </div>
+    </div>
+  </article>
+</main>
+<!--@band-->
