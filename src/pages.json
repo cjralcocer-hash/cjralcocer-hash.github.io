@@ -3,6 +3,7 @@
   "languages": ["es", "en"],
   "defaultLanguage": "es",
   "repo": "comidacoachellavalley/comidacoachellavalley.github.io",
+  "googleAnalytics": "",
   "pages": [
     {
       "id": "home",

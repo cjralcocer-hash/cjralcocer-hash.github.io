@@ -18,7 +18,7 @@ Tokens inside src/ files
   {{p:name}}  page string: looks up "<page id>.<name>" (docTitle, description, ogTitle, ogDescription, ogImageAlt)
   {{es:key}}  string from i18n/es.json whatever the page language (for the bilingual printed flyer)
   {{en:key}}  the same from i18n/en.json
-  {{v:name}}  value computed here: lang, root, site, canonical, pageId, home, siteHost, findTel, cards, jsonld, ...
+  {{v:name}}  value computed here: lang, root, site, canonical, pageId, home, siteHost, findTel, cards, jsonld, analytics, ...
   {{@name}}   a section of the page file
 """
 import json
@@ -47,6 +47,21 @@ def read(rel):
 
 def esc(s):
     return s.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+
+
+GA_ID = re.compile(r'^G-[A-Z0-9]+$')
+
+
+def analytics_html(cfg):
+    """Google Analytics tag, only when src/pages.json has a googleAnalytics ID like G-ABC123."""
+    ga = cfg.get('googleAnalytics', '')
+    if not ga:
+        return ''
+    if not GA_ID.match(ga):
+        raise BuildError('googleAnalytics in src/pages.json must look like G-ABC123, got %r' % ga)
+    return ('<script async src="https://www.googletagmanager.com/gtag/js?id=%s"></script>\n'
+            '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}'
+            "gtag('js',new Date());gtag('config','%s');</script>" % (ga, ga))
 
 
 def load_config():
@@ -146,6 +161,7 @@ def render_page(cfg, strings, layout, page, lang):
         'cards': '',
         'count': '',
         'jsonld': '',
+        'analytics': analytics_html(cfg),
     }
     if page.get('list'):
         try:
